@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Plasma Programming Language</title>
+</head>
+<body>
+<h1>Plasma Programming Language</h1>
+
+<p>
+The Plasma Programming language aims to be a general purpose programming
+language suited to parallel and concurrent programming.
+Plasma will use a strong static type system and referential transparency to
+make it easier to develop and maintain large programs.
+</p>
+
+<h2>Design</h2>
+
+<p>
+Development has started only recently (July 2015) and we're not ready to
+discuss many design decisions.
+However some vague details are provided here to get the hype train rolling.
+</p>
+
+<p>
+Plasma language:
+</p>
+
+<ul>
+<li>Declaratively pure (referential transparency)</li>
+<li>Strong static type system supporting:</li>
+  <ul>
+  <li>Discriminated unions</li>
+  <li>Algebraic types</li>
+  <li>Other things</li>
+  </ul>
+<li>Straight-forward FFI aimed towards C APIs</li>
+</ul>
+
+<p>
+Plasma implementation:
+</p>
+
+<ul>
+<li>Compiles to an abstract machine representation</li>
+<li>Abstract machine has bytecode and textual representations</li>
+<li>The first version will execute the bytecode kind-of directly (details
+later)</li>
+<li>Later versions may compile the bytecode to assembly/machine code and/or
+LLVM</li>
+</ul>
+
+<h2>Progress</h2>
+
+<p>
+Our progress goals in approximate order are:
+</p>
+
+<ol>
+<li>Hello World compiles and executes</li>
+<li>Basic runtime: very simple GC</li>
+<li>Self hosting ready</li>
+<li>Bootstraps</li>
+<li>Runtime system improvements</li>
+<li>Basic Parallelism and Concurrency</li>
+<li>Optimisations</li>
+<li>Improved code generation / extra backend targets</li>
+<li>Improved Garbage Collection</li>
+</ol>
+
+<p>
+We're hard at work
+</p>
+<img src="working.jpeg" alt="Paul and Alfred working on Plasma"/>
+
+<h2>Contact</h2>
+
+<p>
+Coming soon.
+</p>
+
+</body>
+</html>

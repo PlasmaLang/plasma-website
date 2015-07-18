@@ -46,12 +46,14 @@ Plasma implementation:
 later)</li>
 <li>Later versions may compile the bytecode to assembly/machine code and/or
 LLVM</li>
+<li>Open source</li>
 </ul>
 
 <h2>Progress</h2>
 
 <p>
-Our progress goals in approximate order are:
+We intend to measure our progress based on these kinds of milestones, in
+approximate order.
 </p>
 
 <ol>
@@ -70,6 +72,79 @@ Our progress goals in approximate order are:
 We're hard at work
 </p>
 <img src="working.jpeg" alt="Paul and Alfred working on Plasma"/>
+
+<h2>FAQ</h2>
+
+<dl>
+<dt>What is it written in?
+<dd><a href="http://mercurylang.org">Mercury</a>,
+until it can be bootstrapped, then hopefully Plasma
+
+<dt>You work on <a href="http://mercurylang.org">Mercury</a> already,
+so is this Mercury 2.0?
+<dd>No.  It's more like a compromise between declarative languages and
+imperative (more familiar) languages.  It is not a logic programming
+language.
+
+<dt>Why are you writing it?
+<dd>A few reasons.
+The main one is that I feel as if I haven't done anything "cool"
+computer-science wise since finishing my Ph.D.
+(Automatic Parallelism for Mercury)
+and would like to do more of that kind of thing.
+I also love purely-declarative programming but Haskell and Mercury can be
+quite difficult to learn.
+Therefore I'd like to create a compromise, a language that has many of the
+cool things about declarative programming, without some of the super-abstract
+or otherwise unfriendly features of these languages.
+I also have some exciting plans for parallelism and concurrency, but that's
+a secret.
+
+<dt>Why the name Plasma?
+<dd>It's a secret for now, until then I'll say that I'm referring to the
+fourth state of matter.
+
+<dt>What paradigm is it?
+<dd>Technically it will be a functional language,
+however it will look more like a procedural language and be familiar to
+more people
+
+<dt>What is the intended purpose?  Web programming / scripting / systems?
+<dd>I really don't like these separations.
+A good language with a good implementation should be suitable in many
+environments.
+
+<dt>Will it have a Javascript/Ruby/X backend?
+<dd>I would prefer to have fewer backends to maintain.
+Therefore I will concentrate on the two backends that I have planned:
+bytecode and native code (or LLVM).
+However, a bytecode intermediate format allows other developers to write
+bytecode interpreters (or translators) for their favorite environments.
+eg: the JVM.
+
+<dt>Why are you letting that old man hold you while you code?
+<dd>Because I'm only 12 weeks old and can't sit up by myself yet
+
+</dl>
+
+<h2>How can I help?</h2>
+
+<p>
+Coming soon.
+<!--
+I'm considering financial donations in addition to the usual code,
+documentation and such.
+-->
+</p>
+
+<!--
+<p>
+I'm also interested in talking to a graphic artist who can donate some
+graphics for the website, such as a banner and a logo.
+I have something in mind but if someone else can draw it that would be
+great.
+</p>
+-->
 
 <h2>Contact</h2>
 

@@ -1,0 +1,56 @@
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+
+body {
+    font-family: Roboto, Arial, Sans-serif;
+    margin: 0px;
+    font-size: 18pt;
+}
+
+.body, h1 {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1 {
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    font-size: 48pt;
+}
+h1 img {
+    vertical-align: bottom;
+}
+
+div.banner {
+    background: black;
+    color: yellow;
+}
+
+div.menu {
+    background: grey;
+    height: 24pt;
+    border-top: 2px solid red;
+    border-bottom: 2px solid grey;
+}
+
+div.figure {
+    float: right;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+div.figure p.caption {
+    margin: 10px;
+}    
+
+dt {
+    margin-bottom: 0.5em;
+    font-style: italic;
+}
+dd {
+    margin-bottom: 1em;
+}
+

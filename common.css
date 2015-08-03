@@ -8,12 +8,21 @@ body {
 }
 
 .content, h1 {
-    margin: 0px 100px;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 900px;
 }
-
-@media screen and (max-width: 700px) {
-    .content, h1 {
-        margin: 0px 15px;
+.column {
+    max-width: 35em;
+}
+@media screen and (max-width: 360px) {
+    h1 {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 800px) {
+    #hardwork {
+        display: none;
     }
 }
 

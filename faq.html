@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plasma Programming Language</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Plasma programming language.">
+<meta name="keywords" content="Plasma,Programming Language,Programming,Language,Concurrent,Parallel,Declrative,Functional">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="favicon.ico"/>
+<link href='common.css' rel='stylesheet' type='text/css'>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39671467-2', 'auto');
+  ga('send', 'pageview');
+</script>
+</head>
+<body>
+<div class="banner">
+<h1><img src="sunt-200.png" width="80" alt="sun image"/>PLASMA</h1>
+</div>
+
+<div class="menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="roadmap.html">Roadmap</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul>
+</div>
+<div class="menu-gap"></div>
+
+<div class="content">
+
+<h2>FAQ</h2>
+
+<div class="column">
+<dl>
+<dt>What is it written in?
+<dd><a href="http://mercurylang.org">Mercury</a>,
+until it can be bootstrapped, then hopefully Plasma
+
+<dt>You work on <a href="http://mercurylang.org">Mercury</a> already,
+so is this Mercury 2.0?
+<dd>No.  It's more like a compromise between declarative languages and
+imperative (more familiar) languages.  It is not a logic programming
+language.
+
+<dt>Why are you writing it?
+<dd>A few reasons.
+The main one is that I feel as if I haven't done anything "cool"
+computer-science wise since finishing my Ph.D.
+(Automatic Parallelism for Mercury)
+and would like to do more of that kind of thing.
+I also love purely-declarative programming but Haskell and Mercury can be
+quite difficult to learn.
+Therefore I'd like to create a compromise, a language that has many of the
+cool things about declarative programming, without some of the super-abstract
+or otherwise unfriendly features of these languages.
+I also have some exciting plans for parallelism and concurrency, but that's
+a secret.
+
+<dt>Why the name Plasma?
+<dd>It's a secret for now, until then I'll say that I'm referring to the
+fourth state of matter.
+
+<dt>What paradigm is it?
+<dd>Technically it will be a functional language,
+however it will look more like a procedural language and be familiar to
+more people
+
+<dt>What is the intended purpose?  Web programming / scripting / systems?
+<dd>I really don't like these separations.
+A good language with a good implementation should be suitable in many
+environments.
+
+<dt>Will it have a Javascript/Ruby/X backend?
+<dd>I would prefer to have fewer backends to maintain.
+Therefore I will concentrate on the two backends that I have planned:
+bytecode and native code (or LLVM).
+However, a bytecode intermediate format allows other developers to write
+bytecode interpreters (or translators) for their favorite environments.
+eg: the JVM.
+
+</dl>
+</div>
+
+</body>
+</html>

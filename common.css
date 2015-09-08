@@ -7,9 +7,9 @@ body {
     font-size: 14pt;
 }
 
-.content, h1 {
+.content, h1, div.menu ul {
     margin: 0px auto;
-    width: 100%;
+    width: 90%;
     max-width: 900px;
 }
 .column {
@@ -30,8 +30,8 @@ h1 {
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: 48pt;
 }
 h1 img {
@@ -44,10 +44,30 @@ div.banner {
 }
 
 div.menu {
-    background: grey;
-    height: 24pt;
-    border-top: 2px solid red;
-    border-bottom: 2px solid grey;
+    background: black;
+    /* border-top: 2px solid red;
+    border-bottom: 2px solid red; */
+    padding-bottom: 16px;
+}
+div.menu-gap {
+    height: 48px;
+    background: -webkit-linear-gradient(black, white); /* Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, white); /* Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black white); /* Firefox 3.6 to 15 */
+    background: linear-gradient(black, white) grey;
+}
+div.menu ul {
+    padding-left: 0px;
+}
+div.menu ul li {
+    display: inline-block;
+    padding: 0.2em;
+    font-size: 110%;
+    color: yellow;
+}
+div.menu ul li a {
+    color: yellow;
+    text-decoration: none;
 }
 
 div.figure {
@@ -67,4 +87,43 @@ dt {
 dd {
     margin-bottom: 1em;
 }
+
+ol.milestones li ul {
+    list-style-type: none;
+}
+ol.milestones li ul li:before {
+    margin-left: -40px;
+    width: 40px;
+    text-align: center;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 1px;
+    margin-bottom: -4px;
+    height: 21px;
+    content: " ";
+}
+ol.milestones li ul li.status-done:before {
+    background-image: url(images/icons/done-21.png);
+}
+ol.milestones li ul li.status-todo:before {
+    background-image: url(images/icons/todo-21.png);
+}
+ol.milestones li ul li.status-wip:before {
+    background-image: url(images/icons/wip-21.png);
+}
+ol.milestones li ul li.status-blocked:before {
+    background-image: url(images/icons/blocked-21.png);
+}
+
+/*
+ol.milestones li ul li.status-wip:before {
+    content: "⚒";
+    color: blue;
+}
+ol.milestones li ul li.status-blocked:before {
+    content: "⯄";
+    color: red;
+}
+*/
 

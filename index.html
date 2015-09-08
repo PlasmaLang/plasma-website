@@ -25,7 +25,13 @@
 </div>
 
 <div class="menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="roadmap.html">Roadmap</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul>
 </div>
+<div class="menu-gap"></div>
 
 <div class="content">
 <div class="column">
@@ -76,95 +82,15 @@ LLVM</li>
 </ul>
 </div>
 
-<h2>Progress</h2>
-
-<div id="hardwork" class="figure">
-<img src="working.jpeg" width="400" alt="Paul and Alfred working on Plasma"/>
-<p class="caption">
-We're hard at work
-</p>
-</div>
-
-<div class="column">
-<p>
-We intend to measure our progress based on these kinds of milestones, in
-approximate order.
-</p>
-
-<ol>
-<li>Hello World compiles and executes</li>
-<li>Basic runtime: very simple GC</li>
-<li>Self hosting ready</li>
-<li>Bootstraps</li>
-<li>Runtime system improvements</li>
-<li>Basic Parallelism and Concurrency</li>
-<li>Optimisations</li>
-<li>Improved code generation / extra backend targets</li>
-<li>Improved Garbage Collection</li>
-</ol>
-</div>
-
-<h2>FAQ</h2>
-
-<div class="column">
-<dl>
-<dt>What is it written in?
-<dd><a href="http://mercurylang.org">Mercury</a>,
-until it can be bootstrapped, then hopefully Plasma
-
-<dt>You work on <a href="http://mercurylang.org">Mercury</a> already,
-so is this Mercury 2.0?
-<dd>No.  It's more like a compromise between declarative languages and
-imperative (more familiar) languages.  It is not a logic programming
-language.
-
-<dt>Why are you writing it?
-<dd>A few reasons.
-The main one is that I feel as if I haven't done anything "cool"
-computer-science wise since finishing my Ph.D.
-(Automatic Parallelism for Mercury)
-and would like to do more of that kind of thing.
-I also love purely-declarative programming but Haskell and Mercury can be
-quite difficult to learn.
-Therefore I'd like to create a compromise, a language that has many of the
-cool things about declarative programming, without some of the super-abstract
-or otherwise unfriendly features of these languages.
-I also have some exciting plans for parallelism and concurrency, but that's
-a secret.
-
-<dt>Why the name Plasma?
-<dd>It's a secret for now, until then I'll say that I'm referring to the
-fourth state of matter.
-
-<dt>What paradigm is it?
-<dd>Technically it will be a functional language,
-however it will look more like a procedural language and be familiar to
-more people
-
-<dt>What is the intended purpose?  Web programming / scripting / systems?
-<dd>I really don't like these separations.
-A good language with a good implementation should be suitable in many
-environments.
-
-<dt>Will it have a Javascript/Ruby/X backend?
-<dd>I would prefer to have fewer backends to maintain.
-Therefore I will concentrate on the two backends that I have planned:
-bytecode and native code (or LLVM).
-However, a bytecode intermediate format allows other developers to write
-bytecode interpreters (or translators) for their favorite environments.
-eg: the JVM.
-
-<dt>Why are you letting that old man hold you while you code?
-<dd>Because I'm only 12 weeks old and can't sit up by myself yet
-
-</dl>
-</div>
-
 <h2>How can I help?</h2>
 
 <div class="column">
 <p>
 Coming soon.
+</p>
+
+<p>
+The source is <a href="https://bitbucket.org/paulbone/plasma"/>here</a>.
 </p>
 </div>
 
@@ -174,12 +100,13 @@ Coming soon.
 <h3>E-mail</h3>
 
 <p>
-The best way to get in contact is to send an e-mail to
-<code>plasma@plasmalang.org</code>.
+The main forum for discussing plasma is the using the
+<a href="https://www.plasmalang.org/lists/">mailing lists</a>.
 </p>
 
 <p>
-Mailing lists coming soon.
+To contact the authors directly you can send an e-mail to
+<code>plasma@plasmalang.org</code>.
 </p>
 
 <h3>IRC</h3>

@@ -7,8 +7,7 @@ all : \
 	images/icons/wip-21.png \
 	images/logo-64.png \
 	images/sun-200.png \
-	images/sunt-200.png \
-	images/working.jpeg
+	images/sunt-200.png
 
 images/icons/todo-21.png: images-original/todo.png images/icons
 	convert $< -resize 21x21 $@

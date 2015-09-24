@@ -34,3 +34,7 @@ images/icons:
 images:
 	mkdir -p $@
 
+.PHONY: clean
+clean:
+	rm -rf images
+

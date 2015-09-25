@@ -120,14 +120,3 @@ ol.milestones li ul li.status-blocked:before {
     background-image: url(images/icons/blocked-21.png);
 }
 
-/*
-ol.milestones li ul li.status-wip:before {
-    content: "⚒";
-    color: blue;
-}
-ol.milestones li ul li.status-blocked:before {
-    content: "⯄";
-    color: red;
-}
-*/
-

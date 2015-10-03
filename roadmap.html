@@ -44,7 +44,8 @@ Licensed as CC BY-NC-ND 4.0
 
 <div class="column">
 <p>
-We will measure our progress towards 1.0 using several milestones,
+We will measure our progress towards a stable and mostly feature complete
+release using several milestones;
 each of which is broken into a number of tasks.
 </p>
 
@@ -60,6 +61,12 @@ each of which is broken into a number of tasks.
 
 <h3>Milestones</h3>
 
+<p>
+The first milestone, "Hello World", is simply the implementation of a basic
+runtime, bytecode interpreter and compiler that is capable of compiling and
+executing a hello world program and some other small examples.
+</p>
+
 <ol class="milestones">
   <li class="status-wip">Hello World
   <ul>
@@ -72,13 +79,11 @@ each of which is broken into a number of tasks.
       <li class="status-wip">Basic suite of instructions</li>
       <li class="status-done">Blocks and control flow</li>
       <li class="status-done">Bytecode fibs</li>
-      <li class="status-todo">Structures and memory</li>
-      <li class="status-todo">Loops</li>
-      <li class="status-todo">...</li>
+      <li class="status-wip">Structures and memory</li>
     </ul></li>
     <li class="status-todo">Language and compiler
     <ul>
-      <li class="status-todo">Define language</li>
+      <li class="status-wip">Define language</li>
       <li class="status-blocked">Parsing</li>
       <li class="status-todo">Basic types</li>
       <li class="status-todo">Code generation</li>
@@ -86,20 +91,55 @@ each of which is broken into a number of tasks.
       <li class="status-blocked">Hello world!</li>
     </ul></li>
   </ul></li>
-  <li class="status-todo">Basic runtime
+</ol>
+
+<p>
+The goal of the second milestone, "Introducing Plasma", is to be able to
+demonstrate the kind of language that Plasma will eventually become.
+By the completion of this goal people should be able to begin experimenting
+with Plasma and "getting a feel" for the language.
+</p>
+
+<ol class="milestones" start="2">
+  <li>Introducing Plasma
   <ul>
-    <li class="status-todo">Subroutine threaded bytecode execution (amd64)</li>
-    <li class="status-todo">Operations for different data-widths</li>
-    <li class="status-todo">Support labels in data (for computed gotos)</li>
-    <li class="status-todo">Multi-module bytecode loading</li>
-    <li class="status-todo">Basic Garbage Collection</li>
-    <li class="status-todo">...</li>
-  </ul></li>
+    <li class="status-todo">Fancy control flow
+      <ul>
+      <li class="status-todo">Loops</li>
+      <li class="status-todo">Pattern matching</li>
+      </ul></li>
+    <li class="status-todo">Type system</li>
+    <li class="status-todo">Resources or effect system (TBA)</li>
+    <li class="status-todo">Multi-module programs</li>
+    <li class="status-todo">More complete runtime system
+    <ul>
+      <li class="status-todo">Subroutine threaded bytecode execution
+        (amd64)</li>
+      <li class="status-todo">Operations for different data-widths</li>
+      <!--
+      <li class="status-todo">Support labels in data (for computed gotos)</li>
+      -->
+      <li class="status-todo">Multi-module bytecode loading</li>
+      <li class="status-todo">Basic Garbage Collection</li>
+    </ul></li>
+    <li class="status-todo">Concurrency and Parallelism
+    <ul>
+      <li class="status-todo">Lightweight threads</li>
+      <li class="status-todo">Basic concurrent communications
+        (channels, mvars etc)</li>
+    </ul></li>
+  </ul>
+</ol>
+
+<p>
+The remaining goals represent steps towards a stable release.
+While we're revising all the milestones as we go, milestones 3 and onwards
+are the most-likely milestones to change.
+</p>
+
+<ol class="milestones" start="3">
   <li class="status-todo">Self hosting ready
   <ul>
-    <li class="status-todo">DU Types</li>
-    <li class="status-todo">Abstract types</li>
-    <li class="status-todo">Multi-module programs</li>
     <li class="status-blocked">Basic IO Library</li>
     <li class="status-blocked">Basic Datastructures Library</li>
     <li class="status-todo">...</li>
@@ -109,7 +149,7 @@ each of which is broken into a number of tasks.
   <ul>
     <li class="status-blocked">Basic Runtime system improvements</li>
     <li class="status-blocked">Basic Optimisations</li>
-    <li class="status-blocked">Basic Parallelism and Concurrency</li>
+    <li class="status-blocked">More Parallelism and Concurrency</li>
     <li class="status-blocked">Better libraries</li>
     <li class="status-todo">...</li>
   </ul></li>

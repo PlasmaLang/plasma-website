@@ -41,50 +41,35 @@ Licensed as CC BY-NC-ND 4.0
 <div class="content">
 <div class="column">
 <p>
-The Plasma Programming language aims to be a general purpose programming
-language suited to parallel and concurrent programming.
-Plasma will use a strong static type system and referential transparency to
-make it easier to develop and maintain large programs.
-</p>
-</div>
-
-<h2>Design</h2>
-
-<div class="column">
-<p>
-Development has started only recently (July 2015) and we're not ready to
-discuss many design decisions.
-However some vague details are provided here to get the hype train rolling.
+The Plasma programming language strikes a balance between functional and
+imperative programming,
+making it easier to write reliable and efficient software.
+Plasma is <b>under development</b> and is not usable yet.
+Its planned features include:
 </p>
 
-<p>
-Plasma language:
-</p>
+<dl>
+<dt>Declratively pure,</dt>
+<dd>helping programmers programmers more confidently understand their
+programs, making debugging easier.
+Purity also makes it easier to apply many optimisations including automatic
+parallelisation.
+Plasma uses a <i>resource</i> system to make effects safe.
+Resources are composable unlike monads.
+</dd>
+<dt>A strong, static type system</dt>
+<dd>supporting ADTs, Generics and type inference.</dd>
+<dt>Direct support for loops</dt>
+<dd>for map, reduce, filter and combinations.
+Loops work on different aggregate types.
+</dd>
+<dt>Foreign Function Interface (FFI)</dt>
+<dd>A good FFI fot interoperating with C.
+<dt>Multiple concurrency abstractions</dt>
+<dt>Automatic parallelisation</dt>
+<dt>Free/Libre software<dt>
+</dl>
 
-<ul>
-<li>Declaratively pure (referential transparency)</li>
-<li>Strong static type system supporting:
-  <ul>
-  <li>Discriminated unions</li>
-  <li>Algebraic types</li>
-  <li>Other things</li>
-  </ul></li>
-<li>Straight-forward FFI aimed towards C APIs</li>
-</ul>
-
-<p>
-Plasma implementation:
-</p>
-
-<ul>
-<li>Compiles to an abstract machine representation</li>
-<li>Abstract machine has bytecode and textual representations</li>
-<li>The first version will execute the bytecode kind-of directly (details
-later)</li>
-<li>Later versions may compile the bytecode to assembly/machine code and/or
-LLVM</li>
-<li>Open source</li>
-</ul>
 </div>
 
 <h2>How can I help?</h2>

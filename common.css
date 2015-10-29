@@ -16,7 +16,7 @@ body {
     max-width: 900px;
 }
 .column {
-    max-width: 35em;
+    max-width: 44em;
 }
 @media screen and (max-width: 360px) {
     h1 {

@@ -70,25 +70,30 @@ executing a hello world program and some other small examples.
 <ol class="milestones">
   <li class="status-wip">Hello World
   <ul>
-    <li class="status-wip">Bytecode assembly tool</li>
+    <li class="status-wip">Bytecode assembly tool
+    <ul>
+      <li class="status-todo">Instructions of multiple widths</li>
+    </ul></li>
     <li class="status-wip">Bytecode interpreter
     <ul>
       <li class="status-wip">Bytecode loading</li>
-      <li class="status-wip">Token threaded bytecode execution</li>
+      <li class="status-done">Token threaded bytecode execution</li>
       <li class="status-done">Bytecode hello world</li>
       <li class="status-wip">Basic suite of instructions</li>
       <li class="status-done">Blocks and control flow</li>
       <li class="status-done">Bytecode fibs</li>
-      <li class="status-wip">Structures and memory</li>
     </ul></li>
     <li class="status-wip">Language and compiler
     <ul>
       <li class="status-wip">Define language</li>
       <li class="status-wip">Parsing</li>
-      <li class="status-todo">Basic types</li>
       <li class="status-wip">Code generation</li>
-      <li class="status-todo">...</li>
+      <li class="status-wip">Basic types</li>
+      <li class="status-todo">Semantic checks</li>
+      <li class="status-todo">Basic resource usage checks</li>
+      <li class="status-todo">Prelude or basic libraries</li>
       <li class="status-done">Hello world!</li>
+      <li class="status-todo">More examples</li>
     </ul></li>
   </ul></li>
 </ol>
@@ -103,19 +108,20 @@ with Plasma and "getting a feel" for the language.
 <ol class="milestones" start="2">
   <li>Introducing Plasma
   <ul>
+    <li class="status-todo">Type system</li>
+    <li class="status-todo">Structures and memory (PZ)</li>
+    <li class="status-todo">Multi-module programs</li>
     <li class="status-todo">Fancy control flow
       <ul>
       <li class="status-todo">Loops</li>
       <li class="status-todo">Pattern matching</li>
       </ul></li>
-    <li class="status-todo">Type system</li>
-    <li class="status-todo">Resources or effect system (TBA)</li>
-    <li class="status-todo">Multi-module programs</li>
+    <li class="status-todo">More flexable resources (TBA)</li>
     <li class="status-todo">More complete runtime system
     <ul>
       <li class="status-todo">Subroutine threaded bytecode execution
         (amd64)</li>
-      <li class="status-todo">Operations for different data-widths</li>
+      <li class="status-wip">Operations for different data-widths</li>
       <!--
       <li class="status-todo">Support labels in data (for computed gotos)</li>
       -->

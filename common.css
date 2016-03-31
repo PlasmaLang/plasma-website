@@ -2,7 +2,7 @@
  * Copyright (C) 2015 Paul Bone
  * Licensed as CC BY-NC-ND 4.0
  */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Roboto:400,400italic,700,700italic);
 
 body {
     font-family: Roboto, Arial, Sans-serif;
@@ -122,5 +122,9 @@ ol.milestones li ul li.status-wip:before {
 }
 ol.milestones li ul li.status-blocked:before {
     background-image: url(images/icons/blocked-21.png);
+}
+
+code, pre, .monospaced {
+    font-family: 'Source Code Pro', "Courier New", Courier, monospace;
 }
 

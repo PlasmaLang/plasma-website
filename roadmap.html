@@ -13,6 +13,11 @@ Licensed as CC BY-NC-ND 4.0
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="favicon.ico"/>
 <link href='common.css' rel='stylesheet' type='text/css'>
+<style>
+.codename {
+  font-style: italic;
+}
+</style>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -65,104 +70,110 @@ each of which is broken into a number of tasks.
 <p>
 The first milestone, "Hello World", is simply the implementation of a basic
 runtime, bytecode interpreter and compiler that is capable of compiling and
-executing a hello world program and some other small examples.
+executing a hello world program.
+Although there are many rough edges, this milestone is now complete, and the
+rough edges have been moved to our <a href="docs/todo.html">TODO list</a>.
 </p>
 
 <ol class="milestones">
-  <li class="status-wip">Hello World
+  <li class="status-done">Hello World
   <ul>
-    <li class="status-wip">Bytecode assembly tool
+    <li class="status-done">Bytecode assembly tool</li>
+    <li class="status-done">Basic bytecode interpreter
     <ul>
-      <li class="status-todo">Instructions of multiple widths</li>
-    </ul></li>
-    <li class="status-wip">Bytecode interpreter
-    <ul>
-      <li class="status-wip">Bytecode loading</li>
+      <li class="status-done">Bytecode loading</li>
       <li class="status-done">Token threaded bytecode execution</li>
       <li class="status-done">Bytecode hello world</li>
-      <li class="status-wip">Basic suite of instructions</li>
+      <li class="status-done">Basic suite of instructions</li>
       <li class="status-done">Blocks and control flow</li>
       <li class="status-done">Bytecode fibs</li>
     </ul></li>
-    <li class="status-wip">Language and compiler
-    <ul>
-      <li class="status-wip">Define language</li>
-      <li class="status-wip">Parsing</li>
-      <li class="status-wip">Code generation</li>
-      <li class="status-wip">Basic types</li>
-      <li class="status-todo">Semantic checks</li>
-      <li class="status-todo">Basic resource usage checks</li>
-      <li class="status-todo">Prelude or basic libraries</li>
-      <li class="status-done">Hello world!</li>
-      <li class="status-todo">More examples</li>
-    </ul></li>
+    <li class="status-done">Basic compiler that can handle "Hello world!"</li>
   </ul></li>
 </ol>
 
 <p>
-The goal of the second milestone, "Introducing Plasma", is to be able to
-demonstrate the kind of language that Plasma will eventually become.
-By the completion of this goal people should be able to begin experimenting
-with Plasma and "getting a feel" for the language.
+The goal of the second and third milestones, are to be able to
+demonstrate the kind of language that Plasma will eventually become,
+and allow developers to "get a feel" for the language.
+The second milestone, "Language Basics", covers the kinds of features that
+form the basic language.
+The third milestone, "Nebula", will introduce parallelism and concurrency.
 </p>
 
 <ol class="milestones" start="2">
-  <li>Introducing Plasma
+  <li>Language Basics
   <ul>
-    <li class="status-todo">Type system</li>
-    <li class="status-todo">Structures and memory (PZ)</li>
+    <li class="status-wip">Define language</li>
+    <li class="status-todo">Type system
+    <ul>
+      <li class="status-wip">Builtin types</li>
+      <li class="status-todo">Algebraic types</li>
+      <li class="status-todo">Generics</li>
+      <li class="status-todo">Interfaces</li>
+    </ul></li>
+    <li class="status-todo">Resource system</li>
+    <li class="status-todo">Prelude or basic libraries</li>
+    <li class="status-todo">More examples</li>
     <li class="status-todo">Multi-module programs</li>
+    <li class="status-todo">Runtime system</li>
+    <ul>
+      <li class="status-todo">Multi-module bytecode loading</li>
+      <li class="status-todo">Basic Garbage Collection</li>
+    </ul></li>
+  </ul></li>
+  <li>Concurrency and Parallelism (<span class="codename">Nebula</span>)
+  <ul>
     <li class="status-todo">Fancy control flow
       <ul>
       <li class="status-todo">Loops</li>
       <li class="status-todo">Pattern matching</li>
       </ul></li>
-    <li class="status-todo">More flexable resources (TBA)</li>
-    <li class="status-todo">More complete runtime system
-    <ul>
-      <li class="status-todo">Subroutine threaded bytecode execution
-        (amd64)</li>
-      <li class="status-wip">Operations for different data-widths</li>
-      <!--
-      <li class="status-todo">Support labels in data (for computed gotos)</li>
-      -->
-      <li class="status-todo">Multi-module bytecode loading</li>
-      <li class="status-todo">Basic Garbage Collection</li>
-    </ul></li>
     <li class="status-todo">Concurrency and Parallelism
     <ul>
       <li class="status-todo">Lightweight threads</li>
       <li class="status-todo">Basic concurrent communications
         (channels, mvars etc)</li>
     </ul></li>
-  </ul>
+    <li class="status-todo">Runtime system improvements
+    <ul>
+      <li class="status-wip">Operations for different data-widths</li>
+      <li class="status-todo">Subroutine threaded bytecode execution
+        (amd64)</li>
+      <li class="status-todo">N:M multi-threading</li>
+      <!--
+      <li class="status-todo">Support labels in data (for computed gotos)</li>
+      -->
+    </ul></li>
+  </ul></li>
 </ol>
 
 <p>
-The remaining goals represent steps towards a stable release.
-While we're revising all the milestones as we go, milestones 3 and onwards
+The remaining milestones represent steps towards a stable release.
+While we're revising all the milestones as we go, milestones 4 and onwards
 are the most-likely milestones to change.
 </p>
 
-<ol class="milestones" start="3">
+<ol class="milestones" start="4">
   <li class="status-todo">Self hosting ready
+      (<span class="codename">Stella nursery</span>)
   <ul>
     <li class="status-blocked">Basic IO Library</li>
     <li class="status-blocked">Basic Datastructures Library</li>
     <li class="status-todo">...</li>
   </ul></li>
-  <li class="status-todo">Bootstraps</li>
-  <li class="status-todo">Features and Optimisations
+  <li class="status-todo">Bootstraps ("Protostar")</li>
+  <li class="status-todo">Features and Optimisations ("T-Tauri")
   <ul>
-    <li class="status-blocked">Basic Runtime system improvements</li>
+    <li class="status-blocked">Runtime system improvements</li>
     <li class="status-blocked">Basic Optimisations</li>
     <li class="status-blocked">More Parallelism and Concurrency</li>
     <li class="status-blocked">Better libraries</li>
     <li class="status-todo">...</li>
   </ul></li>
-  <li class="status-todo">1.0
+  <li class="status-todo">1.0 (<span class="codename">Star</span>)
   <ul>
-    <li class="status-blocked">Bugfixing</li>
+    <li class="status-blocked">Bug fixing</li>
     <li class="status-blocked">Documentation</li>
     <li class="status-blocked">Polishing off rough edges (TBA)</li>
     <li class="status-todo">...</li>
@@ -173,6 +184,7 @@ are the most-likely milestones to change.
     <li class="status-blocked">Improved code generation</li>
     <li class="status-blocked">Native code / LLVM (maybe)</li>
     <li class="status-blocked">Improved Garbage Collection</li>
+    <li class="status-blocked">Plenty of other ideas</li>
   </ul></li>
 </ol>
 

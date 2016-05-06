@@ -15,9 +15,6 @@ body {
     width: 90%;
     max-width: 900px;
 }
-.column {
-    max-width: 44em;
-}
 @media screen and (max-width: 360px) {
     h1 {
         text-align: center;

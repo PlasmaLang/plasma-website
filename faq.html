@@ -45,45 +45,100 @@ Licensed as CC BY-NC-ND 4.0
 
 <dl>
 <dt>What is it written in?
-<dd><a href="http://mercurylang.org">Mercury</a>,
+<dd>
+<p><a href="http://mercurylang.org">Mercury</a>,
 until it can be bootstrapped, then hopefully Plasma
 
 <dt>You work on <a href="http://mercurylang.org">Mercury</a> already,
 so is this Mercury 2.0?
-<dd>No.  It's more like a compromise between declarative languages and
-imperative (more familiar) languages.  It is not a logic programming
-language.
+<dd>
+<p>No.
+While it's fair to say that Plasma is related to Mercury (they're both
+declaratively pure strongly typed eager languages);
+My goals for Plasma are different from goals of the Mercury project.
+With Plasma I aim to create a compromise between declarative
+languages (Like Mercury and Haskell) and imperative languages
+like C, Java and Go.
+Plasma's syntax looks more like an imperative language, while it's type
+system and pure semantics are more like a declarative language.
+Plasma is not a logic programming language.
 
 <dt>Why are you writing it?
-<dd>A few reasons.
-The main one is that I feel as if I haven't done anything "cool"
-computer-science wise since finishing my Ph.D.
-(Automatic Parallelism for Mercury)
-and would like to do more of that kind of thing.
-I also love purely-declarative programming but Haskell and Mercury can be
-quite difficult to learn.
-Therefore I'd like to create a compromise, a language that has many of the
-cool things about declarative programming, without some of the super-abstract
-or otherwise unfriendly features of these languages.
-I also have some exciting plans for parallelism and concurrency, but that's
-a secret.
+<dd>
+<p>I believe that purely-declarative strongly statically typed languages are the
+only sensible option for creating reliable software.
+However the two main options Haskell and Mercury have several problems,
+including being difficult to learn.
+Additionally imperative programming provides some specific advantages over
+declarative programming, for example the convenience of expressing loops
+directly in the language's syntax and manipulating data in arrays.
+I also have some exciting plans for parallel and concurrent programming.
+
+<p>I'm writing Plasma because I believe that we need a easy-to-learn-and-use
+purely-declarative language that doesn't make arrays and loops awkward to
+use.
 
 <dt>Why the name Plasma?
-<dd>It's a secret for now, until then I'll say that I'm referring to the
-fourth state of matter.
+<dd>
+<p>Plasma refers to the fourth state of matter.
+The name Plasma comes from a very far-away goal I have for parallel
+computing.  This is so far away that it's not practical to talk about it
+right now.
+
+<p>Plasma is also good for creating several puns, eg: Plasma is so hot right
+now.
 
 <dt>What paradigm is it?
-<dd>Technically it will be a functional language,
-however it will look more like a procedural language and be familiar to
-more people
+<dd>
+<p>Technically it will be a purely functional language,
+this means that code cannot have side effects.
+However it will look more like a procedural language which should make it
+more familiar to more people.
+It will be strongly statically typed (a type system similar to Haskell,
+Mercury or OCaml's) 
+and use eager evaluation (like OCaml or Mercury).
+
+<dt>If it is pure, how do you handle effects?  Are there monads?
+<dd>
+<p>Monads are not used to handle effects as they are in Haskell,
+and unlike Mercury and Clean I do not plan to use uniqueness typing to
+manage effects.
+My colleague
+<a href="http://people.eng.unimelb.edu.au/schachte/">Peter Schachte</a>
+created a concept called Resources for his language
+<a href="http://people.eng.unimelb.edu.au/schachte/papers/wybeintro.pdf">Wybe</a>.
+I intend to extend this concept a little further and use it to manage
+effects.
+
+<p>Monads are useful and may be supported, but wont be used for
+effects or to the extent that they are in Haskell. 
 
 <dt>What is the intended purpose?  Web programming / scripting / systems?
-<dd>I really don't like these separations.
+<dd>
+<p>I really don't like these separations.
 A good language with a good implementation should be suitable in many
 environments.
+A more practical question is can a given domain be modeled easily in Plasma?
+Another relevant question is can Plasma be used in a given environment?
+
+<dt>Can a given domain be modeled easily in Plasma?
+<dd>
+<p>Good question!  I hope that Plasma will be very good at problems of a
+symbolic nature: most non-numeric problems, the kind of problems that
+benefit from a type system like Haskell's.
+I also hope that Plasma will be good at numerical problems: simulations and
+scientific computing.
+
+<dt>Can Plasma be used in a given environment?  (OS support? scalability?)
+<dd>
+<p>I develop on Debian Linux on x86_64, using Mercury and GCC.
+Occasionally I test using Clang and/or x86.
+Development is at a rather early stage, performance is not relevant at this
+stage, but we are keeping performance and scalability (up and down) in mind.
 
 <dt>Will it have a Javascript/Ruby/X backend?
-<dd>I would prefer to have fewer backends to maintain.
+<dd>
+<p>I would prefer to have only a small number of backends to maintain.
 Therefore I will concentrate on the two backends that I have planned:
 bytecode and native code (or LLVM).
 However, a bytecode intermediate format allows other developers to write

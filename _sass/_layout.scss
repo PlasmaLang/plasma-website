@@ -1,0 +1,232 @@
+
+body {
+    background: black;
+    color: white;
+}
+div.page-content, div.banner h1, nav ul, footer.site-footer  {
+    margin: 0px auto;
+    width: 90%;
+    max-width: 900px;
+}
+@media screen and (max-width: 360px) {
+    h1 {
+        text-align: center;
+    }
+}
+
+div.banner {
+    background: black;
+    color: yellow;
+    h1 {
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 16px;
+        padding-bottom: -1px;
+        font-size: 48pt;
+        img {
+            vertical-align: baseline;
+            margin-bottom: -17px;
+        }
+        a {
+            text-decoration: none;
+        }
+
+    }
+}
+
+nav {
+    background: black;
+    /* border-top: 2px solid red;
+    border-bottom: 2px solid red; */
+    padding-bottom: 16px;
+    ul {
+        padding-left: 0px;
+        li {
+            display: inline-block;
+            padding: 0.2em;
+            font-size: 110%;
+            color: yellow;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+div.menu-gap, div.footer-gap {
+    background-repeat: no-repeat; /* fix for prince & okular */
+}
+div.menu-gap {
+    height: 48px;
+    background: -webkit-linear-gradient(black, white); /* Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, white); /* Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black white); /* Firefox 3.6 to 15 */
+    background: linear-gradient(black, white) grey;
+}
+    
+div.page-full-width {
+    background: white;
+    color: black;
+    padding-top: 24px;
+    padding-bottom: 18px;
+}
+
+h1 {
+    font-size: 200%;
+}
+h2, #toctitle {
+    font-size: 150%;
+}
+h3 {
+    font-size: 125%;
+}
+h4 {
+    font-size: 112%;
+}
+h5 {
+    font-size: 106%;
+}
+h6 {
+    font-size: 103%;
+}
+
+div.footer-gap {
+    clear: both;
+    height: 24px;
+    background: -webkit-linear-gradient(white, black); /* Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, black); /* Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, black); /* Firefox 3.6 to 15 */
+    background: linear-gradient(white, black) grey;
+}
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+    padding: $spacing-unit/2 0;
+    background: black;
+    color: yellow;
+    a {
+        text-decoration: none;
+    }
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+    color: yellow;
+}
+
+.contact-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+/**
+ * Docs
+ */
+div#toc {
+    margin-bottom: 0;
+}
+div.docheader {
+    margin-bottom: $spacing-unit / 2;
+}
+#preamble, #toctitle {
+    margin-top: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}

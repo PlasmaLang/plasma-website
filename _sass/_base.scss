@@ -1,0 +1,205 @@
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Basic styling
+ */
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+table,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol, dd {
+    margin-left: $spacing-unit;
+}
+dd > div.ulist > ul {
+    margin-left: 0;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+dt {
+    margin-bottom: 0.5em;
+    font-style: italic;
+}
+dd {
+    margin-bottom: 1em;
+}
+
+ol.milestones li ul {
+    list-style-type: none;
+    li:before {
+        margin-left: -40px;
+        width: 40px;
+        text-align: center;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 1px;
+        margin-bottom: -4px;
+        height: 21px;
+        content: " ";
+    }
+    li.status-done:before {
+        background-image: url(/images/icons/done-21.png);
+    }
+    li.status-todo:before {
+        background-image: url(/images/icons/todo-21.png);
+    }
+    li.status-wip:before {
+        background-image: url(/images/icons/wip-21.png);
+    }
+    li.status-blocked:before {
+        background-image: url(/images/icons/blocked-21.png);
+    }
+}
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6, #toctitle {
+    font-weight: $base-font-weight;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: inherit;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/**
+ * Code formatting
+ */
+pre, code, .monospaced {
+    font-family: $code-font-family;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+    font-size: 15px;
+    margin-bottom: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}

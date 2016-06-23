@@ -75,3 +75,7 @@ docs/todo.txt:
 clean:
 	rm -rf images _site docs/*.txt docs/*.html
 
+.PHONY: upload
+upload: all
+	rsync -crv --del _site/ champagne:/srv/www/plasmalang/
+

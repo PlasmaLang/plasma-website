@@ -20,3 +20,11 @@ contact_page: "contact.html"
 
 # Build settings
 markdown: kramdown
+
+asciidoctor:
+    attributes:
+          - hardbreaks!
+
+gems:
+    - jekyll-asciidoc
+

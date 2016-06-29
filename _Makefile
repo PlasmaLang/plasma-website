@@ -1,7 +1,9 @@
 # vim: noet sw=4 ts=4
 
 .PHONY : all
-all : \
+all : _site
+
+_site : \
 		images/icons/blocked-21.png \
 		images/icons/done-21.png \
 		images/icons/todo-21.png \
@@ -9,12 +11,16 @@ all : \
 		images/logo-64.png \
 		images/sun-200.png \
 		images/sunt-200.png \
-		docs
-	jekyll b
+		docs \
+		_vendor
+	bundle exec jekyll build
 
 .PHONY : serve
-serve : all
-	jekyll s
+serve : _site
+	bundle exec jekyll serve
+
+_vendor : Gemfile
+	bundle install --path _vendor/bundle
 
 images/icons/todo-21.png: _images-original/todo.png images/icons
 	convert $< -resize 21x21 $@

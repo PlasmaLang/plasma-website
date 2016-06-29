@@ -1,4 +1,7 @@
+Gemfile.lock
+.bundle/
 .sass-cache/
 _sass
 _site
+_vendor/
 images/

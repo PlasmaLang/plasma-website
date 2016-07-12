@@ -57,22 +57,22 @@ docs: docs/index.html \
 	docs/references.html \
 	docs/todo.html
 
-docs/index.txt:
-	cp ../plasma/docs/index.txt $@
-docs/pz_format.txt:
-	cp ../plasma/docs/pz_format.txt $@
-docs/pz_machine.txt:
-	cp ../plasma/docs/pz_machine.txt $@
-docs/plasma_ref.txt:
-	cp ../plasma/docs/plasma_ref.txt $@
-docs/C_style.txt:
-	cp ../plasma/docs/C_style.txt $@
-docs/Mercury_style.txt:
-	cp ../plasma/docs/Mercury_style.txt $@
-docs/references.txt:
-	cp ../plasma/docs/references.txt $@
-docs/todo.txt:
-	cp ../plasma/docs/todo.txt $@
+docs/index.txt: ../plasma/docs/index.txt
+	cp $< $@
+docs/pz_format.txt: ../plasma/docs/pz_format.txt
+	cp $< $@
+docs/pz_machine.txt: ../plasma/docs/pz_machine.txt
+	cp $< $@
+docs/plasma_ref.txt: ../plasma/docs/plasma_ref.txt
+	cp $< $@
+docs/C_style.txt: ../plasma/docs/C_style.txt
+	cp $< $@
+docs/Mercury_style.txt: ../plasma/docs/Mercury_style.txt
+	cp $< $@
+docs/references.txt: ../plasma/docs/references.txt
+	cp $< $@
+docs/todo.txt: ../plasma/docs/todo.txt
+	cp $< $@
 
 %.html : %.txt docs/_asciidoc.conf
 	asciidoc --conf-file docs/_asciidoc.conf -o $@ $<

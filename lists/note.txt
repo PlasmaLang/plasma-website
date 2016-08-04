@@ -1,0 +1,3 @@
+This directory is intentionally empty, but it needs to exist to make apache
+re-write rules work.
+

@@ -79,6 +79,35 @@ effects.
 <p>Monads are useful and may be supported, but wont be used for
 effects or to the extent that they are in Haskell.
 
+<dt>Does/will it have/support <i>X</i>?</dt>
+<dd>
+  <dl>
+    <dt>Threads, channels, mvars, futures and similar?</dt>
+    <dd>Yes, not implemented yet.</dd>
+
+    <dt>Green threads?</dt>
+    <dd>
+    The threading model will be N:M, meaning that greenthreads will be
+    used and multiplexed onto native threads.
+    </dd>
+
+    <dt>Type classes or parametric modules?</dt>
+    <dd>
+    We're working <a href="docs/plasma_ref.html#_interfaces">interfaces</a>
+    which combine benefits of both type classes and parametric modules.
+    </dd>
+
+    <dt>Higher kinded types?</dt>
+    <dd>Probably, I think they'll be useful for loops.</dd>
+  </dl>
+
+  <p>
+  Other planned features are described in the
+  <a href="roadmap.html">roadmap</a>.
+  </p>
+
+</dd>
+
 <dt>What is the intended purpose?  Web programming / scripting / systems?
 <dd>
 <p>I really don't like these separations.

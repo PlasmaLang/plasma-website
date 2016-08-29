@@ -173,6 +173,46 @@ div.footer-gap {
 }
 
 /**
+ * Publications
+ */
+.bibliography {
+  .author:after {
+    content: ",";
+  }
+  .title {
+    quotes: '\201c' '\201d';
+  }
+  .title:before {
+    content: open-quote;
+  }
+  .title:after {
+    content: close-quote;
+  }
+  .conf {
+    font-style: italic;
+  }
+  .conf:after {
+    content: ",";
+  }
+  .where:after {
+    content: ",";
+  }
+  .when:after {
+    content: ".";
+  }
+  .links {
+    a:before {
+      content: "[";
+      color: inherit;
+    }
+    a:after {
+      content: "]";
+      color: inherit;
+    }
+  }
+}
+
+/**
  * Docs
  */
 div#toc {

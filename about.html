@@ -1,0 +1,160 @@
+---
+layout: default
+title: About Plasma
+---
+<!--
+Copyright (C) 2016 Paul Bone
+Licensed as CC BY-NC-ND 4.0
+-->
+
+<h2>About</h2>
+
+<p>
+We believe that strong static typed, pure functional programming (FP) has a lot
+to offer in terms of software reliability and performance.
+However it has a well-deserved reputation for being difficult to learn for
+newcomers.
+FP can also be difficult to use for experienced functional programmers.
+</p>
+
+<p>
+Multicore computing is ubiquitous,
+and other promising parallel architectures either available or on the
+horizon;
+we believe that it is necessary that parallel and concurrent programming is
+available and straight forward.
+</p>
+
+<h3>Goals</h3>
+
+<p>
+Plasma hopes to address these challenges with the following goals.
+</p>
+
+<ol>
+  <li>
+    <p>
+      To combine <span class="hl">declarative</span> and
+      <span class="hl">imperative</span> programming features.
+    </p>
+
+    <p>
+      We will combine the safety and reasoning power of strongly typed pure
+      FP with a familiar imperative-like syntax.
+      We will support
+      loops, arrays and other imperative programming features.
+      This benefits both experienced developers and novices.
+    </p>
+  </li>
+  <li>
+    <p>Simplicity</p>
+
+    <p>
+      Keeping things simple is an excellent engineering practice.
+      It also makes the language and tools easier to understand.
+    </p>
+
+    <p>
+      Plasma will have a reduced emphasis and dependence on abstract
+      concepts like monads.
+      They're still supported, but now they can be <span class="hl">learnt
+      gradually</span>.
+      Many <a href="docs/plasma_ref.html#_Interfaces">interfaces</a>
+      will have more sensible names, eg:
+      <code>Mappable</code> rather than <code>Functor</code>.
+      We will also aim for good tooling and a
+      consistent syntax;
+      things that <span class="hl">are</span> different will
+      <span class="hl">look</span> different.
+    </p>
+  </li>
+
+  <li>
+    <p>Excellent <span class="hl">parallelism</span> and
+      <span class="hl">concurrency</span> support.</p>
+
+    <p>
+      Channels, mvars, semaphores, streams, futures and software
+      transactional memory provide safer abstractions than traditional
+      threads and locks concurrency.
+    </p>
+
+    <p>
+      <span class="hl">Deterministic parallelism</span>
+      makes parallelism available without constraining the structure of
+      your program or affecting its declarative semantics,
+      eg: Haskell's <code>par</code> function or
+      <span class="hldef">strategies</span>.
+    </p>
+
+    <p>
+      <span class="hl">Automatic parallelism</span> introduces
+      deterministic parallelism as a compiler optimisation.
+    </p>
+  </li>
+</ol>
+
+<p>
+For more information and an overview of some features
+please see the
+<a href="#talk_2016">Presentation at Compose :: Melbourne 2016</a>.
+
+<h3>Features</h3>
+
+<dl>
+<dt>Declaratively pure</dt>
+<dd>helping programmers more confidently understand their
+programs, making debugging easier.
+Purity also makes it easier to apply many optimisations including automatic
+parallelisation.
+Plasma uses a <i>resource</i> system to make effects safe.
+Resources are composable unlike monads.
+</dd>
+<dt>A strong, static type system</dt>
+<dd>supporting ADTs, parametric polymorphism,
+  <a href="docs/plasma_ref.html#_INterfaces">interfaces</a>
+  and type inference.</dd>
+<dt>Eagerly evaluated.</dt>
+<dd>Eager evaluation makes performance and other behaviours more
+predictable.</dd>
+<dt>Direct support for loops</dt>
+<dd>for map, reduce, filter and combinations.
+Loops work on different aggregate types.
+See <a href="docs/plasma_ref.html#_Loops">Loops in the reference manual</a>.
+</dd>
+<dt>Bytecode and native code</dt>
+<dd>Generic token-based bytecode interpreter,
+in the future more optimal bytecode interpreters for each major platform.
+and hopefully native code generation.
+<dt>Foreign Function Interface (FFI)</dt>
+<dd>Interoperability with C.
+<dt>Multiple concurrency abstractions</dt>
+<dd>Tasks, channels, mvars, futures and STM.
+<dt>Manual and automatic parallelisation</dt>
+<dd>Parallelise programs based on data-flow, loops and possibly pipelines
+either by adding annotations or automatically.
+See my
+<a href="http://www.mercurylang.org/documentation/papers.html#pbone_phd_thesis">Ph.D. research</a>.
+</dd>
+<dt>Free/Libre software</dt>
+<dd>MIT License</dd>
+</dl>
+
+<h3 id="Publications">Publications</h3>
+
+<p>
+The following things have been published about Plasma.
+</p>
+
+<ul class="bibliography">
+  <li id="talk_2016">
+	<span class="author">P. Bone</span>
+	<span class="title">Plasma Programming Language</span>
+	<span class="conf">Compose :: Melbourne Conference</span>
+	<span class="when">Aug, 2016</span>
+	<span class="links">
+	  <a href="pub/pbone-2016-plasma.pdf" target-"_blank">Slides</a>
+	</span>
+  </li>
+</ul>
+

@@ -70,6 +70,7 @@ div.page-full-width {
     color: black;
     padding-top: 24px;
     padding-bottom: 18px;
+    min-height: 450px;
 }
 
 h1 {
@@ -89,6 +90,13 @@ h5 {
 }
 h6 {
     font-size: 103%;
+}
+
+div.page-content > h1:first-child,
+div.docheader > h1:first-child,
+div.page-content > h2:first-child,
+h1.post-title {
+    margin-top: 0;
 }
 
 div.footer-gap {
@@ -229,6 +237,14 @@ div.docheader {
 /**
  * Posts
  */
+.post_subtitle {
+  font-style: italic;
+}
+
+.bloglist dt {
+  @extend h3
+}
+
 .post-header {
     margin-bottom: $spacing-unit;
 }

@@ -1,0 +1,29 @@
+---
+layout: default
+title: News
+---
+
+<h2>News</h2>
+
+<dl class="news">
+  {% for post in site.posts %}
+    <dt>
+      <a href="{{ post.url }}">
+	<time itemprop="datePublished"
+	      datetime="{{ post.date | date_to_xmlschema }}">
+	  {{ post.date | date: "%b %-d, %Y" }}
+	</time>
+	&mdash;
+	{{ post.title }}
+      </a>
+    </dt>
+    <dd>
+      {{ post.excerpt }}
+    </dd>
+  {% endfor %}
+</dl>
+
+<p>
+Subscribe using <a href="/news.xml">RSS</a>.
+</p>
+

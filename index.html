@@ -2,7 +2,7 @@
 layout: default
 ---
 <!--
-Copyright (C) 2015 Paul Bone
+Copyright (C) 2015-2016 Paul Bone
 Licensed as CC BY-NC-ND 4.0
 -->
 
@@ -35,6 +35,30 @@ For more information see our
 and for detailed information about syntax and semantics take a look at the
 <a href="docs/plasma_ref.html">Plasma Language Reference</a>
 and the rest of the <a href="docs/">documentation</a>.
+</p>
+
+<h2>Latest News</h2>
+
+<dl class="news">
+  {% for post in site.posts limit:5 %}
+    <dt>
+      <a href="{{ post.url }}">
+	<time itemprop="datePublished"
+	      datetime="{{ post.date | date_to_xmlschema }}">
+	  {{ post.date | date: "%b %-d, %Y" }}
+	</time>
+	&mdash;
+	{{ post.title }}
+      </a>
+    </dt>
+    <dd>
+      {{ post.excerpt }}
+    </dd>
+  {% endfor %}
+</dl>
+
+<p>
+See all <a href="news.html">news</a>.
 </p>
 
 <h2>How can I help?</h2>

@@ -1,0 +1,54 @@
+---
+layout: post
+author: Paul Bone
+title: Match-case statements
+---
+
+We've reached another minor milestone.  Match-case statements are now
+supported including some rules for how variables are allowed to be used in
+branching code.  This also means that Plasma is now Turing complete,
+although it is far from being _expressive_.
+
+Match statements attempt to match an expression against a number of patterns.
+Currently the only patterns that are supported are integers, variable names
+and underscore (a wild-card pattern).  Cases are tried in order.  Later the
+compiler may warn about cases that are never executed (because an earlier
+case matches).
+
+----
+    match (n) {
+      0 -> {
+        beer = "There's no beer!"
+      } 
+      1 -> {
+        beer = "There's only one beer"
+      }
+      m -> {
+        beer = "There are " ++ int_to_string(m) ++ " bottles of beer"
+      }
+    }
+    print!(beer)
+----
+
+If a variable is produced by at least one case, and used outside the match
+statement then it *must* be produced in all cases that _fall through_.  If a
+variable is produced on at least one case, and not used outside the match,
+then it will be _named apart_ by the compiler, allowing it to have a
+different type from variables with the same name in other cases.  These
+rules have been implemented however the error messages will abort
+compilation.  Friendlier errors will be implemented later.
+
+If it is possible that no case matches, and the other cases produce values
+used after the match, then that is also an error.  However until types are
+properly implemented this cannot be implemented.
+
+Cases may contain a return statement (or otherwise not _fall through_, if
+that happens they do not need to produce any variables.  Currently the
+compiler only supports either all cases falling through, or none falling
+through.  I plan to implement this later, this will probably be implemented
+by transforming the code after the match into a separate function which is
+called in the cases that fall through.  This will also have implications for
+type-checking due to the order of compilation passes, so must wait until
+then.
+
+

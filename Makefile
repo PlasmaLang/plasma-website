@@ -17,7 +17,7 @@ _site : \
 
 .PHONY : serve
 serve : _site
-	bundle exec jekyll serve
+	bundle exec jekyll serve --drafts
 
 _vendor : Gemfile
 	bundle install --path _vendor/bundle

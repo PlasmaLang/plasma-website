@@ -11,6 +11,8 @@ _site : \
 		images/logo-64.png \
 		images/sun-200.png \
 		images/sunt-200.png \
+		images/logo-wide-600.png \
+		images/logo-128.png \
 		docs \
 		_vendor
 	bundle exec jekyll build
@@ -37,6 +39,10 @@ images/sun-200.png: _images-original/sun.png images
 	convert $< -resize 200x200 $@
 images/sunt-200.png: _images-original/sunt.png images
 	convert $< -resize 200x200 $@
+images/logo-wide-600.png: _images-original/plasma-logo-wide.png images
+	convert $< -resize 600x315 $@
+images/logo-128.png: _images-original/logo.png images
+	convert $< -resize 128x128 $@
 
 images/working.jpeg: _images-original/working.jpeg images
 	cp $< $@

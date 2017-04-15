@@ -55,29 +55,36 @@ images:
 
 .PHONY: docs
 docs: docs/index.html \
-	docs/pz_format.html \
-	docs/pz_machine.html \
-	docs/plasma_ref.html \
 	docs/C_style.html \
 	docs/Mercury_style.html \
+	docs/concept_map.html \
+	docs/plasma_ref.html \
+	docs/pz_format.html \
+	docs/pz_machine.html \
 	docs/references.html \
-	docs/todo.html
+	docs/todo.html \
+	docs/types.html
 
 docs/index.txt: ../plasma/docs/index.txt
+	cp $< $@
+
+docs/C_style.txt: ../plasma/docs/C_style.txt
+	cp $< $@
+docs/Mercury_style.txt: ../plasma/docs/Mercury_style.txt
+	cp $< $@
+docs/concept_map.txt: ../plasma/docs/concept_map.txt
+	cp $< $@
+docs/plasma_ref.txt: ../plasma/docs/plasma_ref.txt
 	cp $< $@
 docs/pz_format.txt: ../plasma/docs/pz_format.txt
 	cp $< $@
 docs/pz_machine.txt: ../plasma/docs/pz_machine.txt
 	cp $< $@
-docs/plasma_ref.txt: ../plasma/docs/plasma_ref.txt
-	cp $< $@
-docs/C_style.txt: ../plasma/docs/C_style.txt
-	cp $< $@
-docs/Mercury_style.txt: ../plasma/docs/Mercury_style.txt
-	cp $< $@
 docs/references.txt: ../plasma/docs/references.txt
 	cp $< $@
 docs/todo.txt: ../plasma/docs/todo.txt
+	cp $< $@
+docs/types.txt: ../plasma/docs/types.txt
 	cp $< $@
 
 %.html : %.txt docs/_asciidoc.conf

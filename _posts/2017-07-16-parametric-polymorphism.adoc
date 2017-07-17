@@ -1,0 +1,47 @@
+---
+layout: post
+author: Paul Bone
+title: Parametric Polymorphism
+---
+
+It's been some time but we've finally ticked off another goal on the
+http://plasmalang.org/roadmap.html[roadmap].
+The basics of parametric polymorphism work.
+You can define a type, such as +List(a)+, not that a syntax sugar for list
+cells and lists does not exist yet:
+
+----
+type List(a) = Nil 
+             | Cons ( head : a, tail : List(a) )
+----
+
+Here +a+ is a type variable.  It can be substituted for any concrete type.
+
+Write a polymorphic function:
+
+----
+func list_length(l : List(a)) -> Int {
+    match (l) {
+        Nil -> { return 0 }
+        Cons(_, rest) -> { return 1 + list_length(rest) }
+    }
+}
+----
+
+And call it with a list of numbers, or strings, or any concrete type.
+
+----
+List1 = Cons(1, Cons(2, Cons(3, Cons(4, Nil))))
+print!(int_to_string(list_length(List1)) ++ "\n")
+        
+List2 = Cons("A", Cons("B", Cons("C", Nil)))
+print!(int_to_string(list_length(List2)) ++ "\n")
+----
+
+There are some rough edges to clean up, for example the compiler doesn't
+check whether the correct number of types or variables are listed when
+referring to a type (such as writing +List+ when one should write
++List(a)+).
+And polymorphism will become much more useful once Plasma supports other
+features such as higher order values/calls (next major goal) and interfaces.
+

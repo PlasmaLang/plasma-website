@@ -16,7 +16,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://plasmalang.org" # the base hostname & protocol for your site
 twitter_username: PlasmaLang
 github_path: PaulBone/plasma
-contact_page: "contact.html"
+contact_page: "http://plasmalang.org/contact.html"
 
 # Build settings
 markdown: kramdown

@@ -110,6 +110,9 @@ ol.milestones li ul {
     li.status-blocked:before {
         background-image: url(/images/icons/blocked-21.png);
     }
+    li.status-maybe:before {
+        background-image: url(/images/icons/maybe-21.png);
+    }
 }
 
 

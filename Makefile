@@ -8,6 +8,7 @@ _site : \
 		images/icons/done-21.png \
 		images/icons/todo-21.png \
 		images/icons/wip-21.png \
+		images/icons/maybe-21.png \
 		images/logo-64.png \
 		images/sun-200.png \
 		images/sunt-200.png \
@@ -31,6 +32,8 @@ images/icons/done-21.png: _images-original/done.png images/icons
 images/icons/blocked-21.png: _images-original/blocked.png images/icons
 	convert $< -resize 21x21 $@
 images/icons/wip-21.png: _images-original/wip.png images/icons
+	convert $< -resize 21x21 $@
+images/icons/maybe-21.png: _images-original/maybe.png images/icons
 	convert $< -resize 21x21 $@
 
 images/logo-64.png: _images-original/logo.png images

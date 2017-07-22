@@ -22,6 +22,7 @@ each of which is broken into a number of tasks.
 <tr><td><img src="images/icons/wip-21.png"></td><td>Work in progress</td></tr>
 <tr><td><img src="images/icons/done-21.png"></td><td>Done</td></tr>
 <tr><td><img src="images/icons/blocked-21.png"></td><td>Blocked</td></tr>
+<tr><td><img src="images/icons/maybe-21.png"></td><td>Feature idea</td></tr>
 </tbody>
 </table>
 
@@ -56,45 +57,45 @@ rough edges have been moved to our <a href="docs/todo.html">TODO list</a>.
 The goal of the second and third milestones, are to be able to
 demonstrate the kind of language that Plasma will eventually become,
 and allow developers to "get a feel" for the language.
-The second milestone, "Language Basics", covers the kinds of features that
-form the basic language.
-The third milestone, "Nebula", will introduce parallelism and concurrency.
+The second milestone, "Language Groundwork", covers the kinds of features that
+form the basics of the language, and any groundwork that's required for more
+advanced features or may constrain later features.
+The third milestone, "Nebula", is where the excitment begins
+it will introduce parallelism and concurrency and features that are unique
+to Plasma.
 </p>
 
 <ol class="milestones" start="2">
-  <li>Language Basics
+  <li>Language Groundwork
   <ul>
-    <li class="status-wip">Language syntax
+    <li class="status-done">Language syntax
     <ul>
       <li class="status-done">Basic statements and expressions</li>
       <li class="status-done">Case statments</li>
       <li class="status-done">If-then-else</li>
-      <li class="status-todo">Multi-valued expressions</li>
       <li class="status-done">Basic pattern matching</li>
-      <li class="status-todo">Loops</li>
-      <li class="status-todo">Expression versions of if-then-else and
-        match</li>
     </ul></li>
     <li class="status-wip">Type system
     <ul>
-      <li class="status-wip">Builtin types</li>
+      <li class="status-done">Basic builtin types</li>
       <li class="status-done">Sum types</li>
       <li class="status-done">Product types</li>
       <li class="status-done">Generics</li>
-      <li class="status-todo">Higher order values</li>
+      <li class="status-wip">Higher order values</li>
+      <li class="status-todo">Interfaces</li>
     </ul></li>
-    <li class="status-todo">Basic resource system</li>
-    <li class="status-todo">Basic functional features
+    <li class="status-wip">Basic resource system</li>
+    <li class="status-todo">Basic module system
+    <li class="status-blocked">Basic functional features
     <ul>
-      <li class="status-todo">Higher order calls</li>
-      <li class="status-todo">Lambda expressions &amp; closures</li>
+      <li class="status-blocked">Higher order calls</li>
+      <li class="status-blocked">Lambda expressions &amp; closures</li>
       <!-- don't forget to enabling partial application (and generally
         vunctional useage) of cunstructors -->
-      <li class="status-todo">Partial application</li>
+      <li class="status-blocked">Partial application</li>
     </ul></li>
-    <li class="status-todo">Prelude or basic libraries</li>
+    <li class="status-blocked">Prelude or basic libraries</li>
     <li class="status-todo">More examples</li>
-    <li class="status-todo">Multi-module programs</li>
     <li class="status-todo">Runtime system
     <ul>
       <li class="status-todo">Multi-module bytecode loading</li>
@@ -108,6 +109,17 @@ The third milestone, "Nebula", will introduce parallelism and concurrency.
       <li class="status-todo">Lightweight threads</li>
       <li class="status-todo">Basic concurrent communications
         (channels, mvars etc)</li>
+    </ul></li>
+    <li class="status-todo">Language syntax
+    <ul>
+      <li class="status-todo">Loops</li>
+      <li class="status-todo">Scopes</li>
+      <li class="status-todo">State variable notation</li>
+      <li class="status-todo">Multi-valued expressions</li>
+      <li class="status-todo">Expression versions of if-then-else and
+        match</li>
+      <li class="status-todo">Module expressions &amp; module import within
+        code</li>
     </ul></li>
     <li class="status-todo">Runtime system improvements
     <ul>
@@ -132,6 +144,7 @@ are the most-likely milestones to change.
   <li class="status-todo">Self hosting ready
       (<span class="codename">Stella nursery</span>)
   <ul>
+    <li class="status-todo">String builtin type</li>
     <li class="status-todo">Exceptions</li>
     <li class="status-blocked">Basic IO Library</li>
     <li class="status-blocked">Basic Datastructures Library</li>
@@ -142,7 +155,10 @@ are the most-likely milestones to change.
   <ul>
     <li class="status-todo">Type system improvments
     <ul>
-      <li class="status-todo">Interfaces</li>
+      <li class="status-todo">Integers of different widths</li>
+      <li class="status-todo">Arrays</li>
+      <li class="status-maybe">HKTs</li>
+      <li class="status-todo">Uniqueness (for resources)</li>
     </ul></li>
     <li class="status-todo">More expressativity
     <ul>
@@ -151,15 +167,20 @@ are the most-likely milestones to change.
       <li class="status-todo">Deconstruction without match</li>
       <li class="status-todo">Field access, update and conditional
         update</li>
+      <li class="status-todo">Early return</li>
       <li class="status-todo">...</li>
     </ul></li>
     <li class="status-todo">More complete resource system</li>
     <li class="status-blocked">Runtime system improvements</li>
     <li class="status-blocked">Basic Optimisations</li>
-    <li class="status-blocked">More Parallelism and Concurrency</li>
+    <li class="status-blocked">More Parallelism and Concurrency
+    <ul>
+      <li class="status-blocked">Parallel loops</li>
+      <li class="status-blocked">STM and other concurrency primatives</li>
+    </ul></li>
     <li class="status-blocked">Better libraries</li>
     <li class="status-todo">...</li>
-  </ul</li>
+  </ul></li>
   <li class="status-todo">1.0 (<span class="codename">Star</span>)
   <ul>
     <li class="status-blocked">Bug fixing</li>
@@ -186,6 +207,11 @@ join the
 or follow
 <a href="https://twitter.com/PlasmaLang">@PlasmaLang</a> on Twitter
 (<a href="../contact.html">contact information</a>).
+</p>
+<p>
+I re-arrange the items on the roadmap from time to time, to see how these
+have changed you can see
+<a href="https://github.com/PaulBone/plasma-website/commits/master/roadmap.html">this file's history on github</a>.
 </p>
 <p>
 The source is <a href="https://github.com/PaulBone/plasma">on github</a>.

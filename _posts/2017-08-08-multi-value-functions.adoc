@@ -1,0 +1,98 @@
+---
+layout: post
+author: Paul Bone
+title: Multi-value functions
+---
+
+Woo, another goal ticked off on the
+http://plasmalang.org/roadmap.html[roadmap].
+Plasma now supports functions that return any number of results.
+
+Whenever you want to return more than one result from a function,
+it's always bothered me how doing this in C and many other languages is
+pretty clumsy:
+
+----
+int do_something(int input, int *second_output);
+----
+
+Of course some languages you can use tupling to achieve the same affect,
+such as Haskell.
+
+----
+do_something :: Int -> (Int, Int)
+----
+
+But I've always felt that this doesn't directly represent what the developer
+is asking.
+They want to actually return multiple things, and not have the accidental
+complexity of saying "this returns a tuple".
+This may be splitting hairs, maybe it is and so I'll move on to my next
+point.
+
+I'd prefer a language implementation to support this directly in its native
+calling convention (like Prolog or Mercury),
+and not handle it as an optimisation that eliminates the memory allocation
+of the tuple.
+In other words, when there are multiple inputs that is handled directly by
+the calling convention, which says where to place them in registers and the
+stack.
+I would like the same treatment of output arguments, they should likewise
+just be left in registers and the stack as a sensible calling convention
+would allow.
+I'm not aware of a common C calling convention that does that, but I'm not
+writing a C compiler so that's only important when dealing with foreign
+code.
+Therefore I want a language that supports this _directly_ rather than having
+developers rely on _optimisations working as they expect_.
+
+Plasma now supports functions that return any number of values (0 or more).
+In this example +pm()+ returns both the absolute value and negative absolute
+value of its input.
+
+----
+func pm(x : Int) -> Int, Int {
+    if (x < 0) {
+        x_abs = x * -1
+    } else {
+        x_abs = x
+    }
+    return x_abs, x_abs * -1
+}
+----
+
+Some examples of things that return multiple results like this are the
+quadratic formula, and integer division (return the quotient and remainder).
+Of course there are plenty of situations, particularly with functional
+programming styles, where returning multiple results is common.
+
+Functions can also return no results.
+In a pure language such as Plasma
+this only makes sense if they have some effect on the world.
+Printing a result is a good example:
+
+----
+func do_pm(x : Int) using IO {
+    p, m = pm(x)
+    print!("p: " ++ int_to_string(p) ++ ", m: " ++ int_to_string(m) ++ "\n")
+}
+----
+
+In Plasma there is no +void+ symbol like in languages like C.
+Instead a function simply returns no results like +do_pm()+ above..
+
+Later when expression versions of +if+ and +match+ statements are added,
+then those will also support multiple results.
+For example:
+
+----
+func pm2(x : Int) -> Int, Int {
+    neg_x = x * -1
+    return if x < 0 then neg_x, x else x, neg_x
+}
+----
+
+Plasma is beginning to really take shape.
+I'm feeling rather excited; I think the time when people will want to try it
+out for some small tasks is getting noticeably closer.
+

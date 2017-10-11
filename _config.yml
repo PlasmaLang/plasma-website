@@ -15,7 +15,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://plasmalang.org" # the base hostname & protocol for your site
 twitter_username: PlasmaLang
-github_path: PaulBone/plasma
+github_path: PlasmaLang/plasma
 contact_page: "http://plasmalang.org/contact.html"
 
 # Build settings

@@ -65,7 +65,7 @@ docs: docs/index.html \
 	docs/pz_format.html \
 	docs/pz_machine.html \
 	docs/references.html \
-	docs/todo.html \
+	docs/ideas.html \
 	docs/types.html
 
 docs/index.txt: ../plasma/docs/index.txt
@@ -85,7 +85,7 @@ docs/pz_machine.txt: ../plasma/docs/pz_machine.txt
 	cp $< $@
 docs/references.txt: ../plasma/docs/references.txt
 	cp $< $@
-docs/todo.txt: ../plasma/docs/todo.txt
+docs/ideas.txt: ../plasma/docs/ideas.txt
 	cp $< $@
 docs/types.txt: ../plasma/docs/types.txt
 	cp $< $@

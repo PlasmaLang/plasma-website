@@ -25,6 +25,6 @@ asciidoctor:
     attributes:
           - hardbreaks!
 
-gems:
+plugins:
     - jekyll-asciidoc
 

@@ -1,0 +1,42 @@
+---
+layout: post
+author: Paul Bone
+title: Higher order values
+---
+
+Another item ticked off the roadmap!  Higher order values and higher order
+calls.  That's two items!
+
+Now it is possible to capture higher order values.  Let's say we have a
+function such as:
+
+----
+func hello_msg(name : String) -> String {
+    return "Hello " ++ name ++ "\n"
+}
+----
+
+Now in another function's body we can create a value pointing to the
+function.
+
+----
+f = hello_msg
+----
+
+And even call it:
+
+----
+s = f("World")
+----
+
+This is pretty simple stuff, but necessary for any expressive programming
+language.
+Next we'll be adding more tests to make sure these values work if we put
+them inside other structures (like a list of functions).  We also want to
+make sure that statically created data can refer to functions (currently it
+cannot).
+Statically constructed data also cannot refer to data cyclically;
+this may be a good thing.
+After that we'll add closures (including lambdas), partial application,
+and allow data constructors to also serve as functions.
+

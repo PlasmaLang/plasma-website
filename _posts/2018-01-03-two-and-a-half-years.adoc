@@ -1,0 +1,90 @@
+---
+layout: post
+author: Paul Bone
+title: Two and a Half Years
+---
+
+It's been two and a half years since I started work on Plasma.
+With the end of 2017 I noticed that many other language projects were
+publishing retrospectives of their last year.
+Well with one developer progress is a lot slower, so rather than summarise
+the last year,
+I'll write about the whole history!
+
+== Expectations
+
+I can't talk or think about progress without thinking about my expectations.
+It's fair to say that I did expect to get further with this project, but I
+don't think that I underestimated the amount of effort required or my
+limited time.
+I knew those well going in, nevertheless I did expect to get further in this
+time.
+The http://plasmalang.org/roadmap.html[roadmap] is organised by milestones,
+each milestone is made up of multiple goals.
+I hoped, but now that I have retrospect, to achieve about one milestone
+every six months, at least for the first few 2&ndash;3 milestones.
+
+== Progress & Psychology
+
+Initially progress seemed rapid, I was excited and had some close friends
+excited about the project.
+However in 2.5 years I am over half-way through the second milestone,
+less than I expected.
+
+I published the roadmap to provide a sense of what my goals are to anyone
+reading along or wishing to get involved.
+It also helps me maintain focus on what I want to accomplish now and later
+(and I've recently been experimenting with a kanban board and github
+issues).
+However it has a side effect of making it clear what I have (and haven't yet)
+achieved.
+
+While that side affect can sometimes be unfortunate, I think I'd feel like I
+had less progress if I did not see the roadmap at all, I would have no
+lovely green ticks to see at all!
+While I don't want to dwell on this &mdash;
+since I don't owe anyone Plasma, there's no "deadline" &mdash;
+a feeling of progress (and peer support) is just something I seem to need
+sometimes.
+Therefore I try to accept that I set myself lofty goals and
+when I evaluate my progress I try to do so against more moderate goals.
+
+If you think this all sounds quiet difficult to live with
+then I'd like to point out that I wouldn't have started Plasma if I was
+already satisfied with my career progress and contributions in the last few
+years.
+
+== Where is Plasma at today?
+
+Plasma has:
+
+ * a token-based bytecode interpreter, it'll be replaced by better
+technology later;
+ * enough builtin types and functions for testing;
+ * a compiler that generates +.pz+ bytecode format files;
+ * basic functions, expressions, statements, if-then-else, pattern matching;
+ * a type system with ADTs, higher-order values/calls and generics;
+ * the basics of the http://plasmalang.org/docs/plasma_ref.html#_handling_effects_io_destructive_update[resource system];
+ * many features in a planning state!
+
+== Looking Forward
+
+Without calculating it, (although the git logs are available) it seems like
+I'm closing off one goal every two or so months.
+That's actually not bad for something I do in my spare time.
+
+Also quite a few of the recent goals: higher-order code, generics,
+resources; allow Plasma to become more expressive.
+The language itself is taking shape.
+Now more than ever I can feel the implementation getting closer to my
+vision.
+Each time I complete a goal I feel excited about the expressibility that the
+next goal will bring.
+It won't be long (relatively) and Plasma will be ready for some testing. 
+
+Next I'll be adding some more test cases for higher order calls,
+support for closures, lambdas etc.  Then it's time to implement the module
+system and make design decisions about the Prelude/stdlib.
+At that point milestone #2 will be almost complete and its time to encourage
+some testing.
+

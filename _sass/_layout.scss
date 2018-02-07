@@ -221,6 +221,26 @@ div.footer-gap {
 }
 
 /**
+ * Main page items
+ */
+div#features-sample {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  div#sample {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 7px;
+    }
+    div.listing {
+      border: 1px solid #dddddd;
+      background: #f8f8f8;
+      padding: 0.5em;
+    }
+  }
+}
+
+/**
  * Docs
  */
 div#toc {

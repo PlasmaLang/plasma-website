@@ -99,19 +99,19 @@ ol.milestones li ul {
         content: " ";
     }
     li.status-done:before {
-        background-image: url(/images/icons/done-21.png);
+        content: url(/images/icons/done-21.png);
     }
     li.status-todo:before {
-        background-image: url(/images/icons/todo-21.png);
+        content: url(/images/icons/todo-21.png);
     }
     li.status-wip:before {
-        background-image: url(/images/icons/wip-21.png);
+        content: url(/images/icons/wip-21.png);
     }
     li.status-blocked:before {
-        background-image: url(/images/icons/blocked-21.png);
+        content: url(/images/icons/blocked-21.png);
     }
     li.status-maybe:before {
-        background-image: url(/images/icons/maybe-21.png);
+        content: url(/images/icons/maybe-21.png);
     }
 }
 

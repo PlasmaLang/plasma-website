@@ -28,3 +28,9 @@ asciidoctor:
 plugins:
     - jekyll-asciidoc
 
+roadmap_images:
+  done: /images/icons/done-21.png
+  todo: /images/icons/todo-21.png
+  wip: /images/icons/wip-21.png
+  blocked: /images/icons/blocked-21.png
+  maybe: /images/icons/maybe-21.png

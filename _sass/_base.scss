@@ -98,21 +98,6 @@ ol.milestones li ul {
         height: 21px;
         content: " ";
     }
-    li.status-done:before {
-        content: url(/images/icons/done-21.png);
-    }
-    li.status-todo:before {
-        content: url(/images/icons/todo-21.png);
-    }
-    li.status-wip:before {
-        content: url(/images/icons/wip-21.png);
-    }
-    li.status-blocked:before {
-        content: url(/images/icons/blocked-21.png);
-    }
-    li.status-maybe:before {
-        content: url(/images/icons/maybe-21.png);
-    }
 }
 
 

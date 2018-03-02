@@ -1,0 +1,22 @@
+{% if include.roadmap[0].toplevel == true %}
+<ol class="milestones" start="{{include.start | default: 1}}">
+{% else %}
+<ul>
+{% endif %}
+  {% for navitem in include.roadmap %}
+    <li class="status-{{navitem.status | default: todo}}">
+      {% if navitem.status %}
+      <img src="{{site.roadmap_images[navitem.status]}}" alt="Status: {{navitem.status}}"/>
+      {% endif %}
+      {{navitem.name}}
+    {% if navitem.subitems %}
+      {% include /functions/show_roadmap.html roadmap=navitem.subitems %}
+    {% endif %}
+    {{list_type}}
+    </li>
+  {% endfor %}
+{% if include.roadmap[0].toplevel == true %}
+</ol>
+{% else %}
+</ul>
+{% endif %}

@@ -1,0 +1,22 @@
+- name: Hello World
+  toplevel: true
+  subitems:
+    - name: Bytecode assembly tool
+      status: done
+    - name: Basic bytecode interpreter
+      status: done
+      subitems:
+        - name: Bytecode loading
+          status: done
+        - name: Token threaded bytecode execution
+          status: done
+        - name: Bytecode hello world
+          status: done
+        - name: Basic suite of instructions
+          status: done
+        - name: Blocks and control flow
+          status: done
+        - name: Bytecode fibs
+          status: done
+    - name: Basic compiler that can handle "Hello, World!"
+      status: done

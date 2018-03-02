@@ -1,0 +1,88 @@
+- name: Language Groundwork
+  toplevel: true
+  subitems:
+    - name: Language syntax
+      status: done
+      subitems:
+        - name: Basic statements and expressions
+          status: done
+        - name: Case statments
+          status: done
+        - name: 'If-then-else'
+          status: done
+        - name: Basic pattern matching
+          status: done
+    - name: Type system
+      status: wip
+      subitems:
+        - name: Basic builtin types
+          status: done
+        - name: Sum types
+          status: done
+        - name: Product types
+          status: done
+        - name: Generics
+          status: done
+        - name: Higher order values
+          status: done
+        - name: Interfaces
+          status: todo
+    - name: Basic resource system
+      status: done
+    - name: Basic module system
+      status: todo
+    - name: Basic functional features
+      status: wip
+      subitems:
+        - name: Higher order calls
+          status: done
+        - name: 'Lambda expressions &amp; closures'
+          status: todo
+        - name: Partial application
+          status: todo
+    - name: Prelude or basic libraries
+      status: blocked
+    - name: More examples
+      status: todo
+    - name: Runtime system
+      status: todo
+      subitems:
+        - name: 'Multi-module bytecode loading'
+          status: todo
+        - name: Basic Garbage Collection
+          status: todo
+- name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
+  subitems:
+    - name: Concurrency and Parallelism
+      status: todo
+      subitems:
+        - name: Lightweight threads
+          status: todo
+        - name: 'Basic concurrent communications (channels, mvars etc)'
+          status: todo
+    - name: Language syntax
+      status: todo
+      subitems:
+        - name: 'Syntax for lists, dicts etc'
+          status: wip
+        - name: Loops
+          status: todo
+        - name: Scopes
+          status: todo
+        - name: State variable notation
+          status: todo
+        - name: Multi-valued expressions
+          status: done
+        - name: 'Expression versions of if-then-else and match (w/ multi-values)'
+          status: todo
+        - name: 'Module expressions &amp; module import within code'
+          status: todo
+    - name: Runtime system improvements
+      status: todo
+      subitems:
+        - name: 'Operations for different data-widths'
+          status: done
+        - name: 'Subroutine threaded bytecode execution (amd64)'
+          status: todo
+        - name: 'N:M multi-threading'
+          status: todo

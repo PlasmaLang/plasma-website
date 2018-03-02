@@ -36,22 +36,7 @@ Although there are many rough edges, this milestone is now complete, and the
 rough edges have been moved to our <a href="docs/todo.html">TODO list</a>.
 </p>
 
-<ol class="milestones">
-  <li class="status-done">Hello World
-  <ul>
-    <li class="status-done">Bytecode assembly tool</li>
-    <li class="status-done">Basic bytecode interpreter
-    <ul>
-      <li class="status-done">Bytecode loading</li>
-      <li class="status-done">Token threaded bytecode execution</li>
-      <li class="status-done">Bytecode hello world</li>
-      <li class="status-done">Basic suite of instructions</li>
-      <li class="status-done">Blocks and control flow</li>
-      <li class="status-done">Bytecode fibs</li>
-    </ul></li>
-    <li class="status-done">Basic compiler that can handle "Hello world!"</li>
-  </ul></li>
-</ol>
+{% include functions/show_roadmap.html roadmap=site.data.roadmap1 %}
 
 <p>
 The goal of the second and third milestones, are to be able to
@@ -65,75 +50,7 @@ it will introduce parallelism and concurrency and features that are unique
 to Plasma.
 </p>
 
-<ol class="milestones" start="2">
-  <li>Language Groundwork
-  <ul>
-    <li class="status-done">Language syntax
-    <ul>
-      <li class="status-done">Basic statements and expressions</li>
-      <li class="status-done">Case statments</li>
-      <li class="status-done">If-then-else</li>
-      <li class="status-done">Basic pattern matching</li>
-    </ul></li>
-    <li class="status-wip">Type system
-    <ul>
-      <li class="status-done">Basic builtin types</li>
-      <li class="status-done">Sum types</li>
-      <li class="status-done">Product types</li>
-      <li class="status-done">Generics</li>
-      <li class="status-done">Higher order values</li>
-      <li class="status-todo">Interfaces</li>
-    </ul></li>
-    <li class="status-done">Basic resource system</li>
-    <li class="status-todo">Basic module system
-    <li class="status-wip">Basic functional features
-    <ul>
-      <li class="status-done">Higher order calls</li>
-      <li class="status-todo">Lambda expressions &amp; closures</li>
-      <!-- don't forget to enabling partial application (and generally
-        functional useage) of cunstructors -->
-      <li class="status-todo">Partial application</li>
-    </ul></li>
-    <li class="status-blocked">Prelude or basic libraries</li>
-    <li class="status-todo">More examples</li>
-    <li class="status-todo">Runtime system
-    <ul>
-      <li class="status-todo">Multi-module bytecode loading</li>
-      <li class="status-todo">Basic Garbage Collection</li>
-    </ul></li>
-  </ul></li>
-  <li>Concurrency and Parallelism (<span class="codename">Nebula</span>)
-  <ul>
-    <li class="status-todo">Concurrency and Parallelism
-    <ul>
-      <li class="status-todo">Lightweight threads</li>
-      <li class="status-todo">Basic concurrent communications
-        (channels, mvars etc)</li>
-    </ul></li>
-    <li class="status-todo">Language syntax
-    <ul>
-      <li class="status-wip">Syntax for lists, dicts etc</li>
-      <li class="status-todo">Loops</li>
-      <li class="status-todo">Scopes</li>
-      <li class="status-todo">State variable notation</li>
-      <li class="status-done">Multi-valued expressions</li>
-      <li class="status-todo">Expression versions of if-then-else and
-        match (w/ multi-values)</li>
-      <li class="status-todo">Module expressions &amp; module import within
-        code</li>
-    </ul></li>
-    <li class="status-todo">Runtime system improvements
-    <ul>
-      <li class="status-done">Operations for different data-widths</li>
-      <li class="status-todo">Subroutine threaded bytecode execution
-        (amd64)</li>
-      <li class="status-todo">N:M multi-threading</li>
-      <!--
-      <li class="status-todo">Support labels in data (for computed gotos)</li>
-      -->
-    </ul></li>
-  </ul></li>
-</ol>
+{% include functions/show_roadmap.html start=2 roadmap=site.data.roadmap2 %}
 
 <p>
 The remaining milestones represent steps towards a stable release.
@@ -141,63 +58,7 @@ While we're revising all the milestones as we go, milestones 4 and onwards
 are the most-likely milestones to change.
 </p>
 
-<ol class="milestones" start="4">
-  <li class="status-todo">Self hosting ready
-      (<span class="codename">Stella nursery</span>)
-  <ul>
-    <li class="status-todo">String builtin type</li>
-    <li class="status-todo">Exceptions</li>
-    <li class="status-blocked">Basic IO Library</li>
-    <li class="status-blocked">Basic Datastructures Library</li>
-    <li class="status-todo">...</li>
-  </ul></li>
-  <li class="status-todo">Bootstraps ("Protostar")</li>
-  <li class="status-todo">Features and Optimisations ("T-Tauri")
-  <ul>
-    <li class="status-todo">Type system improvments
-    <ul>
-      <li class="status-todo">Integers of different widths</li>
-      <li class="status-todo">Arrays</li>
-      <li class="status-maybe">HKTs</li>
-      <li class="status-todo">Uniqueness (for resources)</li>
-    </ul></li>
-    <li class="status-todo">More expressativity
-    <ul>
-      <li class="status-todo">Better pattern matching (multiple matches,
-        guards, nesting etc)</li>
-      <li class="status-todo">Deconstruction without match</li>
-      <li class="status-todo">Field access, update and conditional
-        update</li>
-      <li class="status-todo">Early return</li>
-      <li class="status-todo">...</li>
-    </ul></li>
-    <li class="status-todo">More complete resource system</li>
-    <li class="status-blocked">Runtime system improvements</li>
-    <li class="status-blocked">Basic Optimisations</li>
-    <li class="status-blocked">More Parallelism and Concurrency
-    <ul>
-      <li class="status-blocked">Parallel loops</li>
-      <li class="status-blocked">STM and other concurrency primatives</li>
-    </ul></li>
-    <li class="status-blocked">Better libraries</li>
-    <li class="status-todo">...</li>
-  </ul></li>
-  <li class="status-todo">1.0 (<span class="codename">Star</span>)
-  <ul>
-    <li class="status-blocked">Bug fixing</li>
-    <li class="status-blocked">Documentation</li>
-    <li class="status-blocked">Polishing off rough edges (TBA)</li>
-    <li class="status-todo">...</li>
-  </ul></li>
-  <li class="status-todo">Future
-  <ul>
-    <li class="status-blocked">Optimisations</li>
-    <li class="status-blocked">Improved code generation</li>
-    <li class="status-blocked">Native code / LLVM (maybe)</li>
-    <li class="status-blocked">Improved Garbage Collection</li>
-    <li class="status-blocked">Plenty of other ideas</li>
-  </ul></li>
-</ol>
+{% include functions/show_roadmap.html start=4 roadmap=site.data.roadmap3 %}
 
 <h2>Staying informed</h2>
 

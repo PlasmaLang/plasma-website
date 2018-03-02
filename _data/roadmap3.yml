@@ -1,0 +1,79 @@
+- name: 'Self hosting ready (<span class="codename">Stella nursery</span>)'
+  toplevel: true
+  subitems:
+  - name: 'String builtin type'
+    status: todo
+  - name: 'Exceptions'
+    status: todo
+  - name: 'Basic IO Library'
+    status: blocked
+  - name: 'Basic Datastructures Library'
+    status: blocked
+  - name: '...'
+    status: todo
+- name: 'Bootstraps ("Protostar")'
+- name: 'Features and Optimisations ("T-Tauri")'
+  subitems:
+  - name: 'Type system improvments'
+    status: todo
+    subitems:
+    - name: 'Integers of different widths'
+      status: todo
+    - name: 'Arrays'
+      status: todo
+    - name: 'HKTs'
+      status: maybe
+    - name: 'Uniqueness (for resources)'
+      status: todo
+  - name: 'More expressativity'
+    status: todo
+    subitems:
+    - name: 'Better pattern matching (multiple matches, guards, nesting etc)'
+      status: todo
+    - name: 'Deconstruction without match'
+      status: todo
+    - name: 'Field access, update and conditional update'
+      status: todo
+    - name: 'Early return'
+      status: todo
+    - name: '...'
+      status: todo
+  - name: 'More complete resource system'
+    status: todo
+  - name: 'Runtime system improvements'
+    status: blocked
+  - name: 'Basic Optimisations'
+    status: blocked
+  - name: 'More Parallelism and Concurrency'
+    status: blocked
+    subitems:
+    - name: 'Parallel loops'
+      status: blocked
+    - name: 'STM and other concurrency primatives'
+      status: blocked
+  - name: 'Better libraries'
+    status: blocked
+  - name: '...'
+    status: todo
+- name: '1.0 (<span class="codename">Star</span>)'
+  subitems:
+  - name: 'Bug fixing'
+    status: blocked
+  - name: 'Documentation'
+    status: blocked
+  - name: 'Polishing off rough edges (TBA)'
+    status: blocked
+  - name: '...'
+    status: todo
+- name: 'Future'
+  subitems:
+  - name: 'Optimisations'
+    status: blocked
+  - name: 'Improved code generation'
+    status: blocked
+  - name: 'Native code / LLVM (maybe)'
+    status: blocked
+  - name: 'Improved Garbage Collection'
+    status: blocked
+  - name: 'Plenty of other ideas'
+    status: blocked

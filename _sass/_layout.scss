@@ -253,6 +253,9 @@ div.docheader {
     margin-top: $spacing-unit / 2;
     margin-bottom: $spacing-unit / 2;
 }
+td>p {
+    margin-bottom: 0;
+}
 
 /**
  * Posts

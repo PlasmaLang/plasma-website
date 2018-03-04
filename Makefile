@@ -61,6 +61,7 @@ docs: docs/index.html \
 	docs/C_style.html \
 	docs/Mercury_style.html \
 	docs/concept_map.html \
+	docs/grades.html \
 	docs/plasma_ref.html \
 	docs/pz_format.html \
 	docs/pz_machine.html \
@@ -76,6 +77,8 @@ docs/C_style.txt: ../plasma/docs/C_style.txt
 docs/Mercury_style.txt: ../plasma/docs/Mercury_style.txt
 	cp $< $@
 docs/concept_map.txt: ../plasma/docs/concept_map.txt
+	cp $< $@
+docs/grades.txt: ../plasma/docs/grades.txt
 	cp $< $@
 docs/plasma_ref.txt: ../plasma/docs/plasma_ref.txt
 	cp $< $@

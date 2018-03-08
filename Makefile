@@ -102,5 +102,13 @@ clean:
 
 .PHONY: upload
 upload: all
-	rsync -crv --exclude Gemfile --exclude Gemfile.lock --exclude README.md --exclude LICENSE --exclude Makefile --exclude images-original --del _site/ champagne:/srv/www/plasmalang/
+	rsync -crv \
+		--exclude Gemfile \
+		--exclude Gemfile.lock \
+		--exclude README.md \
+		--exclude LICENSE.md \
+		--exclude CONTRIBUTING.md \
+		--exclude Makefile \
+		--exclude images-original \
+		--del _site/ champagne:/srv/www/plasmalang/
 

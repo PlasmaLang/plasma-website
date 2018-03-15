@@ -73,6 +73,8 @@
     status: blocked
   - name: 'Native code / LLVM (maybe)'
     status: blocked
+  - name: 'WebAssembly'
+    status: blocked
   - name: 'Improved Garbage Collection'
     status: blocked
   - name: 'Plenty of other ideas'

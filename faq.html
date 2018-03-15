@@ -140,14 +140,14 @@ Occasionally I test using Clang and/or x86.
 Development is at a rather early stage, performance is not relevant at this
 stage, but we are keeping performance and scalability (up and down) in mind.
 
-<dt>Will it have a Javascript/Ruby/X backend?
+<dt>Will it have a JavaScript/Ruby/X backend?
 <dd>
 <p>I would prefer to have only a small number of backends to maintain.
-Therefore I will concentrate on the two backends that I have planned:
-bytecode and native code (or LLVM).
-However, a bytecode intermediate format allows other developers to write
+That said I think the following backends would be valuable and I hope to
+support them:
+bytecode, native code (or LLVM) and WebAssembly.
+However, our bytecode intermediate format allows other developers to write
 bytecode interpreters (or translators) for their favorite environments.
-eg: the JVM.
 
 </dl>
 

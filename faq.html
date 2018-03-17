@@ -65,9 +65,20 @@ now.
 
 <dt>What paradigm is it?
 <dd>
-<p>Technically it will be a purely functional language,
-this means that code cannot have side effects.
-However it will look more like a procedural language which should make it
+<p>We call it a "side-effect free language",
+however this is just another way of saying
+"purely functional"
+but without emphasising <i>functional</i>.
+We do this to avoid giving readers the wrong
+impression,
+since we do not want to emphasise category theory.
+</p>
+<p>
+Like pure functional languages
+Plasma code cannot have side effects.
+Unlike functional languages we declare affects in terms of
+resources,
+and Plasma's syntax looks more like a procedural language which should make it
 more familiar to more people.
 It will be strongly statically typed (a type system similar to Haskell,
 Mercury or OCaml's)
@@ -85,7 +96,7 @@ created a concept called Resources for his language
 I intend to extend this concept a little further and use it to manage
 effects.
 
-<p>Monads are useful and may be supported, but wont be used for
+<p>Monads are useful and may be supported, but will not be used for
 effects or to the extent that they are in Haskell.
 
 <dt>Does/will it have/support <i>X</i>?</dt>

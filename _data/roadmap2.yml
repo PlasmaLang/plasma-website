@@ -37,7 +37,7 @@
         - name: Higher order calls
           status: done
         - name: 'Lambda expressions &amp; closures'
-          status: todo
+          status: wip
         - name: Partial application
           status: todo
     - name: Prelude or basic libraries
@@ -45,8 +45,10 @@
     - name: More examples
       status: todo
     - name: Runtime system
-      status: todo
+      status: wip
       subitems:
+        - name: 'Environments (for closures at runtime)'
+          status: wip
         - name: 'Multi-module bytecode loading'
           status: todo
         - name: Basic Garbage Collection

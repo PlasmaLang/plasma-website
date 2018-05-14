@@ -52,7 +52,7 @@
         - name: 'Multi-module bytecode loading'
           status: todo
         - name: Basic Garbage Collection
-          status: todo
+          status: wip
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
     - name: Concurrency and Parallelism

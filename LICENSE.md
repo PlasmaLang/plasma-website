@@ -9,3 +9,7 @@ The Plasma Team is defined by the Plasma Team section in the
 All images on this website a the copyright of their respective owners. they
 are used with permission.
 
+CODE_OF_CONDUCT.md is Copyright Plasma Team, Rust Project and various
+other authors.  It is distributed under the Creative Commons
+Attribution-ShareAlike 3.0 license.
+

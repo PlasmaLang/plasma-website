@@ -19,7 +19,7 @@ don't think that I underestimated the amount of effort required or my
 limited time.
 I knew those well going in, nevertheless I did expect to get further in this
 time.
-The http://plasmalang.org/roadmap.html[roadmap] is organised by milestones,
+The https://plasmalang.org/roadmap.html[roadmap] is organised by milestones,
 each milestone is made up of multiple goals.
 I hoped, but now that I have retrospect, to achieve about one milestone
 every six months, at least for the first few 2&ndash;3 milestones.
@@ -64,7 +64,7 @@ technology later;
  * a compiler that generates +.pz+ bytecode format files;
  * basic functions, expressions, statements, if-then-else, pattern matching;
  * a type system with ADTs, higher-order values/calls and generics;
- * the basics of the http://plasmalang.org/docs/plasma_ref.html#_handling_effects_io_destructive_update[resource system];
+ * the basics of the https://plasmalang.org/docs/plasma_ref.html#_handling_effects_io_destructive_update[resource system];
  * many features in a planning state!
 
 == Looking Forward

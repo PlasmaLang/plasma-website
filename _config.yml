@@ -13,10 +13,10 @@ description: > # this means to ignore newlines until "baseurl:"
   imperative programming,
   making it easier to write reliable and efficient software.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://plasmalang.org" # the base hostname & protocol for your site
+url: "https://plasmalang.org" # the base hostname & protocol for your site
 twitter_username: PlasmaLang
 github_path: PlasmaLang/plasma
-contact_page: "http://plasmalang.org/contact.html"
+contact_page: "https://plasmalang.org/contact.html"
 
 # Build settings
 markdown: kramdown

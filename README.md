@@ -2,7 +2,7 @@
 ## *a new programming language*
 
 This is the source for the plasma website hosted at,
-[http://plasmalang.org/](http://plasmalang.org/).
+[https://plasmalang.org/](https://plasmalang.org/).
 Go there for a general overview.
 
 The main Plasma source repository is

@@ -1,0 +1,163 @@
+---
+layout: post
+author: Paul Bone
+title: Resources and resources in higher-order code. 
+---
+
+A couple of months ago we added support for resources in higher order code,
+and before that we added resources.
+This late news item will cover both new features.
+
+## Resources
+
+Plasma uses resources to
+http://plasmalang.org/docs/plasma_ref.html#_handling_effects_io_destructive_update[manage effects],
+They provide an annotation on functions that say what the function may do or
+may observe to have been done, this allows Plasma to be a purely declarative
+language and still communicate with the outside world.
+A function declares what resources it may use or observe with a +uses+ or
++observes+ keyword and list of resources:
+
+----
+func print_item(i : Item) uses IO {
+    ...
+}
+----
+
+This function writes an item to standard output.
+(Of course it'd be better style to specify a specific file stream.)
+When you call a function that uses or observes a resource you need to add a
++!+ symbol:
+
+----
+print_item!(my_item)
+----
+
+Of course Plasma knows one or more resources are involved, and which ones,
+the +!+ simply ensures that anyone reading code gets a _heads up_ to draw
+their attention to this code, that some state is involved.
+The Plasma compiler will enforce this.
+
+There are a few rules for using resources:
+
+ * To call a function that uses a resource, the caller must declare that it
+   also uses the resource.
+ * To call a function that observes a resource, the caller must declare that
+   it uses or observes the resource.
+ * Every resource using or observing call must have a +!+ after the function
+   name.
+ * No two calls with bangs (+!+) can be made in the same statement (does not
+   apply to compound statements like if-then-else blocks).
+
+So why separate uses and observes?  For parallelisation!  It is perfectly
+safe to run any number of resource-observing or _pure_ computations in
+parallel, or to run a single resource-using and any number of _pure_
+computations in parallel.  But not to run two or more resource-using
+computations, or a single resource-using and any number of
+resource-observing computations in parallel.  So by making _observes_ a
+separate concept, it'll be easer to leverage more parallelism from Plasma
+programs.
+
+And why resources rather than monads or linear types?  They're easier to use
+and compose (linear types also compose, but monads don't).
+
+One more thing.  Resources can be broken down into a hierarchy.  This
+hierarchy hasn't been designed yet but imagine that +IO+ (the super-resource)
+can break down into +Filesystem+, +Network+, +Environment+ and +Time+ for
+example.  We hope to add some form of uniqueness so that resources can be
+attached to values, allowing you to break (eg) the +Network+ resource down
+into individual connections or database handles.
+This will allow further parallelism, since unrelated resources (not forming
+an ancestor/descendent relationship) can be used in parallel.
+So when you read the above resource rules, know that when a caller _has to
+have_ the resource need by its callees, it may be a parent resource.
+
+## Resources in higher order code
+
+We introduced higher order code in an
+link:/2017/11/19/higher-order-values.html[earlier news item], it's a common
+feature among modern programming languages, and any functional language,
+that allows code to be passed as data.
+
+It's important that higher order code can use resources,
+this allows you to pass a resource-using function as a parameter to another
+function (or store it in a structure or return it, the things you can do
+with any data).
+
+Above we created a function that can print an item (+print_item+), if we
+want to print a list of items we can pass +print_item+ as a parameter to a
+new function +do_for+:
+
+----
+do_for!(print_item, [my_item_1, my_item_2, my_item_3])
+----
+
+Note that we put the +!+ at the end of +do_for+, not +print_item+.
+This is because it's by calling do_for that the effects may happen,
+not mealy by passing print_item, since it's possible to have a function that
+does not call its argument.  Would the identity function when applied to
++print_item+ have an effect?
+
++do_for+ is defined as:
+
+----
+func do_for(f : func(x) uses IO, l : List(x)) uses IO {
+    match (l) {
+        [] -> {}
+        [x | xs] -> {
+            f!(x)
+            do_for!(f, xs)
+        }
+    }
+}
+----
+
+It expects an argument that uses the +IO+ resource and it itself uses the
++IO+ resource, which makes sense because it calls +f+ (its parameter) which
+has an effect (and whose call has +!+).
+
+## Polymorphic resources
+
+What's unimplemented is making this polymorphic, adding the ability for code
+that uses a higher-order value to be resource agnostic.
+If we imagine we can write resource variables in lower case, such as +r+
+that might look like this:
+
+----
+func do_for(f : func(x) uses r, l : List(x)) uses r {
+    match (l) {
+        [] -> {}
+        [x | xs] -> {
+            f!(x)
+            do_for!(f, xs)
+        }
+    }
+}
+----
+
+Unlike type variables, one resource variable can stand in for any number of
+resources in any number of roles.
+During discussions one point was controversial, whether to require any
+resource annotation at all and the +!+ on the higher order call.
+The argument was made that programmers are more likely to write the simplest
+code that works for them, even if it doesn't work for someone using their
+code.  And therefore are going to leave these things out if they can, and
+even place the call to +f+ and the recursive call to +do_for+ in the same
+statement.
+We will consider this but for now we will probably go with the more
+_restrictive_ option of requiring these things, and that it'll be easier to
+relax the language later rather than constrain it.
+
+## What is implemented
+
+ * resources
+ * resource checking
+ * resource hierarchy
+ * passing functions requiring resources
+ * returning functions requiring resources
+ * storing functions requiring resources in data
+
+Polymorphic resources are not supported.  There may also be a number of edge
+cases with type and resources checking (it was complex).
+
+

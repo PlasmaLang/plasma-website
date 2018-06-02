@@ -13,7 +13,7 @@
         - name: Basic pattern matching
           status: done
     - name: Type system
-      status: wip
+      status: done
       subitems:
         - name: Basic builtin types
           status: done
@@ -25,8 +25,6 @@
           status: done
         - name: Higher order values
           status: done
-        - name: Interfaces
-          status: todo
     - name: Basic resource system
       status: done
     - name: Basic module system
@@ -38,12 +36,6 @@
           status: done
         - name: 'Lambda expressions &amp; closures'
           status: wip
-        - name: Partial application
-          status: todo
-    - name: Prelude or basic libraries
-      status: blocked
-    - name: More examples
-      status: todo
     - name: Runtime system
       status: wip
       subitems:
@@ -51,10 +43,12 @@
           status: wip
         - name: 'Multi-module bytecode loading'
           status: todo
-        - name: Basic Garbage Collection
-          status: wip
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
+    - name: Prelude or basic libraries
+      status: blocked
+    - name: FFI
+      status: todo
     - name: Concurrency and Parallelism
       status: todo
       subitems:
@@ -69,22 +63,43 @@
           status: wip
         - name: Loops
           status: todo
+    - name: Arrays
+      status: maybe
+    - name: Runtime system improvements
+      status: todo
+      subitems:
+        - name: 'Operations for different data-widths'
+          status: done
+        - name: 'N:M multi-threading'
+          status: todo
+        - name: Basic Garbage Collection
+          status: wip
+        - name: 'Subroutine threaded bytecode execution (amd64)'
+          status: maybe
+    - name: More examples
+      status: todo
+- name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Quality nebula</span>)'
+  subitems:
+    - name: 'Type system'
+      status: todo
+      subitems:
+        - name: Interfaces
+          status: todo
+    - name: Language syntax
+      status: todo
+      subitems:
         - name: Scopes
           status: todo
         - name: State variable notation
           status: todo
         - name: Multi-valued expressions
           status: done
+        - name: Partial application
+          status: todo
+        - name: Deconstruct without case statement
+          status: todo
         - name: 'Expression versions of if-then-else and match (w/ multi-values)'
           status: todo
         - name: 'Module expressions &amp; module import within code'
           status: todo
-    - name: Runtime system improvements
-      status: todo
-      subitems:
-        - name: 'Operations for different data-widths'
-          status: done
-        - name: 'Subroutine threaded bytecode execution (amd64)'
-          status: todo
-        - name: 'N:M multi-threading'
-          status: todo
+

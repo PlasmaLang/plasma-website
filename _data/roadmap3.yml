@@ -30,8 +30,6 @@
     subitems:
     - name: 'Better pattern matching (multiple matches, guards, nesting etc)'
       status: todo
-    - name: 'Deconstruction without match'
-      status: todo
     - name: 'Field access, update and conditional update'
       status: todo
     - name: 'Early return'
@@ -42,6 +40,9 @@
     status: todo
   - name: 'Runtime system improvements'
     status: blocked
+    subitems:
+      - name: 'Subroutine threaded bytecode execution (amd64)'
+        status: todo
   - name: 'Basic Optimisations'
     status: blocked
   - name: 'More Parallelism and Concurrency'

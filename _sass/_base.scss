@@ -86,18 +86,9 @@ dd {
 
 ol.milestones li ul {
     list-style-type: none;
-    li:before {
-        margin-left: -40px;
-        width: 40px;
-        text-align: center;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-top: 1px;
-        margin-bottom: -4px;
-        height: 21px;
-        content: " ";
-    }
+}
+ol.milestones > li > ul {
+    margin-left: 0;
 }
 
 

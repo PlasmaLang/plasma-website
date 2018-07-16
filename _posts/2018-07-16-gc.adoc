@@ -1,0 +1,81 @@
+---
+layout: post
+author: Paul Bone
+title: Garbage collection
+---
+
+Plasma now supports garbage collection (GC).
+It's a little further ahead in the https://plasmalang.org/roadmap.html[roadmap]
+but I started work on it as a self-contained task to experiment with
+https://www.youtube.com/watch?v=R_mYs0UPt6g&list=PLaaEEl-Qw9by3jR0A-RkCNduEeH12ONJo[live streaming].
+
+Garbage collection will also work along side the new closures and
+module loading code.
+Modules and their procedures will be garbage collected,
+this may sound a little odd but it's a critical step to allowing hot code
+loading.
+While code has live references to it, it is kept,
+but if the references stop existing, or become dead (because they themselves
+are no-longer referred to) then that code can safely be freed - no different
+to normal garbage collection.
+Hot code loading isn't a necessary feature (and you won't find it on the
+roadmap) but it would be nice to have and this part of it costs very little.
+
+## The simplest garbage collector
+
+The current goals are focused around getting the language to a state where
+it's easy to demonstrate its unique features and moving towards boot strapping.
+Having a naive garbage collector allows us to meet these goals sooner, even
+if it doesn't perform very well.  Therefore the GC is about the simplest I
+could create, it is a mark/sweep, non-moving, conservative collector.  It is
+about under 400 lines of code including comments and blank lines.
+
+It also has a number of inefficacies that could be improved with not too
+much effort.  For example a single free list is searched during allocation.
+Allocation could be sped up dramatically by using multiple free lists for
+objects of different sizes which is common in other collectors.
+
+## Where to go from here
+
+This is far from the cutting edge of GC technology.  I do have aspirations
+to get to that cutting edge.  However that's not important today, but being
+able to reclaim memory is.
+
+We could have used Boehm GC (for example) as a very easy way to add a GC.
+However, and without intending any disrespect, projects that use Boehm GC as
+an interim solution seldom find the motivation to replace it with a
+permanent solution later.  Even though it's be possible to make a collector
+tuned to their particular needs, since Boehm GC works fairly well the need
+to replace it is never strong enough to overcome the effort required.
+Maybe this naive collector will motivate us to work on this in the future.
+
+While it's possible to make some rather good collectors that are
+conservative and non-moving
+(we're curious about the
+https://webkit.org/blog/7122/introducing-riptide-webkits-retreating-wavefront-concurrent-garbage-collector/[riptide collector])
+we think this is a limiting factor.
+An objects' location within the heap can be used to tell the collector
+different things about that object.
+A generational collector will often use an object's location to know how
+long ago it was allocated (what generation and sometimes what step of that
+generation it is in).  For generational collectors, but also some others,
+objects will need to be moved eg as they survive each generation.
+
+A moving collector needs to re-write pointers as objects are moved,
+therefore it needs accurate information about which values are pointers,
+making it an accurate collector (and not a conservative collector).
+This can be a difficult thing to retrofit, therefore moving to accurate
+collection early is an important priority.
+While generational collection often gives large performance gains, it may be
+a better test of the GC to implement compacting first.
+Before making this change we will probably which to revise the heap layout.
+
+Other fairly simple changes are likely to give a big performance boost.
+For example using multiple free lists for different object sizes.
+
+## Conclusion
+
+Plasma programs are less likely to run out of memory, even if the GC isn't
+all that fast yet.  Please don't judge it on speed, that wasn't a goal for
+this early version.
+

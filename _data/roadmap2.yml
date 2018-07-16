@@ -73,7 +73,7 @@
         - name: 'N:M multi-threading'
           status: todo
         - name: Basic Garbage Collection
-          status: wip
+          status: done
         - name: 'Subroutine threaded bytecode execution (amd64)'
           status: maybe
     - name: More examples

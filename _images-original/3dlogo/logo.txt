@@ -1,0 +1,10 @@
+
+The logo.blend file contains both versions of the logo in seperate scenes.
+
+The mataral for the LASMA letters is complex and has multiple shaders using
+mutliple functions.  It essentially computes the distance from the heat and
+using an inverse square calculates the temperature for the blackbody
+function and strenth for the emmission shader.  Another shader is used to
+give the letters a slight glossly surface.
+
+

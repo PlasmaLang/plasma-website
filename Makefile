@@ -47,9 +47,6 @@ images/logo-wide-600.png: _images-original/plasma-logo-wide.png images
 images/logo-128.png: _images-original/logo.png images
 	convert $< -resize 128x128 $@
 
-images/working.jpeg: _images-original/working.jpeg images
-	cp $< $@
-
 images/icons:
 	mkdir -p $@
 

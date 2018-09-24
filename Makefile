@@ -4,18 +4,18 @@
 all : _site
 
 _site : \
+		_vendor \
+		docs \
 		images/icons/blocked-21.png \
 		images/icons/done-21.png \
+		images/icons/maybe-21.png \
 		images/icons/todo-21.png \
 		images/icons/wip-21.png \
-		images/icons/maybe-21.png \
-		images/logo-64.png \
-		images/sun-200.png \
-		images/sunt-200.png \
-		images/logo-wide-600.png \
 		images/logo-128.png \
-		docs \
-		_vendor
+		images/logo-64.png \
+		images/logo-wide-600.png \
+		images/sun-200.png \
+		images/sunt-200.png
 	bundle exec jekyll build
 
 .PHONY : serve

@@ -11,7 +11,7 @@ This late news item will cover both new features.
 ## Resources
 
 Plasma uses resources to
-http://plasmalang.org/docs/plasma_ref.html#_handling_effects_io_destructive_update[manage effects],
+https://plasmalang.org/docs/plasma_ref.html#_handling_effects_io_destructive_update[manage effects],
 They provide an annotation on functions that say what the function may do or
 may observe to have been done, this allows Plasma to be a purely declarative
 language and still communicate with the outside world.

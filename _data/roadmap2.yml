@@ -40,9 +40,9 @@
       status: wip
       subitems:
         - name: 'Environments (for closures at runtime)'
-          status: wip
+          status: done
         - name: 'Multi-module bytecode loading'
-          status: todo
+          status: wip
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
     - name: Prelude or basic libraries

@@ -1,0 +1,29 @@
+---
+layout: post
+author: Paul Bone
+excerpt: Plasma now has 1,000+ commits on the master branch 
+keywords: progress,Plasma,roadmap
+---
+
+# 1,000 commits
+
+I've merged a new 70+ commits onto the master branch tonight and noticed the
+that there are now 1,016 commits on master!
+Of course this isn't really a mark of progress as much as busyness -
+we're (mostly I'm) still here, still working away.
+
+That said we have some exciting plans for the next six months.
+Currently link:../../../../roadmap.html[the roadmap] contains three
+unfinished items:
+
+ * Basic module system
+ * Lambda expressions and closures
+ * Multi-module bytecode loading
+
+We plan to implement these over the next six months and move onto some of the
+super-exciting things in the next milestone.  At that time it'll be a great
+time for to start experimenting with Plasma, particularly if you'd like to
+contribute.
+
+Today is also Remembrance Day.  Lest we forget.
+

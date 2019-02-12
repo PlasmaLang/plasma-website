@@ -24,14 +24,14 @@ See the
   file</a>
 for more information.
 
-<dt>You work on <a href="https://mercurylang.org">Mercury</a> already,
+<dt>You (Paul) worked on <a href="https://mercurylang.org">Mercury</a> already,
 so is this Mercury 2.0?
 <dd>
 <p>No.
 While it's fair to say that Plasma is related to Mercury (they're both
 declaratively pure strongly typed eager languages);
-My goals for Plasma are different from the goals of Mercury.
-With Plasma I aim to create a compromise between declarative
+Our goals for Plasma are different from the goals of Mercury.
+With Plasma we aim to create a compromise between declarative
 languages (Like Mercury and Haskell) and imperative languages
 like C, Java and Go.
 Plasma's syntax looks more like an imperative language, while it's type
@@ -40,23 +40,24 @@ Plasma is not a logic programming language.
 
 <dt id="why">Why are you writing it?
 <dd>
-<p>I believe that purely-declarative strongly statically typed languages are the
+<p>We believe that purely-declarative strongly statically typed languages
+are the
 only sensible option for creating reliable software.
 However the available options (including Haskell and Mercury) have several
 problems, including being difficult to learn.
 Additionally imperative programming provides some specific advantages over
 declarative programming, for example the convenience of expressing loops
 directly in the language's syntax and manipulating data in arrays.
-I also have some exciting plans for parallel and concurrent programming.
+We also have some exciting plans for parallel and concurrent programming.
 
-<p>I'm writing Plasma because I believe that we need an easy-to-learn-and-use
-purely-declarative language that doesn't make arrays and loops awkward to
-use.
+<p>We're writing Plasma because we believe that there is a need for an
+easy-to-learn-and-use purely-declarative language that doesn't make arrays
+and loops awkward to use.
 
 <dt id="name">Why the name Plasma?
 <dd>
 <p>Plasma refers to the fourth state of matter.
-The name Plasma comes from a very far-away goal I have for parallel
+The name Plasma comes from a very far-away goal we have for parallel
 computing.  This is so far away that it's not practical to talk about it
 right now.
 
@@ -87,13 +88,12 @@ and use eager evaluation (like OCaml or Mercury).
 <dt id="effects">If it is pure, how do you handle effects?  Are there monads?
 <dd>
 <p>Monads are not used to handle effects as they are in Haskell,
-and unlike Mercury and Clean I do not plan to use uniqueness typing to
+and unlike Mercury and Clean we are not using uniqueness typing to
 manage effects.
-My colleague
 <a href="http://people.eng.unimelb.edu.au/schachte/">Peter Schachte</a>
 created a concept called Resources for his language
 <a href="http://people.eng.unimelb.edu.au/schachte/papers/wybeintro.pdf">Wybe</a>.
-I intend to extend this concept a little further and use it to manage
+We intend to extend this concept a little further and use it to manage
 effects.
 
 <p>Monads are useful and may be supported, but will not be used for
@@ -118,7 +118,7 @@ effects or to the extent that they are in Haskell.
     </dd>
 
     <dt id="hkt">Higher kinded types?</dt>
-    <dd>Probably, I think they'll be useful for loops.</dd>
+    <dd>Probably, they'll probably be useful for loops.</dd>
   </dl>
 
   <p>
@@ -131,7 +131,7 @@ effects or to the extent that they are in Haskell.
 <dt id="scripting-web-systems">
 What is the intended purpose?  Web programming / scripting / systems?
 <dd>
-<p>I really don't like these separations.
+<p>I (Paul) don't like these separations.
 A good language with a good implementation should be suitable in many
 environments.
 A more practical question is can a given domain be modeled easily in Plasma?
@@ -139,10 +139,10 @@ Another relevant question is can Plasma be used in a given environment?
 
 <dt id="domain">Can a given domain be modeled easily in Plasma?
 <dd>
-<p>Good question!  I hope that Plasma will be very good at problems of a
+<p>Good question!  We hope that Plasma will be very good at problems of a
 symbolic nature: most non-numeric problems, the kind of problems that
 benefit from a type system like Haskell's.
-I also hope that Plasma will be good at numerical problems: simulations and
+We also hope that Plasma will be good at numerical problems: simulations and
 scientific computing.
 
 <p>Without update-in-place it can be tricky to model things like graphs.
@@ -153,15 +153,14 @@ they'll just look a bit different if you haven't seen them before.
 <dt id="environment">
 Can Plasma be used in a given environment?  (OS support? scalability?)
 <dd>
-<p>I develop on Mint Linux on x86_64, using Mercury and GCC.
-Occasionally I test using Clang and/or x86.
+<p>We develop and test on Linux on x86_64, using Mercury and GCC/Clang.
 Development is at a rather early stage, performance is not relevant at this
 stage, but we are keeping performance and scalability (up and down) in mind.
 
 <dt id="backends">Will it have a JavaScript/Ruby/X backend?
 <dd>
-<p>I would prefer to have only a small number of backends to maintain.
-That said I think the following backends would be valuable and I hope to
+<p>We want only a small number of backends to maintain.
+That said we think the following backends would be valuable and hope to
 support them:
 bytecode, native code (or LLVM) and WebAssembly.
 

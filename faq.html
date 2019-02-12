@@ -99,6 +99,21 @@ effects.
 <p>Monads are useful and may be supported, but will not be used for
 effects or to the extent that they are in Haskell.
 
+<dt id="research">Is this a research language?
+<dd>
+<p>No.  Well, mostly-no.
+
+<p>We want to make a language that is accessible and tends to have few sharp
+corners.  That means our priorities will be different from most researchers,
+we don't expect Plasma to be a suitable "fit" for most research, and want to
+avoid most research since it can create ongoing maintenance and ease of use
+problems.
+
+<p>There is one exception: auto-parallelisation.  Part of the reason for
+creating Plasma is to continue the
+<a href="http://www.bone.id.au/pub/pbone-2012-thesis/">auto-parallelisation
+research </a> that Paul started with the Mercury language.
+
 <dt id="willitsupport">Does/will it have/support <i>X</i>?</dt>
 <dd>
   <dl>
@@ -119,6 +134,33 @@ effects or to the extent that they are in Haskell.
 
     <dt id="hkt">Higher kinded types?</dt>
     <dd>Probably, they'll probably be useful for loops.</dd>
+
+    <dt id="dependenttypes">Dependent types?</dt>
+    <dd>
+    No.  While dependent types and other fancy type systems ideas
+    are promising, we do not think that they are ready for mainstream.
+    And our <a href="#research">policy of avoiding research</a> means that
+    we're not going to be an early adopter for these ideas.
+    </dd>
+
+    <dt id="ownership">Ownership system (like Rust)?</dt>
+    <dd>
+    <p>
+    No.  We believe that most of the time most developers, writing most
+    software do not need an ownership system to make their code sufficiently 
+    fast or use fit within available memory, a GC is usually good enough.
+    Ownership makes the language and its use more complex, and the benefits
+    are not worth the cost of this complexity.
+
+    <p>
+    It is possible for a compiler to analyse lifetimes of values
+    automatically, no annotations are needed.
+    It wont infer everything but what it can't can be handled by a GC.
+    This gives many of the
+    benefits of ownership but functions like an optimisation.
+    This is where the research for ownership started, with an optimisation
+    called region based memory management.
+    </dd>
   </dl>
 
   <p>

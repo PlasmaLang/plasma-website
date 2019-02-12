@@ -38,7 +38,7 @@ Plasma's syntax looks more like an imperative language, while it's type
 system and pure semantics are more like a declarative language.
 Plasma is not a logic programming language.
 
-<dt>Why are you writing it?
+<dt id="why">Why are you writing it?
 <dd>
 <p>I believe that purely-declarative strongly statically typed languages are the
 only sensible option for creating reliable software.
@@ -53,7 +53,7 @@ I also have some exciting plans for parallel and concurrent programming.
 purely-declarative language that doesn't make arrays and loops awkward to
 use.
 
-<dt>Why the name Plasma?
+<dt id="name">Why the name Plasma?
 <dd>
 <p>Plasma refers to the fourth state of matter.
 The name Plasma comes from a very far-away goal I have for parallel
@@ -63,7 +63,7 @@ right now.
 <p>Plasma is also good for creating several puns, eg: Plasma is so hot right
 now.
 
-<dt>What paradigm is it?
+<dt id="paradigm">What paradigm is it?
 <dd>
 <p>We call it a "side-effect free language",
 however this is just another way of saying
@@ -84,7 +84,7 @@ It will be strongly statically typed (a type system similar to Haskell,
 Mercury or OCaml's)
 and use eager evaluation (like OCaml or Mercury).
 
-<dt>If it is pure, how do you handle effects?  Are there monads?
+<dt id="effects">If it is pure, how do you handle effects?  Are there monads?
 <dd>
 <p>Monads are not used to handle effects as they are in Haskell,
 and unlike Mercury and Clean I do not plan to use uniqueness typing to
@@ -99,25 +99,25 @@ effects.
 <p>Monads are useful and may be supported, but will not be used for
 effects or to the extent that they are in Haskell.
 
-<dt>Does/will it have/support <i>X</i>?</dt>
+<dt id="willitsupport">Does/will it have/support <i>X</i>?</dt>
 <dd>
   <dl>
-    <dt>Threads, channels, mvars, futures and similar?</dt>
+    <dt id="concurrency">Threads, channels, mvars, futures and similar?</dt>
     <dd>Yes, not implemented yet.</dd>
 
-    <dt>Green threads?</dt>
+    <dt id="threadmodel">Green threads?</dt>
     <dd>
     The threading model will be N:M, meaning that greenthreads will be
     used and multiplexed onto native threads.
     </dd>
 
-    <dt>Type classes or parametric modules?</dt>
+    <dt id="interfaces">Type classes or parametric modules?</dt>
     <dd>
     We're working <a href="docs/plasma_ref.html#interfaces">interfaces</a>
     which combine benefits of both type classes and parametric modules.
     </dd>
 
-    <dt>Higher kinded types?</dt>
+    <dt id="hkt">Higher kinded types?</dt>
     <dd>Probably, I think they'll be useful for loops.</dd>
   </dl>
 
@@ -128,7 +128,8 @@ effects or to the extent that they are in Haskell.
 
 </dd>
 
-<dt>What is the intended purpose?  Web programming / scripting / systems?
+<dt id="scripting-web-systems">
+What is the intended purpose?  Web programming / scripting / systems?
 <dd>
 <p>I really don't like these separations.
 A good language with a good implementation should be suitable in many
@@ -136,7 +137,7 @@ environments.
 A more practical question is can a given domain be modeled easily in Plasma?
 Another relevant question is can Plasma be used in a given environment?
 
-<dt>Can a given domain be modeled easily in Plasma?
+<dt id="domain">Can a given domain be modeled easily in Plasma?
 <dd>
 <p>Good question!  I hope that Plasma will be very good at problems of a
 symbolic nature: most non-numeric problems, the kind of problems that
@@ -149,14 +150,15 @@ However are solutions to this that the functional programming world has
 developed,
 they'll just look a bit different if you haven't seen them before.
 
-<dt>Can Plasma be used in a given environment?  (OS support? scalability?)
+<dt id="environment">
+Can Plasma be used in a given environment?  (OS support? scalability?)
 <dd>
 <p>I develop on Mint Linux on x86_64, using Mercury and GCC.
 Occasionally I test using Clang and/or x86.
 Development is at a rather early stage, performance is not relevant at this
 stage, but we are keeping performance and scalability (up and down) in mind.
 
-<dt>Will it have a JavaScript/Ruby/X backend?
+<dt id="backends">Will it have a JavaScript/Ruby/X backend?
 <dd>
 <p>I would prefer to have only a small number of backends to maintain.
 That said I think the following backends would be valuable and I hope to

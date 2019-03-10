@@ -57,6 +57,7 @@ images:
 docs: docs/index.html \
 	docs/C_style.html \
 	docs/Mercury_style.html \
+	docs/bugtracking.html \
 	docs/concept_map.html \
 	docs/grades.html \
 	docs/plasma_ref.html \
@@ -72,6 +73,8 @@ docs/index.txt: ../plasma/docs/index.txt
 docs/C_style.txt: ../plasma/docs/C_style.txt
 	cp $< $@
 docs/Mercury_style.txt: ../plasma/docs/Mercury_style.txt
+	cp $< $@
+docs/bugtracking.txt: ../plasma/docs/bugtracking.txt
 	cp $< $@
 docs/concept_map.txt: ../plasma/docs/concept_map.txt
 	cp $< $@

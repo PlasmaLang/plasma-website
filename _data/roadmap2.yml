@@ -45,17 +45,8 @@
           status: wip
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
-    - name: Prelude or basic libraries
-      status: blocked
     - name: FFI
       status: todo
-    - name: Concurrency and Parallelism
-      status: todo
-      subitems:
-        - name: Lightweight threads
-          status: todo
-        - name: 'Basic concurrent communications (channels, mvars etc)'
-          status: todo
     - name: Language syntax
       status: todo
       subitems:
@@ -63,43 +54,71 @@
           status: wip
         - name: Loops
           status: todo
-    - name: Arrays
-      status: maybe
-    - name: Runtime system improvements
-      status: todo
-      subitems:
-        - name: 'Operations for different data-widths'
-          status: done
-        - name: 'N:M multi-threading'
-          status: todo
-        - name: Basic Garbage Collection
-          status: done
-        - name: 'Subroutine threaded bytecode execution (amd64)'
-          status: maybe
-    - name: More examples
-      status: todo
-- name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Quality nebula</span>)'
-  subitems:
-    - name: 'Type system'
-      status: todo
-      subitems:
-        - name: Interfaces
-          status: todo
-    - name: Language syntax
-      status: todo
-      subitems:
-        - name: Scopes
-          status: todo
         - name: State variable notation
           status: todo
-        - name: Multi-valued expressions
-          status: done
         - name: Partial application
           status: todo
         - name: Deconstruct without case statement
           status: todo
         - name: 'Expression versions of if-then-else and match (w/ multi-values)'
           status: todo
+    - name: Concurrency and Parallelism
+      status: todo
+      subitems:
+        - name: Lightweight threads
+          status: todo
+        - name: 'Basic concurrent communications (channels, mvars etc)'
+          status: todo
+    - name: Arrays
+      status: maybe
+    - name: Prelude or basic libraries
+      status: blocked
+    - name: More examples
+      status: todo
+    - name: Runtime system improvements
+      status: todo
+      subitems:
+        - name: 'Operations for different data-widths'
+          status: done
+        - name: Basic Garbage Collection
+          status: done
+        - name: 'N:M multi-threading'
+          status: todo
+- name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Stella nursery</span>)'
+  subitems:
+    - name: 'Type system'
+      status: todo
+      subitems:
+        - name: Interfaces
+          status: todo
+    - name: Language features
+      status: todo
+      subitems:
+        - name: 'String builtin type'
+          status: todo
+        - name: 'Exceptions/errors'
+          status: todo
+    - name: Language syntax
+      status: todo
+      subitems:
+        - name: Multi-valued expressions
+          status: done
+        - name: Scopes
+          status: todo
         - name: 'Module expressions &amp; module import within code'
           status: todo
+    - name: Libraries
+      status: todo
+      subitems:
+        - name: 'Basic IO Library'
+          status: blocked
+        - name: 'Basic Datastructures Library'
+          status: blocked
+    - name: Runtime system improvements
+      status: todo
+      subitems:
+        - name: 'Improved garbage collection (better heap structure & O(1) allocation)'
+          status: todo
+        - name: 'Subroutine threaded bytecode execution (amd64)'
+          status: maybe
 

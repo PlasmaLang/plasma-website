@@ -1,17 +1,5 @@
-- name: 'Self hosting ready (<span class="codename">Stella nursery</span>)'
-  toplevel: true
-  subitems:
-  - name: 'String builtin type'
-    status: todo
-  - name: 'Exceptions'
-    status: todo
-  - name: 'Basic IO Library'
-    status: blocked
-  - name: 'Basic Datastructures Library'
-    status: blocked
-  - name: '...'
-    status: todo
 - name: 'Bootstraps ("Protostar")'
+  toplevel: true
 - name: 'Features and Optimisations ("T-Tauri")'
   subitems:
   - name: 'Type system improvments'

@@ -56,6 +56,8 @@
           status: todo
         - name: State variable notation
           status: todo
+        - name: Named out parameters
+          status: maybe
         - name: Partial application
           status: todo
         - name: Deconstruct without case statement
@@ -91,6 +93,8 @@
       subitems:
         - name: Interfaces
           status: todo
+        - name: Structurally-typed records
+          status: maybe
     - name: Language features
       status: todo
       subitems:
@@ -107,6 +111,8 @@
           status: todo
         - name: 'Module expressions &amp; module import within code'
           status: todo
+        - name: 'Re-design of bool/truth-ness'
+          status: maybe
     - name: Libraries
       status: todo
       subitems:
@@ -121,4 +127,9 @@
           status: todo
         - name: 'Subroutine threaded bytecode execution (amd64)'
           status: maybe
+    - name: Optimisations
+      status: todo
+      subitems:
+        - name: 'Codegen creates too much stack usage'
+          status: todo
 

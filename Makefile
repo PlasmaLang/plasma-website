@@ -98,7 +98,7 @@ docs/types.txt: ../plasma/docs/types.txt
 
 .PHONY: clean
 clean:
-	rm -rf images _site docs/*.txt docs/*.html
+	rm -rf images _site docs/*.txt docs/*.html Gemfile.lock
 
 .PHONY: upload
 upload: all

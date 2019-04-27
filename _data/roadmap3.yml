@@ -18,10 +18,14 @@
     subitems:
     - name: 'Better pattern matching (multiple matches, guards, nesting etc)'
       status: todo
+      link: https://github.com/PlasmaLang/plasma/issues/125
+      link-label: 'Issue #125'
     - name: 'Field access, update and conditional update'
       status: todo
     - name: 'Early return'
       status: todo
+      link: https://github.com/PlasmaLang/plasma/issues/122
+      link-label: 'Issue #122'
     - name: '...'
       status: todo
   - name: 'More complete resource system'

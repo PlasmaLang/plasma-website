@@ -9,6 +9,9 @@
       <img src="{{site.roadmap_images[navitem.status]}}" alt="Status: {{navitem.status}}"/>
       {% endif %}
       {{navitem.name}}
+      {% if navitem.link %}
+        (<a href="{{navitem.link}}">{{navitem.link-label}}</a>)
+      {% endif %}
     {% if navitem.subitems %}
       {% include /functions/show_roadmap.html roadmap=navitem.subitems %}
     {% endif %}

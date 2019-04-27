@@ -29,6 +29,8 @@
       status: done
     - name: Basic module system
       status: todo
+      link: https://github.com/PlasmaLang/plasma/milestone/3
+      link-label: Modules Issues
     - name: Basic functional features
       status: wip
       subitems:
@@ -36,6 +38,8 @@
           status: done
         - name: 'Lambda expressions &amp; closures'
           status: wip
+          link: https://github.com/PlasmaLang/plasma/milestone/2
+          link-label: Closures issues
     - name: Runtime system
       status: wip
       subitems:
@@ -43,10 +47,14 @@
           status: done
         - name: 'Multi-module bytecode loading'
           status: wip
+          link: https://github.com/PlasmaLang/plasma/issues/158
+          link-label: 'Issue #158'
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
     - name: FFI
       status: todo
+      link: https://github.com/PlasmaLang/plasma/milestone/4
+      link-label: FFI issues
     - name: Language syntax
       status: todo
       subitems:
@@ -62,8 +70,12 @@
           status: todo
         - name: Deconstruct without case statement
           status: todo
+          link: https://github.com/PlasmaLang/plasma/issues/120
+          link-label: 'Issue #120'
         - name: 'Expression versions of if-then-else and match (w/ multi-values)'
           status: todo
+          link: https://github.com/PlasmaLang/plasma/issues/119
+          link-label: 'Issue #119'
     - name: Concurrency and Parallelism
       status: todo
       subitems:
@@ -75,6 +87,8 @@
       status: maybe
     - name: Prelude or basic libraries
       status: blocked
+      link: https://github.com/PlasmaLang/plasma/milestone/5
+      link-label: Standard library issues
     - name: More examples
       status: todo
     - name: Runtime system improvements
@@ -93,6 +107,8 @@
       subitems:
         - name: Interfaces
           status: todo
+          link: https://github.com/PlasmaLang/plasma/issues/72
+          link-label: 'Issue #72'
         - name: Structurally-typed records
           status: maybe
     - name: Language features

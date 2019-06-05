@@ -59,7 +59,7 @@ docs: docs/index.html \
 	docs/Mercury_style.html \
 	docs/bugtracking.html \
 	docs/concept_map.html \
-	docs/design_principals.html \
+	docs/design_principles.html \
 	docs/getting_started.html \
 	docs/grades.html \
 	docs/howto_make_pr.html \
@@ -81,7 +81,7 @@ docs/bugtracking.txt: ../plasma/docs/bugtracking.txt
 	cp $< $@
 docs/concept_map.txt: ../plasma/docs/concept_map.txt
 	cp $< $@
-docs/design_principals.txt: ../plasma/docs/design_principals.txt
+docs/design_principles.txt: ../plasma/docs/design_principles.txt
 	cp $< $@
 docs/getting_started.txt: ../plasma/docs/getting_started.txt
 	cp $< $@

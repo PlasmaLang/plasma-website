@@ -7,7 +7,7 @@ title: Two and a Half Years
 It's been two and a half years since I started work on Plasma.
 With the end of 2017 I noticed that many other language projects were
 publishing retrospectives of their last year.
-Well with one developer progress is a lot slower, so rather than summarise
+Well with one developer progress is a lot slower, so rather than summarising
 the last year,
 I'll write about the whole history!
 
@@ -28,8 +28,7 @@ every six months, at least for the first few 2&ndash;3 milestones.
 
 Initially progress seemed rapid, I was excited and had some close friends
 excited about the project.
-However in 2.5 years I am over half-way through the second milestone,
-less than I expected.
+However, in 2.5 years I am over half-way through the second milestone which is less than I expected.
 
 I published the roadmap to provide a sense of what my goals are to anyone
 reading along or wishing to get involved.
@@ -49,7 +48,7 @@ sometimes.
 Therefore I try to accept that I set myself lofty goals and
 when I evaluate my progress I try to do so against more moderate goals.
 
-If you think this all sounds quiet difficult to live with
+If you think this all sounds quite difficult to live with
 then I'd like to point out that I wouldn't have started Plasma if I was
 already satisfied with my career progress and contributions in the last few
 years.
@@ -78,13 +77,13 @@ resources; allow Plasma to become more expressive.
 The language itself is taking shape.
 Now more than ever I can feel the implementation getting closer to my
 vision.
-Each time I complete a goal I feel excited about the expressibility that the
+Each time I complete a goal I feel excited about the expressiveness that the
 next goal will bring.
 It won't be long (relatively) and Plasma will be ready for some testing. 
 
 Next I'll be adding some more test cases for higher order calls,
 support for closures, lambdas etc.  Then it's time to implement the module
 system and make design decisions about the Prelude/stdlib.
-At that point milestone #2 will be almost complete and its time to encourage
+At that point milestone #2 will be almost complete and it will be time to encourage
 some testing.
 

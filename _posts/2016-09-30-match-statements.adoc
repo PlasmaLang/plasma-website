@@ -39,16 +39,15 @@ rules have been implemented however the error messages will abort
 compilation.  Friendlier errors will be implemented later.
 
 If it is possible that no case matches, and the other cases produce values
-used after the match, then that is also an error.  However until types are
-properly implemented this cannot be implemented.
+used after the match, then that is also an error.  However, until types are
+properly implemented, this cannot be implemented.
 
 Cases may contain a return statement (or otherwise not _fall through_, if
 that happens they do not need to produce any variables.  Currently the
 compiler only supports either all cases falling through, or none falling
-through.  I plan to implement this later, this will probably be implemented
-by transforming the code after the match into a separate function which is
+through.  I plan to implement this later, probably by transforming the code after the match into a separate function which is
 called in the cases that fall through.  This will also have implications for
-type-checking due to the order of compilation passes, so must wait until
+type checking due to the order of compilation passes, so it will have to wait until
 then.
 
 

@@ -2,7 +2,7 @@
   toplevel: true
 - name: 'Features and Optimisations ("T-Tauri")'
   subitems:
-  - name: 'Type system improvments'
+  - name: 'Type system improvements'
     status: todo
     subitems:
     - name: 'Integers of different widths'
@@ -13,7 +13,7 @@
       status: maybe
     - name: 'Uniqueness (for resources)'
       status: todo
-  - name: 'More expressativity'
+  - name: 'More expressiveness'
     status: todo
     subitems:
     - name: 'Better pattern matching (multiple matches, guards, nesting etc)'
@@ -42,7 +42,7 @@
     subitems:
     - name: 'Parallel loops'
       status: blocked
-    - name: 'STM and other concurrency primatives'
+    - name: 'STM and other concurrency primitives'
       status: blocked
   - name: 'Better libraries'
     status: blocked

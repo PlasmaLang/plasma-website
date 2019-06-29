@@ -34,7 +34,7 @@ I'd prefer a language implementation to support this directly in its native
 calling convention (like Prolog or Mercury),
 and not handle it as an optimisation that eliminates the memory allocation
 of the tuple.
-In other words, when there are multiple inputs that is handled directly by
+In other words, when there are multiple inputs that are handled directly by
 the calling convention, which says where to place them in registers and the
 stack.
 I would like the same treatment of output arguments, they should likewise
@@ -62,7 +62,7 @@ func pm(x : Int) -> Int, Int {
 ----
 
 Some examples of things that return multiple results like this are the
-quadratic formula, and integer division (return the quotient and remainder).
+quadratic formula and integer division (return the quotient and remainder).
 Of course there are plenty of situations, particularly with functional
 programming styles, where returning multiple results is common.
 
@@ -82,7 +82,7 @@ In Plasma there is no +void+ symbol like in languages like C.
 Instead a function simply returns no results like +do_pm()+ above..
 
 Later when expression versions of +if+ and +match+ statements are added,
-then those will also support multiple results.
+they will also support multiple results.
 For example:
 
 ----

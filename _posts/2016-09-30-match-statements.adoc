@@ -40,7 +40,7 @@ compilation.  Friendlier errors will be implemented later.
 
 If it is possible that no case matches, and the other cases produce values
 used after the match, then that is also an error.  However, until types are
-properly implemented, this cannot be implemented.
+properly implemented, we can't detect this error.
 
 Cases may contain a return statement (or otherwise not _fall through_, if
 that happens they do not need to produce any variables.  Currently the

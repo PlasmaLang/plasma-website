@@ -27,19 +27,19 @@
           status: done
     - name: Basic resource system
       status: done
+    - name: Basic functional features
+      status: done
+      subitems:
+        - name: Higher order calls
+          status: done
+        - name: 'Closures'
+          status: done 
+          link: https://github.com/PlasmaLang/plasma/issues/52
+          link-label: Basic support for closures
     - name: Basic module system
       status: todo
       link: https://github.com/PlasmaLang/plasma/milestone/3
       link-label: Modules Issues
-    - name: Basic functional features
-      status: wip
-      subitems:
-        - name: Higher order calls
-          status: done
-        - name: 'Lambda expressions &amp; closures'
-          status: wip
-          link: https://github.com/PlasmaLang/plasma/milestone/2
-          link-label: Closures issues
     - name: Runtime system
       status: wip
       subitems:
@@ -49,6 +49,10 @@
           status: wip
           link: https://github.com/PlasmaLang/plasma/issues/158
           link-label: 'Issue #158'
+    - name: Make Plasma easier to use
+      status: todo
+      link: https://github.com/PlasmaLang/plasma/milestone/6
+      link-label: 'Ergonomics issues'
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
     - name: FFI
@@ -66,8 +70,6 @@
           status: todo
         - name: Named out parameters
           status: maybe
-        - name: Partial application
-          status: todo
         - name: Deconstruct without case statement
           status: todo
           link: https://github.com/PlasmaLang/plasma/issues/120
@@ -89,6 +91,17 @@
       status: blocked
       link: https://github.com/PlasmaLang/plasma/milestone/5
       link-label: Standard library issues
+    - name: More functional features
+      status: todo
+      subitems:
+        - name: 'More type inference'
+          status: todo
+          link: https://github.com/PlasmaLang/plasma/issues/124
+          link-label: 'Infer types for functions & closures'
+        - name: 'Lambda expressions, partial application'
+          status: blocked
+          link: https://github.com/PlasmaLang/plasma/milestone/2
+          link-label: Closures and functional features
     - name: More examples
       status: todo
     - name: Runtime system improvements
@@ -96,7 +109,7 @@
       subitems:
         - name: 'Operations for different data-widths'
           status: done
-        - name: Basic Garbage Collection
+        - name: Basic garbage collection
           status: done
         - name: 'N:M multi-threading'
           status: todo

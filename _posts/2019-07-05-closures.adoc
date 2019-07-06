@@ -40,13 +40,15 @@ Which, we admit, was a bit of a pain since it involved
 https://paul.bone.id.au/2018/10/06/pz-calling-conventions/[redoing] a lot of
 earlier work.
 
-We've added a new register to the PZ abstract machine, an "environment"
-register.
+We've added a
+link:/docs/pz_machine.html#_registers[new register]
+to the PZ abstract machine, an "environment" register.
 This register points to an environment structure.  When calling a closure,
 which is the most general call type, the closure provides a code pointer and a
 data pointer.
 As before, the code pointer is loaded into the program counter register,
-and the data pointer is loaded into the environment register.
+and the data pointer is loaded into the environment register
+(link:/docs/pz_machine.html#_calls[call instructions]).
 So that the call can return the previous values of both these registers are
 pushed onto the call stack.
 A new instruction is provided to retrieve the current value of the
@@ -68,6 +70,9 @@ Because supporting closures in this way was an afterthought we have plenty
 of that static information available in the compiler and runtime.
 What we gain by baking closures in like this is flexibility.  Including the
 ability to implement other language features in terms of closures.
+
+We can also optimise the representation of closures, flattening them where
+appropriate.
 
 == What's not done
 

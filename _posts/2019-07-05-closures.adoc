@@ -1,0 +1,107 @@
+---
+layout: post
+author: Paul Bone
+excerpt: Plasma now supports closures 
+keywords: closures, recursion, functional, lambda
+---
+
+Plasma now supports closures.
+Closures are a pretty fundamental thing for any functional language,
+and super convenient for other languages like Python, Lua, JavaScript
+and so on.
+
+Let's see an example
+
+----
+var salutation = "G'day"
+	
+func greet(name : String) uses IO {
+	print!(salutation ++ " " ++ name ++ "\n")
+}
+
+greet!("Paul")
+greet!("Gert")
+----
+
+As you might expect, this program prints:
+
+----
+G'day Paul
+G'day Gert
+----
+
+The +salutation+ is captured (aka closed-over) by the closure.
+
+== How closures are handled
+
+Rather than simply support closures, we went to the effort of backing them
+in fairly deeply.
+Which, we admit, was a bit of a pain since it involved
+https://paul.bone.id.au/2018/10/06/pz-calling-conventions/[redoing] a lot of
+earlier work.
+
+We've added a new register to the PZ abstract machine, an "environment"
+register.
+This register points to an environment structure.  When calling a closure,
+which is the most general call type, the closure provides a code pointer and a
+data pointer.
+As before, the code pointer is loaded into the program counter register,
+and the data pointer is loaded into the environment register.
+So that the call can return the previous values of both these registers are
+pushed onto the call stack.
+A new instruction is provided to retrieve the current value of the
+environment register, then this can be dereferenced to lookup variables in
+that were captured.
+
+== Isn't it inefficient if everything's a closure
+
+A bit, but most cases where things are known statically we can optimise away
+the use of the environment.  If a call is made between two functions that
+are known to share the same environment then that call can be optimised and
+not update the environment register.
+
+While every reference can be found via the environment, including static
+things (see below); the references to statically known things can
+be optimised away, both during compilation and also during module loading.
+
+Because supporting closures in this way was an afterthought we have plenty
+of that static information available in the compiler and runtime.
+What we gain by baking closures in like this is flexibility.  Including the
+ability to implement other language features in terms of closures.
+
+== What's not done
+
+Lambdas and partial application are completely unsupported.  They require
+stronger type inference before we can infer the types of their parameters.
+
+There three other known issues:
+
+ * https://github.com/PlasmaLang/plasma/issues/177[Support for mutually
+   recursive closures].  These need to be represented in deeper parts of the
+   compiler so they can be turned into a set of direct calls.
+ * https://github.com/PlasmaLang/plasma/issues/178[Nested closures].  It
+   crashes.
+ * https://github.com/PlasmaLang/plasma/issues/179[Buggy interaction with
+   the resource system].
+
+It's unfair to say that closures are actually done, but it's time to work on
+something new.
+
+== Anything else?
+
+We also did some refactoring/reengineering, we made the following changes:
+
+ * Code is now allocated in the GC'd heap
+ * All data is now also allocated in the GC'd heap, including static data
+ * A module's entry point is described as a closure, in a sense everything
+   the module may use can be found via that closure.
+
+Why?  This will allow for hot code reloading.  To reload a module we only
+need to load the new code, update any symbol references and optionally
+update any references from other loaded modules (depending on semantics).
+The old version of the code will be reclaimed by the garbage collector after
+there are no-more references to it.
+
+This makes sense for the interpreter.  A native code generator probably won't
+have this feature.
+

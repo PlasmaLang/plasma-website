@@ -34,7 +34,7 @@ The +salutation+ is captured (aka closed-over) by the closure.
 
 == How closures are handled
 
-Rather than simply support closures, we went to the effort of backing them
+Rather than simply support closures, we went to the effort of baking them
 in fairly deeply.
 Which, we admit, was a bit of a pain since it involved
 https://paul.bone.id.au/2018/10/06/pz-calling-conventions/[redoing] a lot of

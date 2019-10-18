@@ -59,6 +59,7 @@ docs: docs/index.html \
 	docs/Mercury_style.html \
 	docs/bugtracking.html \
 	docs/concept_map.html \
+	docs/contributing.html \
 	docs/design_principles.html \
 	docs/getting_started.html \
 	docs/grades.html \
@@ -80,6 +81,8 @@ docs/Mercury_style.txt: ../plasma/docs/Mercury_style.txt
 docs/bugtracking.txt: ../plasma/docs/bugtracking.txt
 	cp $< $@
 docs/concept_map.txt: ../plasma/docs/concept_map.txt
+	cp $< $@
+docs/contributing.txt: ../plasma/docs/contributing.txt
 	cp $< $@
 docs/design_principles.txt: ../plasma/docs/design_principles.txt
 	cp $< $@

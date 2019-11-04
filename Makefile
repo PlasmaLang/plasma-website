@@ -12,10 +12,11 @@ _site : \
 		images/icons/maybe-21.png \
 		images/icons/todo-21.png \
 		images/icons/wip-21.png \
-		images/logo-128.jpeg \
+		images/logo-128.png \
 		images/logo-64.png \
-		images/logo-wide-600.jpeg \
-		images/logotype.jpeg
+		images/logotype-600.png \
+		images/sun-200.png \
+		images/sunt-200.png
 	bundle exec jekyll build
 
 .PHONY : serve
@@ -36,16 +37,18 @@ images/icons/wip-21.png: _images-original/wip.png images/icons
 images/icons/maybe-21.png: _images-original/maybe.png images/icons
 	convert $< -resize 21x21 $@
 
-images/logo-64.png: _images-original/logo.png images
+images/logo-64.png: _images-original/logo-v1.png images
 	convert $< -resize 64x64 $@
 favicon.ico: images/logo-64.png
 	cp $< $@
-images/logo-wide-600.jpeg: _images-original/logotype.png images
-	convert $< -resize 600x160 $@
-images/logo-128.jpeg: _images-original/logo.png images
+images/sun-200.png: _images-original/sun.png images
+	convert $< -resize 200x200 $@
+images/sunt-200.png: _images-original/sunt.png images
+	convert $< -resize 200x200 $@
+images/logotype-600.png: _images-original/logotype-v1.png images
+	convert $< -resize 600x315 $@
+images/logo-128.png: _images-original/logo-v1.png images
 	convert $< -resize 128x128 $@
-images/logotype.jpeg: _images-original/logotype.png images
-	convert $< -resize 900x239 $@
 
 images/icons:
 	mkdir -p $@

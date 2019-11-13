@@ -61,6 +61,7 @@ docs: docs/index.html \
 	docs/C_style.html \
 	docs/Mercury_style.html \
 	docs/bugtracking.html \
+	docs/compiler_internals.html \
 	docs/concept_map.html \
 	docs/contributing.html \
 	docs/design_principles.html \
@@ -82,6 +83,8 @@ docs/C_style.txt: ../plasma/docs/C_style.txt
 docs/Mercury_style.txt: ../plasma/docs/Mercury_style.txt
 	cp $< $@
 docs/bugtracking.txt: ../plasma/docs/bugtracking.txt
+	cp $< $@
+docs/compiler_internals.txt: ../plasma/docs/compiler_internals.txt
 	cp $< $@
 docs/concept_map.txt: ../plasma/docs/concept_map.txt
 	cp $< $@

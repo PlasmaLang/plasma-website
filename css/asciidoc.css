@@ -119,6 +119,15 @@ div.quoteblock, div.verseblock {
   color: #888;
 }
 
+div.quoteblock blockquote {
+  /* Undo formatting from main.css */
+  border-left: none;
+  padding-left: 0;
+  font-size: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
 div.quoteblock > div.attribution {
   padding-top: 0.5em;
   text-align: right;

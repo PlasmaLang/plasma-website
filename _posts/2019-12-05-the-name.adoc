@@ -1,0 +1,30 @@
+---
+layout: post
+author: Paul Bone
+title: The Name
+---
+
+I have revised Plasma's link:about.html[about page] and as part of this I
+have decided to explain why Plasma is called Plasma.
+
+As many followers will know I worked on an automatic parallelisation system
+for Mercury, and intend to implement a similar feature for Plasma.
+
+[quote]
+Just as gases expand to fill their container, Plasma programs (named for the
+fourth state of matter) will flow to utilise modern parallel hardware.
+
+There you have it.
+
+It's true that the better metaphor would be liquid, because I don't want your
+program to actually _increase in volume_ (like a gas or plasma does),
+but just to reach all the cores/SIMD/etc it can.
+I was originally considering a name like liquid or flow,
+but it sounded a little like a bodily function or something was spilt.
+Instead the name Plasma is hot, and that's cool.
+
+I also liked "Plasma' as a nod to the now-dead SISAL language developed at the
+Lawrence Livermore National Laboratory (LLNL)
+whom I had assumed also worked on nuclear fusion (Plasma, get it?).
+However it looks like I was wrong about that.
+

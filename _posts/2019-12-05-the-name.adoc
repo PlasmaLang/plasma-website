@@ -4,7 +4,7 @@ author: Paul Bone
 title: The Name
 ---
 
-I have revised Plasma's link:about.html[about page] and as part of this I
+I have revised Plasma's link:/about.html[about page] and as part of this I
 have decided to explain why Plasma is called Plasma.
 
 As many followers will know I worked on an automatic parallelisation system

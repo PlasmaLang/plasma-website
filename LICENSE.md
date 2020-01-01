@@ -1,5 +1,5 @@
 
-HTML and CSS files are Copyright 2015-2018 Plasma Team, they are available
+HTML and CSS files are Copyright 2015-2020 Plasma Team, they are available
 under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
 International License.
 

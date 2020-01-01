@@ -122,9 +122,13 @@ div.footer-gap {
 }
 
 .footer-heading {
-    font-size: 18px;
+    font-size: 90%;
     margin-bottom: $spacing-unit / 2;
     color: yellow;
+    h2 {
+      font-size: 120%;
+      margin-bottom: 0;
+    }
 }
 
 .contact-list {

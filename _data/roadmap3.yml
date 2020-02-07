@@ -26,6 +26,12 @@
       status: todo
       link: https://github.com/PlasmaLang/plasma/issues/122
       link-label: 'Issue #122'
+    - name: If-without-else
+      status: todo
+      link: https://github.com/PlasmaLang/plasma/issues/123
+      link-label: 'Issue #123 & #183'
+    - name: Spread syntax / varargs / kw-args
+      status: maybe
     - name: '...'
       status: todo
   - name: 'More complete resource system'
@@ -46,6 +52,10 @@
       status: blocked
   - name: 'Better libraries'
     status: blocked
+  - name: PlasmaScript
+    status: Add a weakened form (some code at root level, sha-bang line)
+  - name: PlasmaCore
+    status: Add heardened form (no undefined behaviour, auto parallelism is available)
   - name: '...'
     status: todo
 - name: '1.0 (<span class="codename">Star</span>)'

@@ -136,6 +136,10 @@
       subitems:
         - name: Multi-valued expressions
           status: done
+        - name: Object-method notation 
+          status: maybe
+          link: https://github.com/PlasmaLang/plasma/issues/222
+          link-label: 'Issue #222'
         - name: Scopes
           status: todo
         - name: 'Module expressions &amp; module import within code'
@@ -160,5 +164,5 @@
       status: todo
       subitems:
         - name: 'Codegen creates too much stack usage'
-          status: todo
+          status: wip
 

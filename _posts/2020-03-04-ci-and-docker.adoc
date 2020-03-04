@@ -1,0 +1,55 @@
+---
+layout: post
+author: Paul Bone
+title: CI and docker images
+excerpt: Announcing CI and docker images for developers or evaluation
+keywords: continuous integration,plasma,docker,mercury,debian
+---
+
+# CI and docker images
+
+We have two related announcements today:
+continuous integration on our github repository and a docker image available
+for testing or development.
+
+## Continuous integration
+
+A few times now
+https://github.com/PlasmaLang/plasma/issues/199[people had reported]
+that Plasma wouldn't build with
+Mercury 14.01.1 which is the Mercury version we said we were compatible
+with.
+To prevent this from happening again, and also to ensure we test with
+both gcc and clang C we've
+https://github.com/PlasmaLang/plasma/issues/95[setup continuous integration].
+
+Although now Mercury 14.01.1 is the previous Mercury release since
+https://dl.mercurylang.org/release-20.01/release-notes-20.01.html[20.01]
+and 20.01.1 are now available.
+So Plasma is no-longer compatible with Mercury 14.01.1,
+nevertheless, it's nice to know exactly what it works with at any time.
+
+CI is also used to run an error-checking mode of the garbage collector and
+run with +PZ_DEV+ both defined and undefined.
+
+In the future we'd like to test across different operating systems and CPU
+architectures.
+
+## Docker images
+
+To support CI we made some docker images containing Mercury and other Plasma
+dependencies.  The CI system uses these to perform its builds and tests.
+
+It was a small amount of extra work to build a more general 
+https://github.com/PlasmaLang/plasma/blob/master/scripts/docker/Dockerfile[Dockerfile] 
+(requires other files in the directory) and
+https://hub.docker.com/r/paulbone/plasma-dep[docker image]
+for Plasma development or testing.
+
+This is based on Debian Linux and the Mercury packages for Debian,
+it includes various other tools such as git and vim.
+Vim is configured with syntax highlighting for Mercury and Plasma.
+
+As always, feedback is welcome, file bugs if you find problems or have
+suggestions.
+

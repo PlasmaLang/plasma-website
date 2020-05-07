@@ -1,0 +1,85 @@
+---
+layout: post
+author: Paul Bone
+title: Removing Case Sensitivity
+excerpt: We've made a change to Plasma's syntax, removing any case sensitivity in the syntax.
+keywords: syntax, grammar, case, international, accessibility
+---
+
+We've made 
+https://github.com/PlasmaLang/plasma/issues/66[a change] to Plasma's syntax,
+removing any case sensitivity in the grammar.
+This doesn't mean that identifiers are matched in a case insensitive way
+such as:
+
+----
+var MYVAR = "Hello"
+print!(myvar)
+----
+
+That wouldn't help anyone.
+Instead it means that the concept of case has been removed from the
+language's grammar, so:
+
+----
+type my_type = ...
+----
+
+and
+
+----
+type MyType = ...
+----
+
+are now both legal.
+Previously we required all types to begin with lowercase letters and type
+variables to begin with upper case letters.
+
+Removing this type of case significance is important for people whose
+spoken language does not have case in it's writing system - such as Chinese
+(Mandarin, Cantonese etc) with the largest number of speakers.
+Without this change, they would have been unable to write type names.
+
+Type variables and type names still need to be distinct
+(or add extra syntax like C++ does) to avoid ambiguities in the language.
+We've chosen to use an apostrophe (') to identify type variables as OCaml
+does, like:
+
+----
+type List('x) = Nil
+              | Cons('x, List('x))
+----
+
+This makes type expressions unambiguous.
+But there was also ambiguity within match statements:
+an identifier within a match statement may be a data constructor
+or a new variable.
+Previously data constructors begun with a capital letter,
+like +Nil+ and +Cons+ above;
+and variables with a lower-case letter.
+We've changed Plasma to require the `var` keyword
+to introduce new variables in patterns
+(existing variables can't be used here).
+An identifier without this keyword must now be a data constructor.
+
+----
+func map(f : func('x) -> ('y), l : List('x)) -> List('y) {
+   match (l) {
+      [] ->               { return [] }
+      [var x | var xs] -> { return [f(x) | map(f, xs)] }
+   }
+}
+----
+
+This has the side-benefit of bringing the syntax closer to always
+introducing new variables with the `var` keyword -
+the only time they're not is in function parameter lists.
+
+The new syntax could lead to some longer code lines,
+particularly in pattern matching.
+But we hope that the new inclusive syntax is worth it.
+
+I'll be writing about this in more detail, and with some of the other
+options a language may have on my
+https://paul.bone.id.au/blog/[personal blog].
+

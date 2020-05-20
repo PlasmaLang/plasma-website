@@ -79,7 +79,8 @@ The new syntax could lead to some longer code lines,
 particularly in pattern matching.
 But we hope that the new inclusive syntax is worth it.
 
-I'll be writing about this in more detail, and with some of the other
+*Edit 2020-05-20*:
+I've written about this in more detail, including some of the other
 options a language may have on my
-https://paul.bone.id.au/blog/[personal blog].
+https://paul.bone.id.au/blog/2020/05/20/case-sensitivity-in-grammars/[personal blog].
 

@@ -149,9 +149,17 @@
     - name: Libraries
       status: todo
       subitems:
+        - name: 'Module system improvments'
+          status: blocked
+          link: https://github.com/PlasmaLang/plasma/milestone/13
+          link-label: 'Modules Extras milestone'
         - name: 'Basic IO Library'
           status: blocked
         - name: 'Basic Datastructures Library'
+          status: blocked
+        - name: 'Library management'
+          link: https://github.com/PlasmaLang/plasma/issues/259
+          link-label: 'Issue #259'
           status: blocked
     - name: Runtime system improvements
       status: todo

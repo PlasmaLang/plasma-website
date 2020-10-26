@@ -37,12 +37,11 @@ Its planned features include:
 <h3>Sample</h3>
 <div class="listing">
   <pre><b>func</b> fib(n : Int) -&gt; Int {
-   <b>if</b> (n < 2) {
-      f = 1
+   <b>if</b> (n &lt; 2) {
+      <b>return</b> 1
    } <b>else</b> {
-      f = fib(n-1) + fib(n-2)
+      <b>return</b> fib(n-1) + fib(n-2)
    }
-   <b>return</b> f
 }</pre>
 </div>
 </div>

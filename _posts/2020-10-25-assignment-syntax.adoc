@@ -1,0 +1,201 @@
+---
+layout: post
+author: Paul Bone
+title: Assignment syntax
+excerpt: We've two syntax changes we'd like to introduce 
+keywords: syntax, assignment, statement, expression, if statement, pattern match, deconstruct
+---
+
+= New Syntax for if, match and unpackiing-without-match
+
+These features
+(https://github.com/PlasmaLang/plasma/issues/119[#119]
+and
+https://github.com/PlasmaLang/plasma/issues/120[#120])
+landed back in August,
+but filled with the happiness of completing them
+(and excited to move to the next task)
+it's easy to forget to actually write up a post to celebrate them.
+So while this isn't timely, better late than never?
+
+== Expression versions of If and Match
+
+If and match statements so far have been
+available as statements only:
+
+----
+if (cond) {
+    print!("It's true!\n")
+} else {
+    print!(":-(\n")
+}
+----
+
+
+Plasma has both expressions and statements and we wanted to make these
+available as expressions also
+(https://github.com/PlasmaLang/plasma/issues/119[Bug #119]):
+
+----
+print!(if cond then "It's true!\n"
+               else ":-(\n")
+----
+
+We've also done the same for matches, here's an example match statement:
+
+----
+match (n) {
+    0 -> {
+        return 1
+    }
+    1 -> {
+        return 1
+    }
+    // Any symbols here must be constructor symbols or free variables.
+    var m -> {
+        return fib4(m-1) + fib4(m-2)
+    }
+}
+----
+
+Can now be written as an expression:
+
+----
+return match (n) {
+    0 -> 1
+    1 -> 1
+    // Any symbols here must be constructor symbols or free variables.
+    var m -> fib6(m-1) + fib6(m-2)
+}
+----
+
+Of course as a Plasma programmer you're likely to use both syntaxes.  The
+statement oriented syntax works very nicely when a statement is more complex
+and/or binds multiple variables.
+You're also going to need to use the statement variants when different
+branches
+https://plasmalang.org/docs/plasma_ref.html#_resources[use or observe
+different resources].
+
+== Deconstruction without pattern matching
+
+The other new syntax added was in
+https://github.com/PlasmaLang/plasma/issues/120[Bug #120] and allows the
+deconstruction of a structure without use of a match statement.
+
+----
+Foo(var v1, var v2) = <expr>
+----
+
+is now valid syntax and is equivalent to:
+
+----
+var v1, var v2
+match(<expr>) {
+    case Foo(var v1a, var v2a) -> {
+        v1 = v1a
+        v2 = v2a
+    }
+}
+----
+
+You can see why we had to add this new syntax.
+
+There are two interesting things here.  This only works when the
+deconstruction is guaranteed to succeed, that is the expression's type has
+only a single data constructor.
+We may relax this in the future and allow it in cases where there are
+multiple constructors but we already know which one is bound or maybe even
+in the condition of an if statement which would allow a kind of _test_ to
+occur.
+But those are ideas for the medium-term future.
+
+The other interesting thing is that we've had to change the use of the +var+
+keyword somewhat.
+Rather than introducing a variable declaration:
+
+----
+var v1, v2, v3
+----
+
+Which would declare all three vars, we now require the var keyword in front
+of each new variable:
+
+----
+var v1, var v2, var v3
+----
+
+But even that doesn't make sense when there's no +=+ symbol with a
+right-hand-side.
+We prefer (and the parser is limited to):
+
+----
+var v1
+var v2
+var v3
+----
+
+The former syntax is okay when:
+
+----
+var v1, var v2, var v3 = <expr>
+----
+
++<expr>+ is an expression with "arity 3" (it has 3 results) and can therefore
+bind 3 fresh variables here.
+
+Recall that the +var+ keyword is used to introduced fresh variables, so
+this also works:
+
+----
+var v1
+var v2
+var v3
+v1, v2, v3 = <expr>
+----
+
+Introducing variables ahead of their use is required when they're bound
+differently on different branches:
+
+----
+var x
+var y
+if (...) {
+    Point(x, y) = getPoint(...)
+} else {
+    x = 0
+    y = 0
+}
+----
+
+Of course, using an if _expression_ this could just be written in two lines:
+
+----
+var x, var y = if (...) then getPoint(...)
+                        else 0, 0
+----
+
+This works because if and case expressions can also have any arity, in this
+case they have arity 2.
+
+== The point of syntax
+
+Why bother working on syntax improvements when Plasma is still under such
+heavy early development, isn't that the kind of improvement you make later
+after some kind of "minimal viable product"?
+Also isn't it hard to _iterate_ on syntax when as yet no-one has any _real
+world_ experience with Plasma?
+
+It seems like we can make an exception in these cases because:
+
+ * It makes it easier for me to write tests, meaning the new syntax is good.
+ * It feels like these are both improvements.
+ * Users will now have some more flexibility in how they write their code
+   (we didn't take away much old syntax).
+ * I was always confident I wanted to add both these changes,
+   what was unclear was the details.
+ * It's fun.
+
+.P.S.
+I've also updated the example on Plasma's front page!
+

@@ -78,6 +78,13 @@
           status: done
           link: https://github.com/PlasmaLang/plasma/issues/119
           link-label: 'Issue #119'
+    - name: Resource system
+      status: todo
+      subitems:
+        - name: Scope syntax
+          status: todo
+        - name: Resource escape analysis
+          status: todo
     - name: Concurrency and Parallelism
       status: todo
       subitems:

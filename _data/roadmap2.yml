@@ -37,16 +37,16 @@
           link: https://github.com/PlasmaLang/plasma/issues/52
           link-label: Basic support for closures
     - name: Basic module system
-      status: todo
+      status: wip
       link: https://github.com/PlasmaLang/plasma/milestone/3
       link-label: Modules Issues
     - name: Runtime system
-      status: wip
+      status: done
       subitems:
         - name: 'Environments (for closures at runtime)'
           status: done
         - name: 'Multi-module bytecode loading'
-          status: wip
+          status: done
           link: https://github.com/PlasmaLang/plasma/issues/158
           link-label: 'Issue #158'
     - name: Make Plasma easier to use
@@ -71,11 +71,11 @@
         - name: Named out parameters
           status: maybe
         - name: Deconstruct without case statement
-          status: todo
+          status: done
           link: https://github.com/PlasmaLang/plasma/issues/120
           link-label: 'Issue #120'
         - name: 'Expression versions of if-then-else and match (w/ multi-values)'
-          status: todo
+          status: done
           link: https://github.com/PlasmaLang/plasma/issues/119
           link-label: 'Issue #119'
     - name: Concurrency and Parallelism

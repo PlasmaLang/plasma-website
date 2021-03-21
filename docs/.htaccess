@@ -1,0 +1,14 @@
+
+RewriteBase /docs/
+RewriteRule ^concept_map.html$          design_concept_map.html     [R=303,L]
+RewriteRule ^ideas.html$                design_ideas.html           [R=303,L]
+RewriteRule ^types.html$                design_types.html           [R=303,L]
+RewriteRule ^bugtracking.html$          dev_bugtracking.html        [R=303,L]
+RewriteRule ^compiler_internals.html$   dev_compiler_internals.html [R=303,L]
+RewriteRule ^howto_make_pr.html$        dev_howto_make_pr.html      [R=303,L]
+RewriteRule ^maintainers.html$          dev_maintainers.html        [R=303,L]
+RewriteRule ^C_style.html$              dev_style_c.html            [R=303,L]
+RewriteRule ^Mercury_style.html$        dev_style_mercury.html      [R=303,L]
+RewriteRule ^grades.html$               notes_grades.html           [R=303,L]
+RewriteRule ^references.html$           notes_references.html       [R=303,L]
+

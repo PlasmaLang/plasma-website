@@ -9,6 +9,7 @@ RewriteRule ^howto_make_pr.html$        dev_howto_make_pr.html      [R=303,L]
 RewriteRule ^maintainers.html$          dev_maintainers.html        [R=303,L]
 RewriteRule ^C_style.html$              dev_style_c.html            [R=303,L]
 RewriteRule ^Mercury_style.html$        dev_style_mercury.html      [R=303,L]
-RewriteRule ^grades.html$               notes_grades.html           [R=303,L]
-RewriteRule ^references.html$           notes_references.html       [R=303,L]
+RewriteRule ^grades.html$               dev_mercury_grades.html     [R=303,L]
+
+RewriteBase ^pz_format.html$ https://github.com/PlasmaLang/plasma/blob/master/runtime/pz_format.h [R=303,L]
 

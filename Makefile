@@ -75,7 +75,39 @@ docs: docs/index.html \
 	docs/design_ideas.html \
 	docs/pz_machine.html
 
-docs/%.txt: ../plasma/docs/%.txt
+docs/index.txt : ../plasma/docs/index.txt 
+	cp $< $@
+docs/getting_started.txt : ../plasma/docs/getting_started.txt 
+	cp $< $@
+docs/plasma_ref.txt : ../plasma/docs/plasma_ref.txt 
+	cp $< $@
+docs/contributing.txt : ../plasma/docs/contributing.txt 
+	cp $< $@
+docs/references.txt : ../plasma/docs/references.txt 
+	cp $< $@
+docs/dev_howto_make_pr.txt : ../plasma/docs/dev_howto_make_pr.txt 
+	cp $< $@
+docs/dev_compiler_internals.txt : ../plasma/docs/dev_compiler_internals.txt 
+	cp $< $@
+docs/dev_style_mercury.txt : ../plasma/docs/dev_style_mercury.txt 
+	cp $< $@
+docs/dev_style_c.txt : ../plasma/docs/dev_style_c.txt 
+	cp $< $@
+docs/dev_mercury_grades.txt : ../plasma/docs/dev_mercury_grades.txt 
+	cp $< $@
+docs/dev_maintainers.txt : ../plasma/docs/dev_maintainers.txt 
+	cp $< $@
+docs/dev_bugtracking.txt : ../plasma/docs/dev_bugtracking.txt 
+	cp $< $@
+docs/design_principles.txt : ../plasma/docs/design_principles.txt 
+	cp $< $@
+docs/design_concept_map.txt : ../plasma/docs/design_concept_map.txt 
+	cp $< $@
+docs/design_types.txt : ../plasma/docs/design_types.txt 
+	cp $< $@
+docs/design_ideas.txt : ../plasma/docs/design_ideas.txt 
+	cp $< $@
+docs/pz_machine.txt: ../plasma/docs/pz_machine.txt
 	cp $< $@
 
 %.html : %.txt docs/_asciidoc.conf

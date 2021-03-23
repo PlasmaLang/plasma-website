@@ -11,5 +11,5 @@ RewriteRule ^C_style.html$              dev_style_c.html            [R=303,L]
 RewriteRule ^Mercury_style.html$        dev_style_mercury.html      [R=303,L]
 RewriteRule ^grades.html$               dev_mercury_grades.html     [R=303,L]
 
-RewriteBase ^pz_format.html$ https://github.com/PlasmaLang/plasma/blob/master/runtime/pz_format.h [R=303,L]
+Redirect 303 ^pz_format.html$ https://github.com/PlasmaLang/plasma/blob/master/runtime/pz_format.h
 

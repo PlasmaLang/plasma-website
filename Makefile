@@ -59,6 +59,7 @@ images:
 .PHONY: docs
 docs: docs/index.html \
 	docs/getting_started.html \
+	docs/user_guide.html \
 	docs/plasma_ref.html \
 	docs/contributing.html \
 	docs/references.html \
@@ -78,6 +79,8 @@ docs: docs/index.html \
 docs/index.txt : ../plasma/docs/index.txt 
 	cp $< $@
 docs/getting_started.txt : ../plasma/docs/getting_started.txt 
+	cp $< $@
+docs/user_guide.txt : ../plasma/docs/user_guide.txt 
 	cp $< $@
 docs/plasma_ref.txt : ../plasma/docs/plasma_ref.txt 
 	cp $< $@

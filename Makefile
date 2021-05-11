@@ -23,8 +23,8 @@ _site : \
 serve : _site
 	bundle exec jekyll serve --drafts
 
-_vendor : Gemfile
-	bundle install --path _vendor/bundle
+_vendor : Gemfile Gemfile.lock
+	bundle install
 
 images/icons/todo-21.png: _images-original/todo.png images/icons
 	convert $< -resize 21x21 $@

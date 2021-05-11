@@ -118,7 +118,7 @@ docs/pz_machine.txt: ../plasma/docs/pz_machine.txt
 
 .PHONY: clean
 clean:
-	rm -rf images _site docs/*.txt docs/*.html Gemfile.lock
+	rm -rf images _site docs/*.txt docs/*.html _vendor
 
 .PHONY: upload
 upload: all

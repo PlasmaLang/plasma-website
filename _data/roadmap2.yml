@@ -51,13 +51,13 @@
           link-label: 'Issue #158'
     - name: Make Plasma easier to use
       status: TODO
-      link: https://github.com/PlasmaLang/plasma/milestone/6
+      link: https://github.com/PlasmaLang/plasma/projects/4
       link-label: 'Ergonomics issues'
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
     - name: FFI
       status: TODO
-      link: https://github.com/PlasmaLang/plasma/milestone/4
+      link: https://github.com/PlasmaLang/plasma/projects/3
       link-label: FFI issues
     - name: Language syntax
       status: TODO

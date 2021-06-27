@@ -52,10 +52,10 @@
       status: blocked
   - name: 'Better libraries'
     status: blocked
-  - name: PlasmaScript
-    status: Add a weakened form (some code at root level, sha-bang line)
-  - name: PlasmaCore
-    status: Add heardened form (no undefined behaviour, auto parallelism is available)
+  - name: 'PlasmaScript (weakened form: some code at root level, sha-bang line)'
+    status: TODO 
+  - name: 'PlasmaCore (heardened form: no undefined behaviour, auto parallelism is available)'
+    status: TODO
   - name: '...'
     status: TODO
 - name: '1.0 (<span class="codename">Star</span>)'

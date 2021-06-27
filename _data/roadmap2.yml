@@ -37,7 +37,7 @@
           link: https://github.com/PlasmaLang/plasma/issues/52
           link-label: Basic support for closures
     - name: Basic module system
-      status: wip
+      status: WIP
       link: https://github.com/PlasmaLang/plasma/milestone/3
       link-label: Modules Issues
     - name: Runtime system
@@ -50,24 +50,24 @@
           link: https://github.com/PlasmaLang/plasma/issues/158
           link-label: 'Issue #158'
     - name: Make Plasma easier to use
-      status: todo
+      status: TODO
       link: https://github.com/PlasmaLang/plasma/milestone/6
       link-label: 'Ergonomics issues'
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
     - name: FFI
-      status: todo
+      status: TODO
       link: https://github.com/PlasmaLang/plasma/milestone/4
       link-label: FFI issues
     - name: Language syntax
-      status: todo
+      status: TODO
       subitems:
         - name: 'Syntax for lists, dicts etc'
-          status: wip
+          status: WIP
         - name: Loops
-          status: todo
+          status: TODO
         - name: State variable notation
-          status: todo
+          status: TODO
         - name: Named out parameters
           status: maybe
         - name: Deconstruct without case statement
@@ -79,19 +79,19 @@
           link: https://github.com/PlasmaLang/plasma/issues/119
           link-label: 'Issue #119'
     - name: Resource system
-      status: todo
+      status: TODO
       subitems:
         - name: Scope syntax
-          status: todo
+          status: TODO
         - name: Resource escape analysis
-          status: todo
+          status: TODO
     - name: Concurrency and Parallelism
-      status: todo
+      status: TODO
       subitems:
         - name: Lightweight threads
-          status: todo
+          status: TODO
         - name: 'Basic concurrent communications (channels, mvars etc)'
-          status: todo
+          status: TODO
     - name: Arrays
       status: maybe
     - name: Prelude or basic libraries
@@ -99,10 +99,10 @@
       link: https://github.com/PlasmaLang/plasma/milestone/5
       link-label: Standard library issues
     - name: More functional features
-      status: todo
+      status: TODO
       subitems:
         - name: 'More type inference'
-          status: todo
+          status: TODO
           link: https://github.com/PlasmaLang/plasma/issues/124
           link-label: 'Infer types for functions & closures'
         - name: 'Lambda expressions, partial application'
@@ -110,36 +110,36 @@
           link: https://github.com/PlasmaLang/plasma/milestone/2
           link-label: Closures and functional features
     - name: More examples
-      status: todo
+      status: TODO
     - name: Runtime system improvements
-      status: todo
+      status: TODO
       subitems:
         - name: 'Operations for different data-widths'
           status: done
         - name: Basic garbage collection
           status: done
         - name: 'N:M multi-threading'
-          status: todo
+          status: TODO
 - name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Stella nursery</span>)'
   subitems:
     - name: 'Type system'
-      status: todo
+      status: TODO
       subitems:
         - name: Interfaces
-          status: todo
+          status: TODO
           link: https://github.com/PlasmaLang/plasma/issues/72
           link-label: 'Issue #72'
         - name: Structurally-typed records
           status: maybe
     - name: Language features
-      status: todo
+      status: TODO
       subitems:
         - name: 'String builtin type'
-          status: todo
+          status: TODO
         - name: 'Exceptions/errors'
-          status: todo
+          status: TODO
     - name: Language syntax
-      status: todo
+      status: TODO
       subitems:
         - name: Multi-valued expressions
           status: done
@@ -148,13 +148,13 @@
           link: https://github.com/PlasmaLang/plasma/issues/222
           link-label: 'Issue #222'
         - name: Scopes
-          status: todo
+          status: TODO
         - name: 'Module expressions &amp; module import within code'
-          status: todo
+          status: TODO
         - name: 'Re-design of bool/truth-ness'
           status: maybe
     - name: Libraries
-      status: todo
+      status: TODO
       subitems:
         - name: 'Module system improvments'
           status: blocked
@@ -169,15 +169,15 @@
           link-label: 'Issue #259'
           status: blocked
     - name: Runtime system improvements
-      status: todo
+      status: TODO
       subitems:
         - name: 'Improved garbage collection (better heap structure & O(1) allocation)'
-          status: todo
+          status: TODO
         - name: 'Subroutine threaded bytecode execution (amd64)'
           status: maybe
     - name: Optimisations
-      status: todo
+      status: TODO
       subitems:
         - name: 'Codegen creates too much stack usage'
-          status: wip
+          status: WIP
 

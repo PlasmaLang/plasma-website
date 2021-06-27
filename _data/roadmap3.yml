@@ -3,44 +3,44 @@
 - name: 'Features and Optimisations ("T-Tauri")'
   subitems:
   - name: 'Type system improvements'
-    status: todo
+    status: TODO
     subitems:
     - name: 'Integers of different widths'
-      status: todo
+      status: TODO
     - name: 'Arrays'
-      status: todo
+      status: TODO
     - name: 'HKTs'
       status: maybe
     - name: 'Uniqueness (for resources)'
-      status: todo
+      status: TODO
   - name: 'More expressiveness'
-    status: todo
+    status: TODO
     subitems:
     - name: 'Better pattern matching (multiple matches, guards, nesting etc)'
-      status: todo
+      status: TODO
       link: https://github.com/PlasmaLang/plasma/issues/125
       link-label: 'Issue #125'
     - name: 'Field access, update and conditional update'
-      status: todo
+      status: TODO
     - name: 'Early return'
-      status: todo
+      status: TODO
       link: https://github.com/PlasmaLang/plasma/issues/122
       link-label: 'Issue #122'
     - name: If-without-else
-      status: todo
+      status: TODO
       link: https://github.com/PlasmaLang/plasma/issues/123
       link-label: 'Issue #123 & #183'
     - name: Spread syntax / varargs / kw-args
       status: maybe
     - name: '...'
-      status: todo
+      status: TODO
   - name: 'More complete resource system'
-    status: todo
+    status: TODO
   - name: 'Runtime system improvements'
     status: blocked
     subitems:
       - name: 'Subroutine threaded bytecode execution (amd64)'
-        status: todo
+        status: TODO
   - name: 'Basic Optimisations'
     status: blocked
   - name: 'More Parallelism and Concurrency'
@@ -57,7 +57,7 @@
   - name: PlasmaCore
     status: Add heardened form (no undefined behaviour, auto parallelism is available)
   - name: '...'
-    status: todo
+    status: TODO
 - name: '1.0 (<span class="codename">Star</span>)'
   subitems:
   - name: 'Bug fixing'
@@ -67,7 +67,7 @@
   - name: 'Polishing off rough edges (TBA)'
     status: blocked
   - name: '...'
-    status: todo
+    status: TODO
 - name: 'Future'
   subitems:
   - name: 'Optimisations'

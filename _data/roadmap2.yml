@@ -57,21 +57,28 @@
   subitems:
     - name: FFI
       status: TODO
-      link: https://github.com/PlasmaLang/plasma/projects/3
-      link-label: FFI issues
+      subitems:
+        - name: 'String & character support (basic unicode support)'
+          status: TODO
+        - name: 'C FFI'
+          status: TODO
+          link: https://github.com/PlasmaLang/plasma/projects/3
+          link-label: FFI issues
     - name: Language syntax
       status: TODO
       subitems:
-        - name: 'Syntax for lists, dicts etc'
-          status: WIP
-        - name: Loops
+        - name: Deconstruct without case statement
+          status: done
+        - name: For loops
           status: TODO
+        - name: While loops
+          status: maybe
         - name: State variable notation
           status: TODO
         - name: Named out parameters
           status: maybe
-        - name: Deconstruct without case statement
-          status: done
+        - name: 'Syntax for lists, dicts etc'
+          status: WIP
           link: https://github.com/PlasmaLang/plasma/issues/120
           link-label: 'Issue #120'
         - name: 'Expression versions of if-then-else and match (w/ multi-values)'
@@ -134,8 +141,6 @@
     - name: Language features
       status: TODO
       subitems:
-        - name: 'String builtin type'
-          status: TODO
         - name: 'Exceptions/errors'
           status: TODO
     - name: Language syntax

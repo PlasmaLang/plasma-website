@@ -6,7 +6,7 @@
   {% for navitem in include.roadmap %}
     <li class="status-{{navitem.status | default: todo}}">
       {% if navitem.status %}
-      <img src="{{site.roadmap_images[navitem.status]}}" alt="Status: {{navitem.status}}"/>
+      <img src="{{site.roadmap_images[navitem.status]}}" alt="{{navitem.status}}"/>
       {% endif %}
       {{navitem.name}}
       {% if navitem.link %}

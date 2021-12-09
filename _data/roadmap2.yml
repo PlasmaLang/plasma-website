@@ -56,12 +56,14 @@
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
   subitems:
     - name: FFI
-      status: TODO
+      status: WIP
       subitems:
         - name: 'String & character support (basic unicode support)'
-          status: TODO
+          link: https://github.com/PlasmaLang/plasma/projects/5
+          link-label: Text handling issues
+          status: WIP
         - name: 'C FFI'
-          status: TODO
+          status: WIP
           link: https://github.com/PlasmaLang/plasma/projects/3
           link-label: FFI issues
     - name: Language syntax
@@ -85,12 +87,18 @@
           status: done
           link: https://github.com/PlasmaLang/plasma/issues/119
           link-label: 'Issue #119'
+        - name: Truthy statements
+          status: TODO
     - name: Resource system
       status: TODO
       subitems:
         - name: Scope syntax
           status: TODO
+          link: https://github.com/PlasmaLang/plasma/issues/418
+          link-label: 'Issue #418'
         - name: Resource escape analysis
+          status: TODO
+        - name: Resource lifetimes
           status: TODO
     - name: Concurrency and Parallelism
       status: TODO

@@ -60,7 +60,7 @@
       subitems:
         - name: 'String & character support (basic unicode support)'
           link: https://github.com/PlasmaLang/plasma/projects/5
-          link-label: Text handling issues
+          link-label: Github project
           status: WIP
         - name: 'C FFI'
           status: WIP
@@ -91,13 +91,17 @@
           status: TODO
           link: https://github.com/PlasmaLang/plasma/issues/120
           link-label: 'Issue #120'
+        - name: Other language groundwork
+          status: WIP
+          link: https://github.com/PlasmaLang/plasma/milestone/8
+          link-label: Github milestone
     - name: 'Type system'
       status: TODO
       subitems:
         - name: Interfaces
           status: TODO
-          link: https://github.com/PlasmaLang/plasma/issues/72
-          link-label: 'Issue #72'
+          link: https://github.com/PlasmaLang/plasma/milestone/17
+          link-label: Github milestone 
     - name: Resource system
       status: TODO
       subitems:
@@ -122,8 +126,25 @@
       status: blocked
       link: https://github.com/PlasmaLang/plasma/milestone/5
       link-label: Standard library issues
+    - name: Ergonomics (Nebula)
+      status: TODO
+      link: https://github.com/PlasmaLang/plasma/milestone/18
+      link-label: Github milestone
     - name: More examples
       status: TODO
+      link: https://github.com/PlasmaLang/plasma/issues/304
+      link-label: Github issue
+    - name: Maintenance
+      status: TODO
+      subitems:
+        - name: C++ification of Runtime
+          status: WIP
+          link: https://github.com/PlasmaLang/plasma/milestone/10
+          link-label: 'Github milestone'
+        - name: Testing and CI
+          status: TODO
+          link: https://github.com/PlasmaLang/plasma/milestone/16
+          link-label: 'Github milestone'
 - name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Stella nursery</span>)'
   subitems:
     - name: More functional features
@@ -169,10 +190,6 @@
     - name: Libraries
       status: TODO
       subitems:
-        - name: 'Module system improvments'
-          status: blocked
-          link: https://github.com/PlasmaLang/plasma/milestone/13
-          link-label: 'Modules Extras milestone'
         - name: 'Basic IO Library'
           status: blocked
         - name: 'Basic Datastructures Library'
@@ -181,6 +198,10 @@
           link: https://github.com/PlasmaLang/plasma/issues/259
           link-label: 'Issue #259'
           status: blocked
+    - name: 'Module system improvments'
+      status: blocked
+      link: https://github.com/PlasmaLang/plasma/milestone/13
+      link-label: 'Modules Extras milestone'
     - name: Runtime system improvements
       status: TODO
       subitems:

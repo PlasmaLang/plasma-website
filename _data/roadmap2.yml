@@ -53,7 +53,7 @@
       status: WIP
       link: https://github.com/PlasmaLang/plasma/projects/4
       link-label: 'Ergonomics issues'
-- name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
+- name: 'Make it useful (<span class="codename">Nebula</span>)'
   subitems:
     - name: FFI
       status: WIP
@@ -84,13 +84,9 @@
         - name: While loops
           status: TODO 
         - name: State variable notation
-          status: TODO
+          status: maybe
         - name: Named out parameters
           status: maybe
-        - name: 'Syntax for dictionaries and other structures'
-          status: TODO
-          link: https://github.com/PlasmaLang/plasma/issues/120
-          link-label: 'Issue #120'
         - name: Other language groundwork
           status: WIP
           link: https://github.com/PlasmaLang/plasma/milestone/8
@@ -102,6 +98,32 @@
           status: TODO
           link: https://github.com/PlasmaLang/plasma/milestone/17
           link-label: Github milestone 
+    - name: Arrays
+      status: maybe
+    - name: Prelude or basic libraries
+      status: blocked
+      link: https://github.com/PlasmaLang/plasma/milestone/5
+      link-label: Standard library issues
+    - name: Maintenance
+      status: TODO
+      subitems:
+        - name: C++ification of Runtime
+          status: WIP
+          link: https://github.com/PlasmaLang/plasma/milestone/10
+          link-label: 'Github milestone'
+        - name: Testing and CI
+          status: TODO
+          link: https://github.com/PlasmaLang/plasma/milestone/16
+          link-label: 'Github milestone'
+- name: 'Make it fun (<span class="codename">Cloud</span>)'
+  subitems:
+    - name: Language syntax
+      status: TODO
+      subitems:
+        - name: 'Syntax for dictionaries and other structures'
+          status: TODO
+          link: https://github.com/PlasmaLang/plasma/issues/120
+          link-label: 'Issue #120'
     - name: Resource system
       status: TODO
       subitems:
@@ -120,35 +142,18 @@
           status: TODO
         - name: 'Basic concurrent communications (channels, mvars etc)'
           status: TODO
-    - name: Arrays
-      status: maybe
-    - name: Prelude or basic libraries
-      status: blocked
-      link: https://github.com/PlasmaLang/plasma/milestone/5
-      link-label: Standard library issues
-    - name: Ergonomics (Nebula)
-      status: TODO
-      link: https://github.com/PlasmaLang/plasma/milestone/18
-      link-label: Github milestone
     - name: More examples
       status: TODO
       link: https://github.com/PlasmaLang/plasma/issues/304
       link-label: Github issue
-    - name: Maintenance
+    - name: Ergonomics (Nebula)
       status: TODO
-      subitems:
-        - name: C++ification of Runtime
-          status: WIP
-          link: https://github.com/PlasmaLang/plasma/milestone/10
-          link-label: 'Github milestone'
-        - name: Testing and CI
-          status: TODO
-          link: https://github.com/PlasmaLang/plasma/milestone/16
-          link-label: 'Github milestone'
-        - name: Ease of development
-          status: WIP
-          link: https://github.com/PlasmaLang/plasma/milestone/9
-          link-label: Github milestone
+      link: https://github.com/PlasmaLang/plasma/milestone/18
+      link-label: Github milestone
+    - name: Ease of development
+      status: WIP
+      link: https://github.com/PlasmaLang/plasma/milestone/9
+      link-label: Github milestone
 - name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Stella nursery</span>)'
   subitems:
     - name: More functional features

@@ -50,7 +50,7 @@
           link: https://github.com/PlasmaLang/plasma/issues/158
           link-label: 'Issue #158'
     - name: Make Plasma easier to use
-      status: TODO
+      status: WIP
       link: https://github.com/PlasmaLang/plasma/projects/4
       link-label: 'Ergonomics issues'
 - name: 'Concurrency and Parallelism (<span class="codename">Nebula</span>)'
@@ -145,6 +145,10 @@
           status: TODO
           link: https://github.com/PlasmaLang/plasma/milestone/16
           link-label: 'Github milestone'
+        - name: Ease of development
+          status: WIP
+          link: https://github.com/PlasmaLang/plasma/milestone/9
+          link-label: Github milestone
 - name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Stella nursery</span>)'
   subitems:
     - name: More functional features

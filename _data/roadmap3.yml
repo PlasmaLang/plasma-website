@@ -7,8 +7,6 @@
     subitems:
     - name: 'Integers of different widths'
       status: TODO
-    - name: 'Arrays'
-      status: TODO
     - name: 'HKTs'
       status: maybe
     - name: 'Uniqueness (for resources)'

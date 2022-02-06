@@ -44,8 +44,6 @@
           status: TODO
           link: https://github.com/PlasmaLang/plasma/milestone/17
           link-label: Github milestone 
-    - name: Arrays
-      status: maybe
     - name: Prelude or basic libraries
       status: blocked
       link: https://github.com/PlasmaLang/plasma/milestone/5
@@ -63,13 +61,15 @@
           link-label: 'Github milestone'
 - name: 'Make it fun (<span class="codename">Cloud</span>)'
   subitems:
-    - name: Language syntax
+    - name: Language features
       status: TODO
       subitems:
         - name: 'Syntax for dictionaries and other structures'
           status: TODO
           link: https://github.com/PlasmaLang/plasma/issues/120
           link-label: 'Issue #120'
+        - name: Arrays
+          status: TODO
     - name: Resource system
       status: TODO
       subitems:
@@ -107,42 +107,40 @@
   subitems:
     - name: More functional features
       status: TODO
+      link: https://github.com/PlasmaLang/plasma/milestone/2
+      link-label: Closures and functional features
       subitems:
-        - name: 'More type inference'
+        - name: Lambda expressions
           status: TODO
-          link: https://github.com/PlasmaLang/plasma/issues/124
-          link-label: 'Infer types for functions & closures'
-        - name: 'Lambda expressions, partial application'
-          status: blocked
-          link: https://github.com/PlasmaLang/plasma/milestone/2
-          link-label: Closures and functional features
+        - name: Partial application'
+          status: TODO
     - name: Runtime system improvements
       status: TODO
       subitems:
         - name: 'Operations for different data-widths'
           status: done
-        - name: Basic garbage collection
-          status: done
         - name: 'N:M multi-threading'
           status: TODO
-    - name: Structurally-typed records
-      status: maybe
+    - name: Type system
+      status: TODO
+      subitems:
+       - name: 'More type inference'
+         status: TODO
+         link: https://github.com/PlasmaLang/plasma/issues/124
+         link-label: 'Infer types for functions & closures'
+       - name: Structurally-typed records
+         status: maybe
     - name: Language features
       status: TODO
       subitems:
         - name: 'Exceptions/errors'
           status: TODO
-    - name: Language syntax
-      status: TODO
-      subitems:
         - name: Multi-valued expressions
           status: done
         - name: Object-method notation 
           status: maybe
           link: https://github.com/PlasmaLang/plasma/issues/222
           link-label: 'Issue #222'
-        - name: Scopes
-          status: TODO
         - name: 'Module expressions &amp; module import within code'
           status: TODO
     - name: Libraries (requires concurrency)
@@ -156,13 +154,6 @@
       status: blocked
       link: https://github.com/PlasmaLang/plasma/milestone/13
       link-label: 'Modules Extras milestone'
-    - name: Runtime system improvements
-      status: TODO
-      subitems:
-        - name: 'Improved garbage collection (better heap structure & O(1) allocation)'
-          status: TODO
-        - name: 'Subroutine threaded bytecode execution (amd64)'
-          status: maybe
     - name: Optimisations
       status: TODO
       subitems:
@@ -170,4 +161,8 @@
           status: WIP
           link: https://github.com/PlasmaLang/plasma/milestone/15
           link-label: 'Code generation tasks'
+        - name: 'Improved garbage collection (better heap structure & O(1) allocation)'
+          status: TODO
+        - name: 'Subroutine threaded bytecode execution (amd64)'
+          status: maybe
 

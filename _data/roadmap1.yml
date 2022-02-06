@@ -70,6 +70,8 @@
           status: done
           link: https://github.com/PlasmaLang/plasma/issues/158
           link-label: 'Issue #158'
+        - name: Basic garbage collection
+          status: done
     - name: Make Plasma easier to use
       status: WIP
       link: https://github.com/PlasmaLang/plasma/projects/4

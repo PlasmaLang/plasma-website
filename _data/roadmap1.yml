@@ -20,3 +20,57 @@
           status: done
     - name: Basic compiler that can handle "Hello, World!"
       status: done
+- name: Language Groundwork
+  subitems:
+    - name: Language syntax
+      status: done
+      subitems:
+        - name: Basic statements and expressions
+          status: done
+        - name: Case statments
+          status: done
+        - name: 'If-then-else'
+          status: done
+        - name: Basic pattern matching
+          status: done
+    - name: Type system
+      status: done
+      subitems:
+        - name: Basic builtin types
+          status: done
+        - name: Sum types
+          status: done
+        - name: Product types
+          status: done
+        - name: Generics
+          status: done
+        - name: Higher order values
+          status: done
+    - name: Basic resource system
+      status: done
+    - name: Basic functional features
+      status: done
+      subitems:
+        - name: Higher order calls
+          status: done
+        - name: 'Closures'
+          status: done 
+          link: https://github.com/PlasmaLang/plasma/issues/52
+          link-label: Basic support for closures
+    - name: Basic module system
+      status: WIP
+      link: https://github.com/PlasmaLang/plasma/milestone/3
+      link-label: Modules Issues
+    - name: Runtime system
+      status: done
+      subitems:
+        - name: 'Environments (for closures at runtime)'
+          status: done
+        - name: 'Multi-module bytecode loading'
+          status: done
+          link: https://github.com/PlasmaLang/plasma/issues/158
+          link-label: 'Issue #158'
+    - name: Make Plasma easier to use
+      status: WIP
+      link: https://github.com/PlasmaLang/plasma/projects/4
+      link-label: 'Ergonomics issues'

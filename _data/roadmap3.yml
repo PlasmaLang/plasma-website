@@ -41,6 +41,19 @@
     subitems:
       - name: 'Subroutine threaded bytecode execution (amd64)'
         status: TODO
+  - name: Tooling
+    status: blocked
+    subitems:
+     - name: Packaging
+       status: blocked
+     - name: 'Package management'
+       link: https://github.com/PlasmaLang/plasma/issues/259
+       link-label: 'Issue #260'
+       status: blocked
+     - name: Package repositories
+       status: blocked
+     - name: Language server
+       status: blocked
   - name: 'Basic Optimisations'
     status: blocked
   - name: 'More Parallelism and Concurrency'

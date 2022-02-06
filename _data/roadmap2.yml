@@ -150,6 +150,9 @@
       status: TODO
       link: https://github.com/PlasmaLang/plasma/milestone/18
       link-label: Github milestone
+      subitems:
+       - name: Editor support
+         status: TODO
     - name: Ease of development
       status: WIP
       link: https://github.com/PlasmaLang/plasma/milestone/9
@@ -196,16 +199,12 @@
           status: TODO
         - name: 'Module expressions &amp; module import within code'
           status: TODO
-    - name: Libraries
+    - name: Libraries (requires concurrency)
       status: TODO
       subitems:
         - name: 'Basic IO Library'
           status: blocked
         - name: 'Basic Datastructures Library'
-          status: blocked
-        - name: 'Library management'
-          link: https://github.com/PlasmaLang/plasma/issues/259
-          link-label: 'Issue #259'
           status: blocked
     - name: 'Module system improvments'
       status: blocked

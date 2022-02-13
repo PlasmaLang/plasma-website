@@ -25,10 +25,6 @@
           status: TODO
         - name: 'Re-design of bool/truth-ness'
           status: TODO
-        - name: For loops
-          status: TODO
-        - name: While loops
-          status: TODO 
         - name: State variable notation
           status: maybe
         - name: Named out parameters
@@ -44,26 +40,26 @@
           status: TODO
           link: https://github.com/PlasmaLang/plasma/milestone/17
           link-label: Github milestone 
-    - name: Prelude or basic libraries
+    - name: Basic libraries (data structures and IO)
       status: blocked
       link: https://github.com/PlasmaLang/plasma/milestone/5
       link-label: Standard library issues
     - name: Maintenance
       status: TODO
       subitems:
-        - name: C++ification of Runtime
-          status: WIP
-          link: https://github.com/PlasmaLang/plasma/milestone/10
-          link-label: 'Github milestone'
         - name: Testing and CI
           status: TODO
           link: https://github.com/PlasmaLang/plasma/milestone/16
           link-label: 'Github milestone'
-- name: 'Make it fun (<span class="codename">Cloud</span>)'
+- name: 'Make it interesting (<span class="codename">Cloud</span>)'
   subitems:
     - name: Language features
       status: TODO
       subitems:
+        - name: For loops
+          status: TODO
+        - name: While loops
+          status: TODO 
         - name: 'Syntax for dictionaries and other structures'
           status: TODO
           link: https://github.com/PlasmaLang/plasma/issues/120
@@ -84,7 +80,7 @@
     - name: Concurrency and Parallelism
       status: TODO
       subitems:
-        - name: Lightweight threads
+        - name: Multi-threading
           status: TODO
         - name: 'Basic concurrent communications (channels, mvars etc)'
           status: TODO
@@ -92,18 +88,25 @@
       status: TODO
       link: https://github.com/PlasmaLang/plasma/issues/304
       link-label: Github issue
-    - name: Ergonomics (Nebula)
+    - name: Ergonomics (Cloud)
       status: TODO
       link: https://github.com/PlasmaLang/plasma/milestone/18
       link-label: Github milestone
       subitems:
        - name: Editor support
          status: TODO
-    - name: Ease of development
-      status: WIP
-      link: https://github.com/PlasmaLang/plasma/milestone/9
-      link-label: Github milestone
-- name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Stella nursery</span>)'
+    - name: Maintenance
+      status: TODO
+      subitems:
+        - name: Ease of development
+          status: WIP
+          link: https://github.com/PlasmaLang/plasma/milestone/9
+          link-label: Github milestone
+        - name: C++ification of Runtime
+          status: WIP
+          link: https://github.com/PlasmaLang/plasma/milestone/10
+          link-label: 'Github milestone'
+- name: 'Make it fun (<span class="codename">Stella nursery</span>)'
   subitems:
     - name: More functional features
       status: TODO
@@ -137,12 +140,12 @@
           status: TODO
         - name: Multi-valued expressions
           status: done
-        - name: Object-method notation 
-          status: maybe
-          link: https://github.com/PlasmaLang/plasma/issues/222
-          link-label: 'Issue #222'
         - name: 'Module expressions &amp; module import within code'
           status: TODO
+        - name: Object-method notation 
+          status: TODO
+          link: https://github.com/PlasmaLang/plasma/issues/222
+          link-label: 'Issue #222'
     - name: Libraries (requires concurrency)
       status: TODO
       subitems:

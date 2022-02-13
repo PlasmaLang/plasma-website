@@ -77,6 +77,10 @@
           status: TODO
         - name: Resource lifetimes
           status: TODO
+        - name: Attach resources to values (eg file handles)
+          status: TODO
+        - name: Polymorphic resources for higher-order code
+          status: TODO
     - name: Concurrency and Parallelism
       status: TODO
       subitems:
@@ -93,6 +97,8 @@
       link: https://github.com/PlasmaLang/plasma/milestone/18
       link-label: Github milestone
       subitems:
+       - name: Update/fill-out documentation
+         status: TODO
        - name: Editor support
          status: TODO
     - name: Maintenance
@@ -124,6 +130,8 @@
           status: done
         - name: 'N:M multi-threading'
           status: TODO
+        - name: Backtraces
+          status: TODO
     - name: Type system
       status: TODO
       subitems:
@@ -141,6 +149,8 @@
         - name: Multi-valued expressions
           status: done
         - name: 'Module expressions &amp; module import within code'
+          status: TODO
+        - name: Variable initalisation at top-level
           status: TODO
         - name: Object-method notation 
           status: TODO

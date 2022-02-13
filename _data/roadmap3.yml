@@ -50,6 +50,10 @@
        status: blocked
      - name: Package repositories
        status: blocked
+     - name: Debugger
+       status: blocked
+     - name: Profiler
+       status: blocked
      - name: Language server
        status: blocked
   - name: 'Basic Optimisations'

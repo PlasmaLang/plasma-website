@@ -84,6 +84,8 @@
     - name: Concurrency and Parallelism
       status: TODO
       subitems:
+        - name: Coroutines
+          status: TODO
         - name: Multi-threading
           status: TODO
         - name: 'Basic concurrent communications (channels, mvars etc)'
@@ -159,9 +161,11 @@
     - name: Libraries (requires concurrency)
       status: TODO
       subitems:
-        - name: 'Basic IO Library'
+        - name: Datastructures Library
           status: blocked
-        - name: 'Basic Datastructures Library'
+        - name: File IO Library
+          status: blocked
+        - name: Network IO Library
           status: blocked
     - name: 'Module system improvments'
       status: blocked

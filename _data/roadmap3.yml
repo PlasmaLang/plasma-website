@@ -7,6 +7,8 @@
     subitems:
     - name: 'Integers of different widths'
       status: TODO
+    - name: Floats
+      status: TODO
     - name: 'HKTs'
       status: maybe
     - name: 'Uniqueness (for resources)'
@@ -38,6 +40,10 @@
     status: blocked
     subitems:
       - name: 'Subroutine threaded bytecode execution (amd64)'
+        status: TODO
+      - name: Pin threads to posix threads for FFF (eg OpenGL)
+        status: TODO 
+      - name: Dedicated thread(s) for blocking IO
         status: TODO
   - name: Tooling
     status: blocked
@@ -89,9 +95,16 @@
     status: blocked
   - name: 'Improved code generation'
     status: blocked
-  - name: 'Native code / LLVM (maybe)'
-    status: blocked
-  - name: 'WebAssembly'
+    subitems:
+     - name: 'Native code / LLVM (maybe)'
+       status: blocked
+     - name: 'WebAssembly'
+       status: blocked
+     - name: More JIT
+       status: blocked
+     - name: GPGPU
+       status: maybe
+  - name: Auto-parallelisation
     status: blocked
   - name: 'Improved Garbage Collection'
     status: blocked

@@ -1,59 +1,5 @@
-- name: Language Groundwork
-  toplevel: true
-  subitems:
-    - name: Language syntax
-      status: done
-      subitems:
-        - name: Basic statements and expressions
-          status: done
-        - name: Case statments
-          status: done
-        - name: 'If-then-else'
-          status: done
-        - name: Basic pattern matching
-          status: done
-    - name: Type system
-      status: done
-      subitems:
-        - name: Basic builtin types
-          status: done
-        - name: Sum types
-          status: done
-        - name: Product types
-          status: done
-        - name: Generics
-          status: done
-        - name: Higher order values
-          status: done
-    - name: Basic resource system
-      status: done
-    - name: Basic functional features
-      status: done
-      subitems:
-        - name: Higher order calls
-          status: done
-        - name: 'Closures'
-          status: done 
-          link: https://github.com/PlasmaLang/plasma/issues/52
-          link-label: Basic support for closures
-    - name: Basic module system
-      status: WIP
-      link: https://github.com/PlasmaLang/plasma/milestone/3
-      link-label: Modules Issues
-    - name: Runtime system
-      status: done
-      subitems:
-        - name: 'Environments (for closures at runtime)'
-          status: done
-        - name: 'Multi-module bytecode loading'
-          status: done
-          link: https://github.com/PlasmaLang/plasma/issues/158
-          link-label: 'Issue #158'
-    - name: Make Plasma easier to use
-      status: WIP
-      link: https://github.com/PlasmaLang/plasma/projects/4
-      link-label: 'Ergonomics issues'
 - name: 'Make it useful (<span class="codename">Nebula</span>)'
+  toplevel: true
   subitems:
     - name: FFI
       status: WIP
@@ -79,10 +25,6 @@
           status: TODO
         - name: 'Re-design of bool/truth-ness'
           status: TODO
-        - name: For loops
-          status: TODO
-        - name: While loops
-          status: TODO 
         - name: State variable notation
           status: maybe
         - name: Named out parameters
@@ -98,32 +40,32 @@
           status: TODO
           link: https://github.com/PlasmaLang/plasma/milestone/17
           link-label: Github milestone 
-    - name: Arrays
-      status: maybe
-    - name: Prelude or basic libraries
+    - name: Basic libraries (data structures and IO)
       status: blocked
       link: https://github.com/PlasmaLang/plasma/milestone/5
       link-label: Standard library issues
     - name: Maintenance
       status: TODO
       subitems:
-        - name: C++ification of Runtime
-          status: WIP
-          link: https://github.com/PlasmaLang/plasma/milestone/10
-          link-label: 'Github milestone'
         - name: Testing and CI
           status: TODO
           link: https://github.com/PlasmaLang/plasma/milestone/16
           link-label: 'Github milestone'
-- name: 'Make it fun (<span class="codename">Cloud</span>)'
+- name: 'Make it interesting (<span class="codename">Cloud</span>)'
   subitems:
-    - name: Language syntax
+    - name: Language features
       status: TODO
       subitems:
+        - name: For loops
+          status: TODO
+        - name: While loops
+          status: TODO 
         - name: 'Syntax for dictionaries and other structures'
           status: TODO
           link: https://github.com/PlasmaLang/plasma/issues/120
           link-label: 'Issue #120'
+        - name: Arrays
+          status: TODO
     - name: Resource system
       status: TODO
       subitems:
@@ -135,10 +77,16 @@
           status: TODO
         - name: Resource lifetimes
           status: TODO
+        - name: Attach resources to values (eg file handles)
+          status: TODO
+        - name: Polymorphic resources for higher-order code
+          status: TODO
     - name: Concurrency and Parallelism
       status: TODO
       subitems:
-        - name: Lightweight threads
+        - name: Coroutines
+          status: TODO
+        - name: Multi-threading
           status: TODO
         - name: 'Basic concurrent communications (channels, mvars etc)'
           status: TODO
@@ -146,78 +94,87 @@
       status: TODO
       link: https://github.com/PlasmaLang/plasma/issues/304
       link-label: Github issue
-    - name: Ergonomics (Nebula)
+    - name: Ergonomics (Cloud)
       status: TODO
       link: https://github.com/PlasmaLang/plasma/milestone/18
       link-label: Github milestone
-    - name: Ease of development
-      status: WIP
-      link: https://github.com/PlasmaLang/plasma/milestone/9
-      link-label: Github milestone
-- name: '<i>Quality of </i>(programmer)<i> life</i> improvements (<span class="codename">Stella nursery</span>)'
+      subitems:
+       - name: Update/fill-out documentation
+         status: TODO
+       - name: Editor support
+         status: TODO
+    - name: Maintenance
+      status: TODO
+      subitems:
+        - name: Ease of development
+          status: WIP
+          link: https://github.com/PlasmaLang/plasma/milestone/9
+          link-label: Github milestone
+        - name: C++ification of Runtime
+          status: WIP
+          link: https://github.com/PlasmaLang/plasma/milestone/10
+          link-label: 'Github milestone'
+- name: Work towards bootstrapping
+  subitems:
+    - name: Testing and implement things that may reprioritise and identify missing goals that are necessary for bootstrapping.
+      status: blocked
+- name: 'Make it fun (<span class="codename">Stella nursery</span>)'
   subitems:
     - name: More functional features
       status: TODO
+      link: https://github.com/PlasmaLang/plasma/milestone/2
+      link-label: Closures and functional features
       subitems:
-        - name: 'More type inference'
+        - name: Lambda expressions
           status: TODO
-          link: https://github.com/PlasmaLang/plasma/issues/124
-          link-label: 'Infer types for functions & closures'
-        - name: 'Lambda expressions, partial application'
-          status: blocked
-          link: https://github.com/PlasmaLang/plasma/milestone/2
-          link-label: Closures and functional features
+        - name: Partial application'
+          status: TODO
     - name: Runtime system improvements
       status: TODO
       subitems:
         - name: 'Operations for different data-widths'
           status: done
-        - name: Basic garbage collection
-          status: done
         - name: 'N:M multi-threading'
           status: TODO
-    - name: Structurally-typed records
-      status: maybe
+        - name: Backtraces
+          status: TODO
+    - name: Type system
+      status: TODO
+      subitems:
+       - name: 'More type inference'
+         status: TODO
+         link: https://github.com/PlasmaLang/plasma/issues/124
+         link-label: 'Infer types for functions & closures'
+       - name: Structurally-typed records
+         status: maybe
     - name: Language features
       status: TODO
       subitems:
         - name: 'Exceptions/errors'
           status: TODO
-    - name: Language syntax
-      status: TODO
-      subitems:
         - name: Multi-valued expressions
           status: done
-        - name: Object-method notation 
-          status: maybe
-          link: https://github.com/PlasmaLang/plasma/issues/222
-          link-label: 'Issue #222'
-        - name: Scopes
-          status: TODO
         - name: 'Module expressions &amp; module import within code'
           status: TODO
-    - name: Libraries
+        - name: Variable initalisation at top-level
+          status: TODO
+        - name: Object-method notation 
+          status: TODO
+          link: https://github.com/PlasmaLang/plasma/issues/222
+          link-label: 'Issue #222'
+    - name: Libraries (requires concurrency)
       status: TODO
       subitems:
-        - name: 'Basic IO Library'
+        - name: Datastructures Library
           status: blocked
-        - name: 'Basic Datastructures Library'
+        - name: File IO Library
           status: blocked
-        - name: 'Library management'
-          link: https://github.com/PlasmaLang/plasma/issues/259
-          link-label: 'Issue #259'
+        - name: Network IO Library
           status: blocked
     - name: 'Module system improvments'
       status: blocked
       link: https://github.com/PlasmaLang/plasma/milestone/13
       link-label: 'Modules Extras milestone'
-    - name: Runtime system improvements
-      status: TODO
-      subitems:
-        - name: 'Improved garbage collection (better heap structure & O(1) allocation)'
-          status: TODO
-        - name: 'Subroutine threaded bytecode execution (amd64)'
-          status: maybe
     - name: Optimisations
       status: TODO
       subitems:
@@ -225,4 +182,8 @@
           status: WIP
           link: https://github.com/PlasmaLang/plasma/milestone/15
           link-label: 'Code generation tasks'
+        - name: 'Improved garbage collection (better heap structure & O(1) allocation)'
+          status: TODO
+        - name: 'Subroutine threaded bytecode execution (amd64)'
+          status: maybe
 

@@ -7,7 +7,7 @@
     subitems:
     - name: 'Integers of different widths'
       status: TODO
-    - name: 'Arrays'
+    - name: Floats
       status: TODO
     - name: 'HKTs'
       status: maybe
@@ -41,6 +41,27 @@
     subitems:
       - name: 'Subroutine threaded bytecode execution (amd64)'
         status: TODO
+      - name: Pin threads to posix threads for FFF (eg OpenGL)
+        status: TODO 
+      - name: Dedicated thread(s) for blocking IO
+        status: TODO
+  - name: Tooling
+    status: blocked
+    subitems:
+     - name: Packaging
+       status: blocked
+     - name: 'Package management'
+       link: https://github.com/PlasmaLang/plasma/issues/259
+       link-label: 'Issue #260'
+       status: blocked
+     - name: Package repositories
+       status: blocked
+     - name: Debugger
+       status: blocked
+     - name: Profiler
+       status: blocked
+     - name: Language server
+       status: blocked
   - name: 'Basic Optimisations'
     status: blocked
   - name: 'More Parallelism and Concurrency'
@@ -74,9 +95,16 @@
     status: blocked
   - name: 'Improved code generation'
     status: blocked
-  - name: 'Native code / LLVM (maybe)'
-    status: blocked
-  - name: 'WebAssembly'
+    subitems:
+     - name: 'Native code / LLVM (maybe)'
+       status: blocked
+     - name: 'WebAssembly'
+       status: blocked
+     - name: More JIT
+       status: blocked
+     - name: GPGPU
+       status: maybe
+  - name: Auto-parallelisation
     status: blocked
   - name: 'Improved Garbage Collection'
     status: blocked

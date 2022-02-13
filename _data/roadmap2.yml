@@ -114,6 +114,10 @@
           status: WIP
           link: https://github.com/PlasmaLang/plasma/milestone/10
           link-label: 'Github milestone'
+- name: Work towards bootstrapping
+  subitems:
+    - name: Testing and implement things that may reprioritise and identify missing goals that are necessary for bootstrapping.
+      status: blocked
 - name: 'Make it fun (<span class="codename">Stella nursery</span>)'
   subitems:
     - name: More functional features

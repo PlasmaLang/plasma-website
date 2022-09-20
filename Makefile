@@ -65,6 +65,7 @@ docs: docs/index.html \
 	docs/references.html \
 	docs/dev_howto_make_pr.html \
 	docs/dev_compiler_internals.html \
+	docs/dev_testing.html \
 	docs/dev_style_mercury.html \
 	docs/dev_style_c.html \
 	docs/dev_mercury_grades.html \
@@ -91,6 +92,8 @@ docs/references.txt : ../plasma/docs/references.txt
 docs/dev_howto_make_pr.txt : ../plasma/docs/dev_howto_make_pr.txt 
 	cp $< $@
 docs/dev_compiler_internals.txt : ../plasma/docs/dev_compiler_internals.txt 
+	cp $< $@
+docs/dev_testing.txt : ../plasma/docs/dev_testing.txt 
 	cp $< $@
 docs/dev_style_mercury.txt : ../plasma/docs/dev_style_mercury.txt 
 	cp $< $@

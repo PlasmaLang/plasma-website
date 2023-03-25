@@ -81,15 +81,6 @@
           status: TODO
         - name: Polymorphic resources for higher-order code
           status: TODO
-    - name: Concurrency and Parallelism
-      status: TODO
-      subitems:
-        - name: Coroutines
-          status: TODO
-        - name: Multi-threading
-          status: TODO
-        - name: 'Basic concurrent communications (channels, mvars etc)'
-          status: TODO
     - name: More examples
       status: TODO
       link: https://github.com/PlasmaLang/plasma/issues/304

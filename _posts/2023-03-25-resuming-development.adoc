@@ -1,0 +1,141 @@
+---
+layout: post
+author: Paul Bone
+title: Resuming development 
+excerpt: A little about development status and what 2023 may hold, and some benchmarks
+keywords: update, project, roadmap, status, 2023, 2022, ackermann, performance
+---
+
+= Resuming development
+
+The TL:DR is that after a slow 2022 I'm resuming work on Plasma and hope to
+make more progress in 2023.
+Jump to the end to hear about Plasma's performance.
+
+== 2022
+
+2022 was IRL very busy.
+My family bought a new house, caught COVID, moved house, went skiing and
+then renovated a house.
+I started jokingly saying that my hobby at the moment was "Real Estate"
+because it's what I spent a lot of my spare time on.
+In fact, like a lot of people since 2020 I've been less social, I've never
+been big on "new years' resolutions" but I would like to be more social in
+2023.
+But I would also like to make time for other hobbies including Plasma.
+
+== Why work on Plasma at all?
+
+I hadn't completely left Plasma alone, but not working on it much also led
+to my motivation slipping.
+It's easy to think of it as an obligation that I promised to do rather than
+something I want to do, and so I want to remind myself **why** I want to
+make Plasma.
+
+This is why I like to write down my vision for Plasma, while this
+communicates my vision to others mostly it reminds myself what I was
+thinking.
+
+[quote,Plasma FAQ "Why are you writing [Plasma]?"]
+____
+We believe that purely-declarative strongly statically typed languages
+are the only sensible option for creating reliable software. However the
+available options (including Haskell and Mercury) have several problems,
+including being difficult to learn. Additionally imperative programming
+provides some specific advantages over declarative programming, for
+example the convenience of expressing loops directly in the language's
+syntax and manipulating data in arrays. We also have some exciting plans
+for parallel and concurrent programming.
+
+We're writing Plasma because we believe that there is a need for
+an easy-to-learn-and-use purely-declarative language that
+doesn't make arrays and loops awkward to use. 
+____
+
+== Seven years so far
+
+I started Plasma over seven years ago.  In fact 
+link:/2018/01/03/two-and-a-half-years.html[five years ago]
+I wrote a similar post, bemoaning how long this is taking.
+I want to remind myself (but also anyone reading) that I'm doing this in my
+spare time and the main point of this post is that spare time has not been
+abundant.
+
+I worked on Mercury for over 9 years in total:
+1.5 years during my Honours project (part time),
+4 years for my Ph.D.
+2 years for Mission Critical IT and just over 2 years for 
+YesLogic.
+My work on Plasma has almost been as long, just less intensive and
+different.
+
+== 2023 - how to "get back to it"
+
+So for 2023 I thought it'd be nice to
+https://xkcd.com/356/[nerd snipe] myself and help build my interest and
+motivation.
+So some people were talking about virtual machine implementations on the
+https://proglangdesign.net/ discord server and comparing their performance.
+I gave Plasma a shot at solving 
+https://rosettacode.org/wiki/Ackermann_function[Ackermann's function] for
++ack(3, 12)+, it crashed.
+After adding more stack space and re-compiling, it crashed some more.
+Plenty more stack space later it ran and completed in 45 seconds.
+
+----
+func ack(m : Int, n : Int) -> Int {
+  return if m == 0
+    then n + 1
+    else if n == 0
+      then ack(m - 1, 1)
+      else ack(m - 1, ack(m, n - 1))
+}
+----
+
+Let's put that in perspective:
+
+|====
+| Language    | ack(3, 12)   | ack(3, 9)
+| Plasma      | 34.3s        | 546ms
+| Lua         | 20.8s        | 330ms
+| Python      | **crashed**  | **crashed**
+| Ruby        | **crashed**  | 277ms
+| Haskell     | 15.8s        |
+| Haskell -O2 | 1.92s        |
+| Mercury     | 0.533s       |
+| Mercury -O2 | 0.518s       |
+| Java        | 0.920s       |
+| clang       | 2.53s        |
+| clang -O2   | 0.587s       |
+|====
+
+Ouch, previously when I've checked Plasma's performance (so far only on
+micro-benchmarks) I've been able to claim "It's faster than Python". Which
+doesn't sound like a lot but
+"If python is fast enough for your needs, then Plasma is also fast enough"
+is something concrete that people can use.
+Well we don't know if Plasma is faster than Python, both crashed until I
+added more stack space to Plasma, however I expected it to be faster than
+Ruby, but last time I used Ruby was before the 1.8-1.9 era when I think they
+switched to a faster implementation.
+I know I haven't attempted to optimise Plasma at all other than adding tail
+calls and basic simplification, so I know "I can do better".
+
+I tested the naive implementation of each Ackermann's function for each
+language as shown on
+https://rosettacode.org/wiki/Ackermann_function[Rosetta Code].
+
+It's safe to say that I've managed to nerdsnipe myself.  I've been
+refactoring the interpreter and considering faster implementations.
+Yes Plasma is interpreted, that's just the first version.  We can write
+native code generators later.
+
+I'm also been considering what features we'll need in the runtime & bytecode
+representation to support concurrency and parallelism.
+I think that quite a lot of the bytecode format will need to change,
+and was going to do that today but I built a frame for some bird-netting in
+the garden instead, because home maintenance stuff never ends!
+
+I've updated the link:/roadmap.html[roadmap] to move concurrency
+higher in the priority list to reflect this new focus.
+

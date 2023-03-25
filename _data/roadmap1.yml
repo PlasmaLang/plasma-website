@@ -72,6 +72,19 @@
           link-label: 'Issue #158'
         - name: Basic garbage collection
           status: done
+    - name: Concurrency and Parallelism
+      status: WIP
+      subitems:
+        - name: Continuations in runtime system
+          status: WIP
+          link: https://github.com/orgs/PlasmaLang/projects/3/views/1
+          link-label: 'Issues'
+        - name: Coroutines
+          status: TODO
+        - name: Multi-threading
+          status: TODO
+        - name: 'Basic concurrent communications (channels, mvars etc)'
+          status: TODO
     - name: Make Plasma easier to use
       status: WIP
       link: https://github.com/PlasmaLang/plasma/projects/4

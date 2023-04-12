@@ -98,7 +98,7 @@ Let's put that in perspective:
 | Language    | ack(3, 12)   | ack(3, 9)
 | Plasma      | 34.3s        | 546ms
 | Lua         | 20.8s        | 330ms
-| Python      | **crashed**  | **crashed**
+| Python      | 97.6s        | 1.00s 
 | Ruby        | **crashed**  | 277ms
 | Haskell     | 15.8s        |
 | Haskell -O2 | 1.92s        |
@@ -109,21 +109,29 @@ Let's put that in perspective:
 | clang -O2   | 0.587s       |
 |====
 
-Ouch, previously when I've checked Plasma's performance (so far only on
+Previously when I've checked Plasma's performance (so far only on
 micro-benchmarks) I've been able to claim "It's faster than Python". Which
 doesn't sound like a lot but
-"If python is fast enough for your needs, then Plasma is also fast enough"
+"If Python is fast enough for your needs, then Plasma is also fast enough"
 is something concrete that people can use.
-Well we don't know if Plasma is faster than Python, both crashed until I
-added more stack space to Plasma, however I expected it to be faster than
+It is faster than Python, at least version 3.8.10, so that's still true.
+A friend of mine, fox, tested it with python 3.11 which was closer to
+Plasma's performance.
+Also both Plasma and Python crashed until given larger stacks.
+
+I expected it to be faster than
 Ruby, but last time I used Ruby was before the 1.8-1.9 era when I think they
 switched to a faster implementation.
 I know I haven't attempted to optimise Plasma at all other than adding tail
 calls and basic simplification, so I know "I can do better".
 
+Fox also noticed that Plasma is slower when its runtime is built with
+clang rather than GCC.  The results above use GCC.
+
 I tested the naive implementation of each Ackermann's function for each
 language as shown on
 https://rosettacode.org/wiki/Ackermann_function[Rosetta Code].
+Some where modified to request a larger stack size.
 
 It's safe to say that I've managed to nerdsnipe myself.  I've been
 refactoring the interpreter and considering faster implementations.
@@ -138,4 +146,12 @@ the garden instead, because home maintenance stuff never ends!
 
 I've updated the link:/roadmap.html[roadmap] to move concurrency
 higher in the priority list to reflect this new focus.
+
+== Update 2023-04-12
+
+Fox contacted me with information about Python (since I hadn't
+given it enough stack space) and also ran some
+tests on Plasma.  I've updated the last section with the new information
+including the Python rows in the table, the updated analysis WRT Python and
+the observation that Plasma is slower when compiled with Clang.
 

@@ -87,5 +87,5 @@
           status: TODO
     - name: Make Plasma easier to use
       status: WIP
-      link: https://github.com/PlasmaLang/plasma/projects/4
+      link: https://github.com/orgs/PlasmaLang/projects/7
       link-label: 'Ergonomics issues'

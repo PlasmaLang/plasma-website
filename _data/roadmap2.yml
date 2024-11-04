@@ -5,12 +5,12 @@
       status: WIP
       subitems:
         - name: 'String & character support (basic unicode support)'
-          link: https://github.com/PlasmaLang/plasma/projects/5
+          link: https://github.com/orgs/PlasmaLang/projects/8
           link-label: Github project
           status: WIP
         - name: 'C FFI'
           status: WIP
-          link: https://github.com/PlasmaLang/plasma/projects/3
+          link: https://github.com/orgs/PlasmaLang/projects/4
           link-label: FFI issues
     - name: Language syntax
       status: TODO

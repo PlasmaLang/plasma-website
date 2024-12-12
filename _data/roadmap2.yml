@@ -19,8 +19,6 @@
           status: done
         - name: 'Expression versions of if-then-else and match (w/ multi-values)'
           status: done
-          link: https://github.com/PlasmaLang/plasma/issues/119
-          link-label: 'Issue #119'
         - name: Truthy statements
           status: TODO
         - name: 'Re-design of bool/truth-ness'

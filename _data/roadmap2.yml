@@ -60,8 +60,6 @@
           status: TODO 
         - name: 'Syntax for dictionaries and other structures'
           status: TODO
-          link: https://github.com/PlasmaLang/plasma/issues/120
-          link-label: 'Issue #120'
         - name: Arrays
           status: TODO
     - name: Resource system

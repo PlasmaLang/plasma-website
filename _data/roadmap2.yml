@@ -141,8 +141,14 @@
           status: TODO
         - name: Multi-valued expressions
           status: done
-        - name: 'Module expressions &amp; module import within code'
+        - name: 'Module import within code'
           status: TODO
+          link: https://github.com/PlasmaLang/plasma/issues/269
+          link-label: 'Issue #269'
+        - name: 'Module expressions'
+          status: TODO
+          link: https://github.com/PlasmaLang/plasma/issues/464
+          link-label: 'Issue #464'
         - name: Variable initalisation at top-level
           status: TODO
         - name: Object-method notation 
